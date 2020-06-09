@@ -25,9 +25,11 @@ public class Deck : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (_hand.transform.childCount - 1 < _maxCardsInHand)
+        Hand hand = _hand.GetComponent<Hand>();
+        if (hand.cardsInHand.Count < _maxCardsInHand)
         {
-            GameObject newCard = Instantiate(_card, _hand.transform);
+            //Card newCard = Instantiate(_card, _hand.transform);
+            hand.addCardToHand();
         }
     }
 }

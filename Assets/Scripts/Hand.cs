@@ -21,46 +21,42 @@ using UnityEngine;
 
 public class Hand : MonoBehaviour
 {
-    private float _leftBound = -14.5f;
-    private float _rightBound = 14.5f;
-    private bool _cardsArranged;
     [SerializeField]
     private GameObject centerpiece;
-    private int currentNumberOfCards = 0;
-    private int n;
+    [SerializeField]
+    private GameObject _card;
+    public List<Card> cardsInHand = new List<Card>();
 
     void Start()
     {
-        _cardsArranged = false;
-        n = currentNumberOfCards;
+
     }
 
     void Update()
     {
-        currentNumberOfCards = CardsInHand();
-
-        if (n != currentNumberOfCards)
-        {
-            arrangeCards();
-            _cardsArranged = true;
-            n = currentNumberOfCards;
-        }
+        arrangeCards();
     }
 
     void arrangeCards()
     {
-        float pos = -14.5f;
-        foreach (Transform child in transform)
+        if (CardsInHand() > 0)
         {
-            if (centerpiece)
+            float xPosition;
+            if(transform.childCount > 0)
             {
-                child.transform.position = new Vector3(pos - 4f, 1, -22);
-                pos += 4f;
+                xPosition = (transform.childCount % 2 == 0) ? 0 - ((transform.childCount * 3.5f) / 2) : 0 - ((transform.childCount * 3.5f) / 2);
+            }
+            else
+            {
+                xPosition = -1.75f;
+            }
+
+            foreach (Transform child in transform)
+            {
+                child.transform.position = new Vector3(xPosition, 1, -22);
+                xPosition += (3.5f + 0.3f);
             }
         }
-
-        // Center out the cards
-
     }
 
     void playCard()
@@ -71,16 +67,18 @@ public class Hand : MonoBehaviour
     }
 
     int CardsInHand()
-    // Returns the number of cards in the player's hand.
-    // Use this method to apply appropriate spacing to the player's hand
     {
-        int total = 0;
+        return cardsInHand.Count;
+    }
 
-        foreach (Transform child in transform)
-        {
-            total++;
-        }
 
-        return total;
+
+    public void addCardToHand()
+    {
+        Card newCard = gameObject.AddComponent<Card>();
+        cardsInHand.Add(newCard);
+
+        // Add card to heirarchy
+        Instantiate(_card, transform);
     }
 }

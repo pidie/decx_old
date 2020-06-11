@@ -25,7 +25,7 @@ public class Hand : MonoBehaviour
     private GameObject centerpiece;
     [SerializeField]
     private GameObject _card;
-    public List<Card> cardsInHand = new List<Card>();
+    private List<Card> _cardsInHand = new List<Card>();
 
     void Start()
     {
@@ -39,18 +39,10 @@ public class Hand : MonoBehaviour
 
     void arrangeCards()
     {
-        if (CardsInHand() > 0)
+        if (getCardCount() > 0)
         {
-            float xPosition;
-            if(transform.childCount > 0)
-            {
-                xPosition = (transform.childCount % 2 == 0) ? 0 - ((transform.childCount * 3.5f) / 2) : 0 - ((transform.childCount * 3.5f) / 2);
-            }
-            else
-            {
-                xPosition = -1.75f;
-            }
-
+            // Todo: change hardcoded 3.5 to width of card
+            float xPosition = transform.childCount > 1 ? 1.75f - ((transform.childCount * (3.5f + 0.3f)) / 2f) : 0f;
             foreach (Transform child in transform)
             {
                 child.transform.position = new Vector3(xPosition, 1, -22);
@@ -66,19 +58,20 @@ public class Hand : MonoBehaviour
 
     }
 
-    int CardsInHand()
+    public int getCardCount()
     {
-        return cardsInHand.Count;
+        return _cardsInHand.Count;
     }
 
-
-
-    public void addCardToHand()
+    public void addCardToHand(int newCardCount = 1)
     {
-        Card newCard = gameObject.AddComponent<Card>();
-        cardsInHand.Add(newCard);
+        for(int i = 0; i < newCardCount; i++)
+        {
+            Card newCard = gameObject.AddComponent<Card>();
+            _cardsInHand.Add(newCard);
 
-        // Add card to heirarchy
-        Instantiate(_card, transform);
+            // Add card to heirarchy
+            Instantiate(_card, transform);
+        }
     }
 }

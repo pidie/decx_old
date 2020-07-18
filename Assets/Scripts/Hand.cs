@@ -46,6 +46,8 @@ public class Hand : MonoBehaviour
             foreach (Transform child in transform)
             {
                 child.transform.position = new Vector3(xPosition, 1, -22);
+                //child.RotateAround();
+                //child.transform.position = new Vector3(xPosition, 1, -22);
                 xPosition += (3.5f + 0.3f);
             }
         }

@@ -43,11 +43,10 @@ public class Hand : MonoBehaviour
         {
             // Todo: change hardcoded 3.5 to width of card
             float xPosition = transform.childCount > 1 ? 1.75f - ((transform.childCount * (3.5f + 0.3f)) / 2f) : 0f;
+            Debug.Log(xPosition);
             foreach (Transform child in transform)
             {
                 child.transform.position = new Vector3(xPosition, 1, -22);
-                //child.RotateAround();
-                //child.transform.position = new Vector3(xPosition, 1, -22);
                 xPosition += (3.5f + 0.3f);
             }
         }

@@ -33,10 +33,15 @@ public class GameHandler : MonoBehaviour
         _graveyard.AddToGraveyard(deadCard);
     }
 
-    private void DrawCard()
+    private Card DrawCard()
     {
         Card drawnCard = _playerDeck.DrawCard();
-        _playerHand.AddCardToHand(drawnCard);
+        if (drawnCard)
+        {
+            _playerHand.AddCardToHand(drawnCard);
+            return drawnCard;
+        }
+        return null;
     }
 
     private void UseCard(Card card)

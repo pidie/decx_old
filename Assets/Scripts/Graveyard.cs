@@ -15,4 +15,9 @@ public class Graveyard : CardCollection
     {
         
     }
+
+    public void AddToGraveyard(Card card)
+    {
+        AddCardToTop(card);
+    }
 }

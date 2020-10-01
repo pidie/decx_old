@@ -25,7 +25,7 @@ public class Hand : CardCollection
     private GameObject centerpiece;
     [SerializeField]
     private GameObject _card;
-    private List<Card> _cardsInHand = new List<Card>();
+    //private List<Card> _cardsInHand = new List<Card>();
 
     void Start()
     {
@@ -34,12 +34,12 @@ public class Hand : CardCollection
 
     void Update()
     {
-        arrangeCards();
+        ArrangeCards();
     }
 
-    void arrangeCards()
+    void ArrangeCards()
     {
-        if (getCardCount() > 0)
+        if (GetCardCount() > 0)
         {
             // Todo: change hardcoded 3.5 to width of card
             float xPosition = transform.childCount > 1 ? 1.75f - ((transform.childCount * (3.5f + 0.3f)) / 2f) : 0f;
@@ -53,27 +53,19 @@ public class Hand : CardCollection
         }
     }
 
-    void playCard()
+    void PlayCard()
     {
 
         // Card clicked should be played. Should trigger arrangeCards to have them centered.
 
     }
 
-    public int getCardCount()
+    public void AddCardToHand(Card card)
     {
-        return _cardsInHand.Count;
-    }
+        //Card newCard = gameObject.AddComponent<Card>();
+        AddCardToBottom(card);
 
-    public void addCardToHand(int newCardCount = 1)
-    {
-        for(int i = 0; i < newCardCount; i++)
-        {
-            Card newCard = gameObject.AddComponent<Card>();
-            _cardsInHand.Add(newCard);
-
-            // Add card to heirarchy
-            Instantiate(_card, transform);
-        }
+        // Add card to heirarchy
+        Instantiate(_card, transform);
     }
 }

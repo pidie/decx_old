@@ -16,7 +16,7 @@ public class Deck : CardCollection
     // Start is called before the first frame update
     void Start()
     {
-        
+        LoadDeck();
     }
 
     // Update is called once per frame
@@ -24,13 +24,24 @@ public class Deck : CardCollection
     {
         
     }
+
+    public Card DrawCard()
+    {
+        return RemoveCardFromTop();
+    }
+
     private void OnMouseDown()
     {
         Hand hand = _hand.GetComponent<Hand>();
-        if (hand.getCardCount() < _maxCardsInHand)
+        if (hand.GetCardCount() < _maxCardsInHand)
         {
             //Card newCard = Instantiate(_card, _hand.transform);
-            hand.addCardToHand();
+            //hand.AddCardToHand();
         }
+    }
+
+    private void LoadDeck()
+    {
+        // fill deck with shuffled cards...
     }
 }

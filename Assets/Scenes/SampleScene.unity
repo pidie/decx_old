@@ -140,6 +140,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &89706038 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -3879987220695704066, guid: 7768f62926344f94b96214677795566c,
+    type: 3}
+  m_PrefabInstance: {fileID: 4924769598590242617}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89706035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cc6247f906afb944b5b9364af071493, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &145287938
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,6 +801,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be9aeb4ea58cc30429f0e9fa3677ef61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _graveyard: {fileID: 2096785664}
+  _player1Deck: {fileID: 89706038}
 --- !u!4 &1440645840
 Transform:
   m_ObjectHideFlags: 0

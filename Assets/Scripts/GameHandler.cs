@@ -7,7 +7,9 @@ public class GameHandler : MonoBehaviour
     [SerializeField]
     private Graveyard _graveyard;
     [SerializeField]
-    private Deck _player1Deck;
+    private Deck _playerDeck;
+    [SerializeField]
+    private Hand _playerHand;
 
     // Start is called before the first frame update
     void Start()
@@ -21,22 +23,19 @@ public class GameHandler : MonoBehaviour
         
     }
 
-    // example of CardCollection class use
-    private void exampleMethod()
+    private void SendCardToGraveyard(Card deadCard)
     {
-        Card newCard1 = gameObject.AddComponent<Card>();
-        newCard1.cardName = "zorbo";
-        newCard1.cardClass = "monk";
+        _graveyard.AddToGraveyard(deadCard);
+    }
 
-        Card newCard2 = gameObject.AddComponent<Card>();
-        newCard2.cardName = "maximus";
-        newCard2.cardClass = "warrior";
+    private void DrawCard()
+    {
+        Card drawnCard = _playerDeck.DrawCard();
+        _playerHand.AddCardToHand(drawnCard);
+    }
 
-        // both single and...
-        _player1Deck.AddCardToTop(newCard1);
+    private void UseCard(Card card)
+    {
 
-        // overloaded for more than one card added
-        Card[] cards = [newCard1, newCard2];
-        _graveyard.AddCardToTop(cards);
     }
 }

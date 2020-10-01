@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CardCollection: MonoBehaviour
 {
-    protected List<Card> _cardList = new List<Card>();
+    private List<Card> _cardList = new List<Card>();
 
 
     void Start()
@@ -18,43 +19,49 @@ public class CardCollection: MonoBehaviour
 
     }
 
+    public int GetCardCount()
+    {
+        return _cardList.Count;
+    }
 
-    public void AddCardToTop(Card card)
+    protected void AddCardToTop(Card card)
     {
         _cardList.Add(card);
     }
 
-    public void AddCardToTop(Card[] cards)
+    protected void AddCardToTop(Card[] cards)
     {
         _cardList.AddRange(cards);
     }
 
-    public void AddCardToBottom(Card card)
+    protected void AddCardToBottom(Card card)
     {
         _cardList.Insert(0, card);
     }
 
-    public void AddCardToBottom(Card[] cards)
+    protected void AddCardToBottom(Card[] cards)
     {
         _cardList.InsertRange(0, cards);
     }
 
-    public void RemoveCardFromTop()
+    protected Card RemoveCardFromTop()
     {
-        _cardList.RemoveAt(_cardList.Count);
+        Card topCard =_cardList.Last();
+        return _cardList.Remove(topCard) ? topCard : null;
     }
 
-    public void RemoveCardFromBottom()
+    protected Card RemoveCardFromBottom()
     {
-        _cardList.RemoveAt(0);
+        Card bottomCard = _cardList.First();
+        return _cardList.Remove(bottomCard) ? bottomCard : null;
     }
 
-    public void RemoveCard(Card card)
+    protected void RemoveCard(Card card)
     {
         _cardList.Remove(card);
     }
 
-    public void SwapCards(Card card1, Card card2)
+    protected void SwapCards(Card card1, Card card2)
     {
         int card1Index = _cardList.IndexOf(card1);
         int card2Index = _cardList.IndexOf(card2);
@@ -62,12 +69,12 @@ public class CardCollection: MonoBehaviour
         _cardList[card2Index] = card1;
     }
 
-    public void ShuffleCards()
+    protected void ShuffleCards()
     {
         // todo...
     }
 
-    public void ClearList()
+    protected void ClearList()
     {
         _cardList.Clear();
     }

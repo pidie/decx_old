@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class GameHandler : MonoBehaviour
 {
+    // card collections
     [SerializeField]
     private Graveyard _graveyard;
     [SerializeField]
     private Deck _playerDeck;
     [SerializeField]
     private Hand _playerHand;
+
+    //game states
+    dynamic phase = null; // *need enum from phases of round.
+
 
     // Start is called before the first frame update
     void Start()

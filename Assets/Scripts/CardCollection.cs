@@ -61,6 +61,11 @@ public class CardCollection: MonoBehaviour
         _cardList.Remove(card);
     }
 
+    protected void RemoveAllCards()
+    {
+        _cardList.Clear();
+    }
+
     protected void SwapCards(Card card1, Card card2)
     {
         int card1Index = _cardList.IndexOf(card1);
@@ -72,10 +77,5 @@ public class CardCollection: MonoBehaviour
     protected void ShuffleCards()
     {
         // todo...
-    }
-
-    protected void ClearList()
-    {
-        _cardList.Clear();
     }
 }

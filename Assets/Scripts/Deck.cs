@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
-public class Deck : MonoBehaviour
+public class Deck : CardCollection
 {
     [SerializeField]
     private GameObject _hand;
@@ -22,7 +24,6 @@ public class Deck : MonoBehaviour
     {
         
     }
-
     private void OnMouseDown()
     {
         Hand hand = _hand.GetComponent<Hand>();

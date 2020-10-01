@@ -19,7 +19,7 @@ using UnityEngine;
  */
 
 
-public class Hand : MonoBehaviour
+public class Hand : CardCollection
 {
     [SerializeField]
     private GameObject centerpiece;

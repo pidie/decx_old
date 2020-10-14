@@ -1,8 +1,11 @@
 ﻿using System;
+using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using System.Linq;
+using UnityEditor;
 
 public class Deck : CardCollection
 {
@@ -12,10 +15,13 @@ public class Deck : CardCollection
     private GameObject _card;
     [SerializeField]
     private int _maxCardsInHand;
+    [SerializeField]
+    private DataManager _DataManager;
 
     // Start is called before the first frame update
     void Start()
     {
+        _DataManager = new DataManager();
         LoadDeck();
     }
 
@@ -30,18 +36,30 @@ public class Deck : CardCollection
         return RemoveCardFromTop();
     }
 
-    private void OnMouseDown()
+    public void LoadDeck()
     {
-        Hand hand = _hand.GetComponent<Hand>();
-        if (hand.GetCardCount() < _maxCardsInHand)
-        {
-            //Card newCard = Instantiate(_card, _hand.transform);
-            //hand.AddCardToHand();
-        }
-    }
+        // todo: refactor to take deck identifier
 
-    private void LoadDeck()
-    {
-        // fill deck with shuffled cards...
+        string currentPath = Directory.GetCurrentDirectory() + "\\CardLibrary";
+        string[] filesPaths = Directory.GetFiles(currentPath);
+
+        // filter for json files
+        string[] filteredFilesPaths = filesPaths.Where(filePath => {
+            string fileExt = filePath.Substring(filePath.Length - 4);
+            return fileExt == "json";
+        }).ToArray();
+
+        Card[] loadedCardData = filteredFilesPaths.Select(filePath => {
+            string cardJson = _DataManager.GetJsonFromFile(filePath);
+            CardModel cardModel = JsonUtility.FromJson<CardModel>(cardJson);
+            //Card newCard = new Card();
+
+            Card newCard = gameObject.AddComponent<Card>();
+
+            newCard.LoadCard(cardModel);
+            return newCard;
+        }).ToArray();
+
+        AddCardToTop(loadedCardData);
     }
 }

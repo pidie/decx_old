@@ -22,10 +22,9 @@ using UnityEngine;
 public class Hand : CardCollection
 {
     [SerializeField]
-    private GameObject centerpiece;
+    private GameObject _centerpiece;
     [SerializeField]
     private GameObject _card;
-    //private List<Card> _cardsInHand = new List<Card>();
 
     void Start()
     {
@@ -64,6 +63,8 @@ public class Hand : CardCollection
     {
         //Card newCard = gameObject.AddComponent<Card>();
         AddCardToBottom(card);
+
+        // bind card data to gameObject here...?
 
         // Add card to heirarchy
         Instantiate(_card, transform);

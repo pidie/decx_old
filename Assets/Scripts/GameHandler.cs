@@ -12,10 +12,6 @@ public class GameHandler : MonoBehaviour
     [SerializeField]
     private Hand _playerHand;
 
-    //game states
-    dynamic phase = null; // *need enum from phases of round.
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +24,11 @@ public class GameHandler : MonoBehaviour
         
     }
 
+    private void LoadPlayerDeck()
+    {
+        _playerDeck.LoadDeck();
+    }
+
     private void SendCardToGraveyard(Card deadCard)
     {
         _graveyard.AddToGraveyard(deadCard);
@@ -36,7 +37,7 @@ public class GameHandler : MonoBehaviour
     private Card DrawCard()
     {
         Card drawnCard = _playerDeck.DrawCard();
-        if (drawnCard)
+        if (drawnCard != null)
         {
             _playerHand.AddCardToHand(drawnCard);
             return drawnCard;

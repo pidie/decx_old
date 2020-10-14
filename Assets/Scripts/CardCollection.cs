@@ -8,17 +8,6 @@ public class CardCollection: MonoBehaviour
 {
     private List<Card> _cardList = new List<Card>();
 
-
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-
-    }
-
     public int GetCardCount()
     {
         return _cardList.Count;

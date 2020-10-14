@@ -22,6 +22,16 @@ public class Card : MonoBehaviour
 
     }
 
+    public CardModel GetCardData()
+    {
+        return new CardModel() {
+            name = _name,
+            ID = _id,
+            title = _title,
+            description = _description
+        };
+    }
+
     public void LoadCard(CardModel inputData)
     {
         _name = inputData.name;

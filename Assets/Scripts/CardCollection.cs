@@ -35,12 +35,22 @@ public class CardCollection: MonoBehaviour
 
     protected Card RemoveCardFromTop()
     {
+        if (_cardList.Count == 0)
+        {
+            Debug.LogWarning("Deck is empty.");
+            return null;
+        }
         Card topCard =_cardList.Last();
         return _cardList.Remove(topCard) ? topCard : null;
     }
 
     protected Card RemoveCardFromBottom()
     {
+        if (_cardList.Count == 0)
+        {
+            Debug.LogWarning("Deck is empty.");
+            return null;
+        }
         Card bottomCard = _cardList.First();
         return _cardList.Remove(bottomCard) ? bottomCard : null;
     }

@@ -31,6 +31,16 @@ public class Deck : CardCollection
         
     }
 
+    void OnMouseDown()
+    {
+        Card drawnCard = DrawCard();
+        if (drawnCard)
+        {
+            CardModel cardData = drawnCard.GetCardData();
+            Debug.Log(cardData.name);
+        }
+    }
+
     public Card DrawCard()
     {
         return RemoveCardFromTop();

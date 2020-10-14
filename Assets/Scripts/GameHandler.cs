@@ -15,7 +15,7 @@ public class GameHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        LoadPlayerDeck();
     }
 
     // Update is called once per frame

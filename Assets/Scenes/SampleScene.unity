@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2312a683980771e449bef9e666812864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  centerpiece: {fileID: 0}
+  _centerpiece: {fileID: 0}
   _card: {fileID: 4769657208153724752, guid: cadd1424d955cb84db67c33c200f5948, type: 3}
 --- !u!1 &183421967
 GameObject:
@@ -802,7 +802,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _graveyard: {fileID: 2096785664}
-  _player1Deck: {fileID: 89706038}
+  _playerDeck: {fileID: 89706038}
+  _playerHand: {fileID: 145287940}
 --- !u!4 &1440645840
 Transform:
   m_ObjectHideFlags: 0
@@ -1254,5 +1255,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8871636072954486699, guid: 7768f62926344f94b96214677795566c, type: 3}
+    - {fileID: 8871636074155185930, guid: 7768f62926344f94b96214677795566c, type: 3}
+    - {fileID: 8871636074336082240, guid: 7768f62926344f94b96214677795566c, type: 3}
+    - {fileID: 8871636072994775673, guid: 7768f62926344f94b96214677795566c, type: 3}
+    - {fileID: 8871636072456771702, guid: 7768f62926344f94b96214677795566c, type: 3}
+    - {fileID: 8871636073439081343, guid: 7768f62926344f94b96214677795566c, type: 3}
+    - {fileID: 8871636072677118455, guid: 7768f62926344f94b96214677795566c, type: 3}
+    - {fileID: 8871636073921030393, guid: 7768f62926344f94b96214677795566c, type: 3}
+    - {fileID: 8871636072762306820, guid: 7768f62926344f94b96214677795566c, type: 3}
+    - {fileID: 8871636074443768195, guid: 7768f62926344f94b96214677795566c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7768f62926344f94b96214677795566c, type: 3}

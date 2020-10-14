@@ -22,7 +22,6 @@ public class Deck : CardCollection
     void Start()
     {
         _DataManager = new DataManager();
-        LoadDeck();
     }
 
     // Update is called once per frame
@@ -54,21 +53,20 @@ public class Deck : CardCollection
         string[] filesPaths = Directory.GetFiles(currentPath);
 
         // filter for json files
-        string[] filteredFilesPaths = filesPaths.Where(filePath => {
-            string fileExt = filePath.Substring(filePath.Length - 4);
-            return fileExt == "json";
-        }).ToArray();
+        string[] filteredFilesPaths = filesPaths
+            .Where(filePath => {
+                string fileExt = filePath.Substring(filePath.Length - 4);
+                return fileExt == "json";
+            }).ToArray();
 
-        Card[] loadedCardData = filteredFilesPaths.Select(filePath => {
-            string cardJson = _DataManager.GetJsonFromFile(filePath);
-            CardModel cardModel = JsonUtility.FromJson<CardModel>(cardJson);
-            //Card newCard = new Card();
-
-            Card newCard = gameObject.AddComponent<Card>();
-
-            newCard.LoadCard(cardModel);
-            return newCard;
-        }).ToArray();
+        Card[] loadedCardData = filteredFilesPaths
+            .Select(filePath => {
+                string cardJson = _DataManager.GetJsonFromFile(filePath);
+                CardModel cardModel = JsonUtility.FromJson<CardModel>(cardJson);
+                Card newCard = gameObject.AddComponent<Card>();
+                newCard.LoadCard(cardModel);
+                return newCard;
+            }).ToArray();
 
         AddCardToTop(loadedCardData);
     }

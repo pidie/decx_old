@@ -39,6 +39,14 @@ public class Card : MonoBehaviour
         _title = inputData.title;
         _description = inputData.description;
     }
+
+    public void AddText()
+    {
+        GameObject text = new GameObject();
+        TextMesh textMesh = text.AddComponent<TextMesh>();
+        textMesh.text = _title;
+        textMesh.fontSize = 30;
+    }
 }
 
 [Serializable]

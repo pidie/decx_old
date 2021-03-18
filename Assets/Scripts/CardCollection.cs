@@ -40,7 +40,7 @@ public class CardCollection: MonoBehaviour
             Debug.LogWarning("Deck is empty.");
             return null;
         }
-        Card topCard =_cardList.Last();
+        Card topCard =_cardList.First();
         return _cardList.Remove(topCard) ? topCard : null;
     }
 
@@ -51,7 +51,7 @@ public class CardCollection: MonoBehaviour
             Debug.LogWarning("Deck is empty.");
             return null;
         }
-        Card bottomCard = _cardList.First();
+        Card bottomCard = _cardList.Last();
         return _cardList.Remove(bottomCard) ? bottomCard : null;
     }
 
@@ -73,8 +73,8 @@ public class CardCollection: MonoBehaviour
         _cardList[card2Index] = card1;
     }
 
-    protected void ShuffleCards()
+    protected void ShuffleCards(Card[] cards)
     {
-        // todo...
+        cards = cards.OrderBy(a => Guid.NewGuid()).ToArray();
     }
 }

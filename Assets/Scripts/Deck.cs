@@ -36,7 +36,7 @@ public class Deck : CardCollection
         if (drawnCard)
         {
             CardModel cardData = drawnCard.GetCardData();
-            Debug.Log(cardData.name);
+            Debug.Log(cardData.title);
         }
     }
 

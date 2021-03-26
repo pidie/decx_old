@@ -1,0 +1,124 @@
+After a successful attack roll, the target of the attack makes a Reflex check to determine if they can mitigate or negate the damage.
+The Reflex mechanic has three outlets: Block, Dodge, and Parry.
+    - Blocked attacks absorb [70-100]% + [X] of the incoming attack's damage.
+    - Dodged attacks are immediately escaped and may grant an opportunity for the player's character to move one space.
+    - Parried attacks negate the damage and offer a chance for the target to counter the attack.
+  
+Each character has 4 attributes:
+    - ARCANA
+    - CHI
+    - GUILE
+    - POWER
+  
+One of these four attributes will be the character's main attribute (MAINATT).
+  
+Each character has a DEFENSE score, which is:
+    ( CHI * 0.3 ) + ( GUILE * 0.3 ) + ( MAINATT * 0.4 )
+    
+    Using the MAINATT in this way will make "glass cannon" builds more survivable. Players will still need to consider defenses, but if they don't, they at least have a fightning chance.
+  
+Each character has a RawScore, which is:
+    ( GUILE + ( POWER / 3 ) + LVL + DEFENSE ) * RawScoreMultiplier
+  
+A character's Reflex score is:
+    ( ( RawScore - Weight ) / ( RawScore + 100 ) ) * 0.75
+  
+    Weight in the above formula refers to the summed weight of all the character's equipped items.
+    The above formula self-caps at 75% maximum reflex chance, allowing for sustainable end-game defense without becoming invulnerable.
+
+As stated above, there are three types of reflex. Each has a rating, which is added in the Reflex formula to the RawScore:
+    ( ( RawScore + Rating - Weight ) / (RawScore + Rating + 100 ) ) * 0.75
+  
+The only notable difference between the three reflexes lies in Blocking. Because blocking will be primarily designed for characters who will make use of Power, the RawScore uses ( POWER / 2 ) instead of ( POWER / 3 ) for Block calculations. This will allow Power based characters to dump points into Power without having to allocate points to Guile for the sole purpose of defense.
+
+
+Below will be some sample character sheets with calculations.
+
+Char_1: a new, naked, newbie chaarcter with nothing and no points allocated.
+
+Lvl: 1
+Power: 5
+Guile: 5
+Chi: 5
+Arcana: 5
+Weight: 0
+
+Reflex: 8.43%
+
+Block Rating: 0
+Dodge Rating: 0
+Parry Rating: 0
+
+Block%: 8.92%
+Dodge%: 8.43%
+Parry%: 8.43%
+
+______________________
+
+Char_2: a mid-level warrior type. He has a nice shield that weighs 6 units, but gives him 16 BR, which equates to a just over 5% chance to block.
+
+Lvl: 4
+Power: 34
+Guile: 19
+Chi: 12
+Arcana: 7
+Weight: 15
+
+Reflex: 17.97%
+
+Block Rating: 16
+Dodge Rating: 4
+Parry Rating: 9
+
+Block%: 25.12%
+Dodge%: 19.44%
+Parry%: 21.17%
+
+_______________________
+
+Char_3: a powerful wizard, wearing very fancy magical items, but not really anything that will keep him defended. A true glass cannon, focusing on damage.
+
+Lvl: 9
+Power: 12
+Guile: 12
+Chi: 35
+Arcana: 102
+Weight: 12
+
+RefleX: 16.63%
+
+Block Rating: 0
+Dodge Rating: 8
+Parry Rating: 0
+
+Block%: 17.43%
+Dodge%: 19.70%
+Parry%: 16.63%
+
+_______________________
+
+Char_4: a mid-level fencer who picked up a really nice Parrying Knife that gives him a 15% boost to his parry score.
+
+Lvl: 5
+Power: 18
+Guile: 42
+Chi: 16
+Arcana: 6
+Weight: 9
+
+Reflex: 30.54%
+
+Block Rating: 0
+Dodge Rating: 12
+Parry Rating: 16
+Parry Mult: 1.15
+
+Block%: 30.86%
+Dodge%: 33.26%
+Parry%: 39.21%
+
+________________________
+
+As you can see in the above characters, the percentages reflect the hero's ability to respond to incoming threats. The order of events for Reflex will be:
+
+On a successful attack, the amount of reflex options are checked. If more than one are available (a player can Block or Dodge, for example), a method/algorithm will determine the one with the highest odds (or we could let the player decide). Then reflex will be rolled. A d10K is rolled and it has to be within the percentage (A Parry% of 39.21% must roll a 3921 or lower).

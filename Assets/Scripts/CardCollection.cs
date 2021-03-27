@@ -13,7 +13,6 @@ public class CardCollection: MonoBehaviour
         return _cardList.Count;
     }
 
-<<<<<<< HEAD
     protected void _GetCardList()
     {
         foreach (Card card in _cardList)
@@ -29,8 +28,6 @@ public class CardCollection: MonoBehaviour
         }
     }
 
-=======
->>>>>>> 7c186a7cb6f73a835e20c975e4bd6fb43eea3da4
     protected void AddCardToTop(Card card)
     {
         _cardList.Add(card);
@@ -95,12 +92,8 @@ public class CardCollection: MonoBehaviour
     {
         cards = cards.OrderBy(a => Guid.NewGuid()).ToArray();
     }
-<<<<<<< HEAD
-
+    
     protected void ErrorHandIsFull()
     {
         Debug.LogWarning("Hand is full.");
     }
-=======
->>>>>>> 7c186a7cb6f73a835e20c975e4bd6fb43eea3da4
-}

@@ -7,14 +7,14 @@ public class Card : MonoBehaviour
 {
     private string _name;
     private int _id;
-    [SerializeField]
     private string _title;
     private string _description;
+    public CardModel cardData;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        cardData = GetCardData();
     }
 
     // Update is called once per frame
@@ -25,7 +25,8 @@ public class Card : MonoBehaviour
 
     public CardModel GetCardData()
     {
-        return new CardModel() {
+        return new CardModel() 
+        {
             name = _name,
             ID = _id,
             title = _title,

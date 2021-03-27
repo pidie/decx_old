@@ -39,6 +39,7 @@ public class Deck : CardCollection
             Card drawnCard = DrawCard();
             _topCard = drawnCard;
             CardModel cardData = drawnCard.GetCardData();
+            drawnCard.name = cardData.title;
             Debug.Log(cardData.title);
             _hand.AddCardToHand(drawnCard);
         }
@@ -46,8 +47,6 @@ public class Deck : CardCollection
         {
             ErrorHandIsFull();
         }
-
-        // return true;
     }
 
     public Card DrawCard()

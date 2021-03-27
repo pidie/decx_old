@@ -54,14 +54,16 @@ public class Hand : CardCollection
                 if (hit.transform.parent == transform)
                 {
                     Card cardClicked = hit.transform.GetComponent<Card>();
-                    CardModel cardClickedData = cardClicked.GetCardData();
+                    Debug.Log(cardClicked.cardData.title);
 
-                    if (Input.GetMouseButton(0))
-                    {
-                        Vector3 mousePos = Input.mousePosition;
-                        Vector3 cardClickedPos = cardClicked.transform.position;
-                        cardClickedPos = cardClickedPos + mousePos;
-                    }
+                    // if (Input.GetMouseButton(0))
+                    // {
+                    //     Vector3 mousePos = Input.mousePosition;
+                    //     Debug.Log(mousePos);
+                    //     Vector3 cardClickedPos = cardClicked.transform.position;
+                    //     cardClickedPos = cardClickedPos + mousePos;
+                    //     transform.position = cardClickedPos;
+                    // }
                     //functionality for dragging
                 }
             }
@@ -115,15 +117,11 @@ public class Hand : CardCollection
 
     public void AddCardToHand(Card card)
     {
-        //Card newCard = gameObject.AddComponent<Card>();
         AddCardToBottom(card);
-        CardModel cardData = card.GetCardData();
-        _card.LoadCard(cardData);
-        // _card.AddText();
-        // bind card data to gameObject here...?
+        _card.LoadCard(card.cardData);
         
-
         // Add card to hierarchy
+        _card.name = card.cardData.title;
         Instantiate(_card, transform);
         ArrangeCardsCenter();
     }

@@ -75,7 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d23f453bfcbc12c4fbf4b7a1bfd4e52e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _title: Battle-Joy
+  _title: Banish
 --- !u!137 &-1994746231128953533
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0

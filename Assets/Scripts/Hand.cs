@@ -61,7 +61,6 @@ public class Hand : CardCollection
                         Vector3 mousePos = Input.mousePosition;
                         Vector3 cardClickedPos = cardClicked.transform.position;
                         cardClickedPos = cardClickedPos + mousePos;
-                        // Debug.Log("blahblahblah");
                     }
                     //functionality for dragging
                 }

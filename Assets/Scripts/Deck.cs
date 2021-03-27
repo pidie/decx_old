@@ -36,7 +36,7 @@ public class Deck : CardCollection
     {
         if (_hand.GetCardCount() < _maxCardsInHand)
         {
-            Card drawnCard = DrawCard();
+            HeldCard drawnCard = DrawCard();
             _topCard = drawnCard;
             CardModel cardData = drawnCard.GetCardData();
             drawnCard.name = cardData.title;

@@ -34,9 +34,9 @@ public class GameHandler : MonoBehaviour
         _graveyard.AddToGraveyard(deadCard);
     }
 
-    private Card DrawCard()
+    private HeldCard DrawCard()
     {
-        Card drawnCard = _playerDeck.DrawCard();
+        HeldCard drawnCard = _playerDeck.DrawCard();
         if (drawnCard != null)
         {
             _playerHand.AddCardToHand(drawnCard);

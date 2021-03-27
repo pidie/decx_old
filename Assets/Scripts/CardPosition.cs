@@ -31,7 +31,7 @@ public class CardPosition : MonoBehaviour
         //add logic to accept a card object bound to this position
     }
 
-    public void RemoveCard()
+    public void EvictCard()
     {
         // isOccupied = false;
         //empty this position.

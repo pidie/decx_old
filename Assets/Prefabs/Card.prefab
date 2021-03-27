@@ -14,11 +14,8 @@ GameObject:
   - component: {fileID: 4559377689257960075}
   - component: {fileID: -1994746231128953533}
   - component: {fileID: 4932060712214497687}
-<<<<<<< HEAD
   - component: {fileID: -5024370543651435410}
   - component: {fileID: 6965683853834269780}
-=======
->>>>>>> 7c186a7cb6f73a835e20c975e4bd6fb43eea3da4
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -78,10 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d23f453bfcbc12c4fbf4b7a1bfd4e52e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   _title: Battle-Joy
-=======
->>>>>>> 7c186a7cb6f73a835e20c975e4bd6fb43eea3da4
 --- !u!137 &-1994746231128953533
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -97,10 +91,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-<<<<<<< HEAD
   m_RayTraceProcedural: 0
-=======
->>>>>>> 7c186a7cb6f73a835e20c975e4bd6fb43eea3da4
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -145,7 +136,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4769657208153724752}
   m_CullTransparentMesh: 0
-<<<<<<< HEAD
 --- !u!54 &-5024370543651435410
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -175,5 +165,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _title: 
-=======
->>>>>>> 7c186a7cb6f73a835e20c975e4bd6fb43eea3da4

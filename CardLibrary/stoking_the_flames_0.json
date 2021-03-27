@@ -1,14 +1,6 @@
-<<<<<<< HEAD
 {
 	"name": "stoking_the_flames_0",
 	"ID": "",
 	"title": "Stoking the Flames",
 	"description": "All Fire spells deal +1 damage. All creatures with the Fire keyword gain +1/+1."
-=======
-{
-	"name": "stoking_the_flames_0",
-	"ID": "",
-	"title": "Stoking the Flames",
-	"description": "All Fire spells deal +1 damage. All creatures with the Fire keyword gain +1/+1."
->>>>>>> 7c186a7cb6f73a835e20c975e4bd6fb43eea3da4
 }

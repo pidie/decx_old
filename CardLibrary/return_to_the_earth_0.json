@@ -1,14 +1,6 @@
-<<<<<<< HEAD
 {
 	"name": "return_to_the_earth_0",
 	"ID": "",
 	"title": "Return to the Earth",
 	"description": "Deal 8 damage to an opponent. If that creature is not killed, it is Silenced until the end of the next round."
-=======
-{
-	"name": "return_to_the_earth_0",
-	"ID": "",
-	"title": "Return to the Earth",
-	"description": "Deal 8 damage to an opponent. If that creature is not killed, it is Silenced until the end of the next round."
->>>>>>> 7c186a7cb6f73a835e20c975e4bd6fb43eea3da4
 }

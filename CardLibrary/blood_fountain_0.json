@@ -1,14 +1,6 @@
-<<<<<<< HEAD
 {
 	"name": "blood_fountain_0",
 	"ID": "",
 	"title": "Blood Fountain",
 	"description": "Gain 3 HP each turn for 4 turns."
-=======
-{
-	"name": "blood_fountain_0",
-	"ID": "",
-	"title": "Blood Fountain",
-	"description": "Gain 3 HP each turn for 4 turns."
->>>>>>> 7c186a7cb6f73a835e20c975e4bd6fb43eea3da4
 }

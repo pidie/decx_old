@@ -1,14 +1,6 @@
-<<<<<<< HEAD
 {
 	"name": "tactical_retreat_0",
 	"ID": "",
 	"title": "Tactical Retreat",
 	"description": "Trigger: You take damage. Action: The damage is mitigated and you gain 1 EP."
-=======
-{
-	"name": "tactical_retreat_0",
-	"ID": "",
-	"title": "Tactical Retreat",
-	"description": "Trigger: You take damage. Action: The damage is mitigated and you gain 1 EP."
->>>>>>> 7c186a7cb6f73a835e20c975e4bd6fb43eea3da4
 }

@@ -1,14 +1,6 @@
-<<<<<<< HEAD
 {
 	"name": "split_decision_0",
 	"ID": "",
 	"title": "Split Decision",
 	"description": "Your opponent draws two cards. It keeps one and puts the other in your hand."
-=======
-{
-	"name": "split_decision_0",
-	"ID": "",
-	"title": "Split Decision",
-	"description": "Your opponent draws two cards. It keeps one and puts the other in your hand."
->>>>>>> 7c186a7cb6f73a835e20c975e4bd6fb43eea3da4
 }

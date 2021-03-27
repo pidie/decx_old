@@ -1,14 +1,6 @@
-<<<<<<< HEAD
 {
 	"name": "hidden_passage_0",
 	"ID": "",
 	"title": "Hidden Passage",
 	"description": "Draw a card. If it is a creature, you may swap it for a creature in play at 0 EP cost."
-=======
-{
-	"name": "hidden_passage_0",
-	"ID": "",
-	"title": "Hidden Passage",
-	"description": "Draw a card. If it is a creature, you may swap it for a creature in play at 0 EP cost."
->>>>>>> 7c186a7cb6f73a835e20c975e4bd6fb43eea3da4
 }

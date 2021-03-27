@@ -1,14 +1,6 @@
-<<<<<<< HEAD
 {
 	"name": "preparedness_0",
 	"ID": "",
 	"title": "Preparedness",
 	"description": "Trigger: You are attacked by an ability. Action: The attack is a Glancing Blow."
-=======
-{
-	"name": "preparedness_0",
-	"ID": "",
-	"title": "Preparedness",
-	"description": "Trigger: You are attacked by an ability. Action: The attack is a Glancing Blow."
->>>>>>> 7c186a7cb6f73a835e20c975e4bd6fb43eea3da4
 }

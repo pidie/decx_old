@@ -7,7 +7,6 @@ public class Card : MonoBehaviour
 {
     private string _name;
     private int _id;
-    [SerializeField]
     private string _title;
     private string _description;
 

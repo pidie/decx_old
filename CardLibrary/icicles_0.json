@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 {
 	"name": "icicles_0",
 	"ID": "",
 	"title": "Icicles",
 	"description": "Deal 2 Cold damage."
+=======
+{
+	"name": "icicles_0",
+	"ID": "",
+	"title": "Icicles",
+	"description": "Deal 2 Cold damage."
+>>>>>>> 7c186a7cb6f73a835e20c975e4bd6fb43eea3da4
 }

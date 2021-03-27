@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 {
 	"name": "umbral_blow_0",
 	"ID": "",
 	"title": "Umbral Blow",
 	"description": "Sneak Attack. Deal 4 damage. Your opponents turn ends."
+=======
+{
+	"name": "umbral_blow_0",
+	"ID": "",
+	"title": "Umbral Blow",
+	"description": "Sneak Attack. Deal 4 damage. Your opponents turn ends."
+>>>>>>> 7c186a7cb6f73a835e20c975e4bd6fb43eea3da4
 }

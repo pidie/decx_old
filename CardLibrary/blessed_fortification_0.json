@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 {
 	"name": "blessed_fortification_0",
 	"ID": "",
 	"title": "Blessed Fortification",
 	"description": "Gain 2 Block."
+=======
+{
+	"name": "blessed_fortification_0",
+	"ID": "",
+	"title": "Blessed Fortification",
+	"description": "Gain 2 Block."
+>>>>>>> 7c186a7cb6f73a835e20c975e4bd6fb43eea3da4
 }

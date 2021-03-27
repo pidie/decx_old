@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 {
 	"name": "ice_beam_0",
 	"ID": "",
 	"title": "Ice Beam",
 	"description": "Piercing. Deal 6 Cold damage."
+=======
+{
+	"name": "ice_beam_0",
+	"ID": "",
+	"title": "Ice Beam",
+	"description": "Piercing. Deal 6 Cold damage."
+>>>>>>> 7c186a7cb6f73a835e20c975e4bd6fb43eea3da4
 }

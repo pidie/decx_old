@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 {
 	"name": "acid_pool_0",
 	"ID": "",
 	"title": "Acid Pool",
 	"description": "Deal 1 Acid damage to all creatures each turn for 1 round."
+=======
+{
+	"name": "acid_pool_0",
+	"ID": "",
+	"title": "Acid Pool",
+	"description": "Deal 1 Acid damage to all creatures each turn for 1 round."
+>>>>>>> 7c186a7cb6f73a835e20c975e4bd6fb43eea3da4
 }

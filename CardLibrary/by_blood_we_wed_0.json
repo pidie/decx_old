@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 {
 	"name": "by_blood_we_wed_0",
 	"ID": "",
 	"title": "By Blood We Wed",
 	"description": "Choose two creatures. Give them Lifelink."
+=======
+{
+	"name": "by_blood_we_wed_0",
+	"ID": "",
+	"title": "By Blood We Wed",
+	"description": "Choose two creatures. Give them Lifelink."
+>>>>>>> 7c186a7cb6f73a835e20c975e4bd6fb43eea3da4
 }

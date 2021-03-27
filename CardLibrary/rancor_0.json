@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 {
 	"name": "rancor_0",
 	"ID": "",
 	"title": "Rancor",
 	"description": "Trigger: You are attacked by a card with multiple uses. Action: That card is destroyed."
+=======
+{
+	"name": "rancor_0",
+	"ID": "",
+	"title": "Rancor",
+	"description": "Trigger: You are attacked by a card with multiple uses. Action: That card is destroyed."
+>>>>>>> 7c186a7cb6f73a835e20c975e4bd6fb43eea3da4
 }

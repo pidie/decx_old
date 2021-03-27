@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 {
 	"name": "rune_of_perfidy_0",
 	"ID": "",
 	"title": "Rune of Perfidy",
 	"description": "Until the end of this turn, control 1 enemy card. Alternate: Command 1 enemy creature as long as this rune is intact."
+=======
+{
+	"name": "rune_of_perfidy_0",
+	"ID": "",
+	"title": "Rune of Perfidy",
+	"description": "Until the end of this turn, control 1 enemy card. Alternate: Command 1 enemy creature as long as this rune is intact."
+>>>>>>> 7c186a7cb6f73a835e20c975e4bd6fb43eea3da4
 }

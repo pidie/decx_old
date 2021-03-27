@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 {
 	"name": "life_sap_0",
 	"ID": "",
 	"title": "Life Sap",
 	"description": "Leech. Deal 3 damage."
+=======
+{
+	"name": "life_sap_0",
+	"ID": "",
+	"title": "Life Sap",
+	"description": "Leech. Deal 3 damage."
+>>>>>>> 7c186a7cb6f73a835e20c975e4bd6fb43eea3da4
 }

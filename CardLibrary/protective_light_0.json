@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 {
 	"name": "protective_light_0",
 	"ID": "",
 	"title": "Protective Light",
 	"description": "Gain 5 Armor."
+=======
+{
+	"name": "protective_light_0",
+	"ID": "",
+	"title": "Protective Light",
+	"description": "Gain 5 Armor."
+>>>>>>> 7c186a7cb6f73a835e20c975e4bd6fb43eea3da4
 }

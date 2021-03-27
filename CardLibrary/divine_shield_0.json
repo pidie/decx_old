@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 {
 	"name": "divine_shield_0",
 	"ID": "",
 	"title": "Divine Shield",
 	"description": "Gain 5 Armor. Death Rattle: Draw a card."
+=======
+{
+	"name": "divine_shield_0",
+	"ID": "",
+	"title": "Divine Shield",
+	"description": "Gain 5 Armor. Death Rattle: Draw a card."
+>>>>>>> 7c186a7cb6f73a835e20c975e4bd6fb43eea3da4
 }

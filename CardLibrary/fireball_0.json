@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 {
 	"name": "fireball_0",
 	"ID": "",
 	"title": "Fireball",
 	"description": "Ranged. Deal 4 Fire damage."
+=======
+{
+	"name": "fireball_0",
+	"ID": "",
+	"title": "Fireball",
+	"description": "Ranged. Deal 4 Fire damage."
+>>>>>>> 7c186a7cb6f73a835e20c975e4bd6fb43eea3da4
 }

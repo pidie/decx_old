@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 {
 	"name": "light_of_dawn_0",
 	"ID": "",
 	"title": "Light of Dawn",
 	"description": "Begin the next round. It is your turn."
+=======
+{
+	"name": "light_of_dawn_0",
+	"ID": "",
+	"title": "Light of Dawn",
+	"description": "Begin the next round. It is your turn."
+>>>>>>> 7c186a7cb6f73a835e20c975e4bd6fb43eea3da4
 }

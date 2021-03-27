@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 {
 	"name": "dissolve_armor_0",
 	"ID": "",
 	"title": "Dissolve Armor",
 	"description": "Deal 5 damage to your opponent's Armor."
+=======
+{
+	"name": "dissolve_armor_0",
+	"ID": "",
+	"title": "Dissolve Armor",
+	"description": "Deal 5 damage to your opponent's Armor."
+>>>>>>> 7c186a7cb6f73a835e20c975e4bd6fb43eea3da4
 }

@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 {
 	"name": "burning_touch_0",
 	"ID": "",
 	"title": "Burning Touch",
 	"description": "Any time you deal or take damage, deal 1 bonus Fire damage to your opponent."
+=======
+{
+	"name": "burning_touch_0",
+	"ID": "",
+	"title": "Burning Touch",
+	"description": "Any time you deal or take damage, deal 1 bonus Fire damage to your opponent."
+>>>>>>> 7c186a7cb6f73a835e20c975e4bd6fb43eea3da4
 }

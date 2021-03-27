@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 {
 	"name": "battle_meditation_0",
 	"ID": "",
 	"title": "Battle Meditation",
 	"description": "For the duration of the round, every time your opponent draws a card, gain 1 EP."
+=======
+{
+	"name": "battle_meditation_0",
+	"ID": "",
+	"title": "Battle Meditation",
+	"description": "For the duration of the round, every time your opponent draws a card, gain 1 EP."
+>>>>>>> 7c186a7cb6f73a835e20c975e4bd6fb43eea3da4
 }

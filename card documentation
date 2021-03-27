@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 1. General Cards
 
 The majority of cards will fall under this category. These will be the cards that go into the player's deck. They comprise of the following components:
@@ -292,3 +293,299 @@ damage
 	                "damage_type": "dmgCold",
 	                "damage_on_miss": 0.5
         }
+=======
+1. General Cards
+
+The majority of cards will fall under this category. These will be the cards that go into the player's deck. They comprise of the following components:
+
+
+name (str)
+    A unique string identifier for the card.
+    Default: ""
+    Sample: "sample_card_0"
+
+id_no (str)
+    A unique string identifier made of an 8-digit hexadecimal number. The name and id_no of a card will correlate.
+    Default: ""
+    Sample: "FFC580D4"
+
+title (str)
+    A string representing the card. Will be displayed on the card.
+    Default: ""
+    Sample: "Sample Card"
+
+description (str)
+    A description of the card’s function. Will be displayed on the card.
+    Default: ""
+    Sample: "This card does nothing."
+
+flavor (str)
+    A short bit of text that adds lore to the card. Will be displayed on the card.
+    Default: ""
+    Sample: "You wave your hands over your head calling upon the ancient spirits for aid and… nothing. They’re sleeping again!"
+
+img (str)
+    The path from the root directory to the image file associated with this card. The image file will be displayed on the card.
+    Default: ""
+    Sample: "/data/imgs/sample_card_0.png"
+
+card_type (str)
+    The name of a method that will be used to interpret the data in the card when it is played.
+    Default: ""
+    Sample: "ability"
+
+keywords (list)
+    A list of keywords (as strings) that categorize the card.
+    Default: []
+    Sample: [ "attack" , "wimpy" , "foobar" ]
+
+ep_cost (int)
+    The amount of energy points playing this card will cost the player.
+    Default: 0
+    Sample: 2
+
+effect (list)
+    A list of dictionaries, each defining a method to be called that will enact the card. The effect keyword has two arguments: effect_name and effect_info.
+
+        effect_name (str)
+        	The name of the method to be called. A value of null means no method is called.
+            Default: null
+
+        effect_info (dict)
+            The arguments for the method being called.
+            Default: {}
+
+        effect_chance (float)
+            The percentage chance in decimal format for the effect to proc.
+            Default: 1
+
+        target (dict)
+            Key-value pairs that provide information about the target of the effect. The target keyword has nine arguments: is_creature, is_self, num_of_targs, range, area, arc, cone, zone, and aura.
+
+            is_creature (bool)
+                If true, this effect must target a specific creature that the player selects.
+                Default: true
+
+            is_self (bool)
+                If true, this effect targets the player’s character.
+                Default: false
+
+            num_of_targs (int)
+                The number of individual targets this effect can have. A value of null means that there is no limit to the number of targets.
+                Default: 1
+
+            range (int)
+                The range in spaces from the player’s character that the effect can reach. A value of null means there is no limit to the range of this effect.
+                Default: 1
+
+            area (int)
+                The radius of the area affected by this effect. A value of 0 means no area is created for this effect.
+                Default: 0
+
+            arc (int)
+                The number of spaces this effect will arc for. A value of 0 means there is no arc for this effect. A value of 1 effects one space and is equivalent to an attack in melee range. A value of 6 affects all spaces around the player’s character and is the maximum value for this attribute.
+                Default: 0
+
+            cone (int)
+                How far on the board the effect goes in a cone. A value of 1 affects only 1 space in front of the player and is equivalent to a melee basic attack.
+                Default: 0
+
+            zone (int)
+                The radius in spaces of the zone created by this effect. A value of 0 means no zone is created for this effect.
+                Default: 0
+
+            aura (int)
+                The radius in spaces + 1 of the aura created by this effect. A value of 0 means no aura is created by this effect. A value of 1 creates a zone 2 with the player in the center that follows the player.
+                Default: 0
+
+    Sample: [
+		{
+			"effect_name": "doNotTouch",
+			"effect_info": {
+				"stop plz": "rightThisVeryNow",
+				"hasBeenTouched": true
+			},
+			"effect_chance": 1,
+			"target": {
+				"is_creature": true,
+				"is_self": false,
+				"num_of_targs": 1,
+				"range": 1,
+				"area": 0,
+				"arc": 0,
+				"cone": 0,
+				"zone": 0,
+				"aura": 0
+			}
+		}
+	]
+
+
+reqs (list)
+    A list of dictionaries stating requirements for the card to be able to be played this turn. The reqs keyword has three arguments: two_gates, or_gate, and and_gate. 
+
+		two_gates (bool)
+			Determines whether both or_gate and and_gate need to be satisfied.
+			Default: false
+
+			or_gate (dict)
+				A list of conditions that might need to be met. The or_gate keyword has two arguments: min and conditions.
+
+				min (int)
+					The minimum number of conditions from conditions that need to be met to satisfy or_gate.
+					Default: 0
+							
+					conditions (dict)
+						The conditions that will be tested for validity
+						Default: {}
+
+			and_gate (dict)
+				Key-value pairs that need to be true in order for the and_gate to return a value of true.
+				Default: {} 
+
+	Sample: [
+		{
+			"two_gates": false,
+			"or_gate": {
+				"min": 1 ,
+				"conditions": {
+					"player_is_dumb": false,
+					"player_is_cool": quiteFalse,
+					"player_ep_is_ge": 2 
+				}
+			}, 
+			"and_gate": { 
+			}
+		}
+    ]
+
+
+prereqs (list)
+    A list of requirements for the card to be available to be added to the player’s deck. The prereqs keyword has three arguments: two_gates, or_gate, and and_gate. 
+
+		two_gates (bool)
+			Determines whether both or_gate and and_gate need to be satisfied.
+			Default: false
+
+		or_gate (dict)
+			A list of conditions that might need to be met. The or_gate keyword has two arguments: min and conditions.
+												
+			min (int)
+				The minimum number of conditions from conditions that need to be met to satisfy or_gate.
+					Default: 0
+
+			conditions (dict)
+				The conditions that will be tested for validity
+				Default: {}
+
+			and_gate (dict)
+				Key-value pairs that need to be true in order for the and_gate to return a value of true.
+				Default: {} 
+
+	Sample: [
+		{
+			"two_gates": true,
+			"or_gate": {
+				"min": 2,
+				"conditions": {
+					"this_looks_familiar": true,
+					"have_seen_before": true,
+					"remember_where": false
+				}	
+			},
+			"and_gate": {
+				"number_of_times_seen_ge": 1
+			}
+		}
+	]
+
+
+When a card is played, default values should be assumed and then written over by the values provided by the card object. The above card then should be able to be written as follows:
+
+{
+	"name": "sample_card_0",
+	"id_no": "FFC580D4",
+	"title": "Sample Card",
+	"description": "This card does nothing.",
+	"flavor": "You wave your hands over your head calling upon the ancient spirits for aid and... nothing. They’re sleeping again!",
+	"img": "/data/imgs/sample_card_0.png",
+	"card_type": "ability",
+	"keywords": [ "attack" , "wimpy" , "foobar" ],
+	"ep_cost": 2,
+	"effect": [
+		{
+			"effect_name": "doNotTouch",
+			"effect_info": {
+				"stop plz": "now",
+				"hasBeenTouched": true
+			}
+		}
+	],
+	"reqs": [
+		{
+			"or_gate": {
+				"min": 1,
+				"conditions": {
+					"player_is_dumb": false,
+					"player_is_cool": quiteFalse,
+					"player_ep_is_ge": 2  
+				}
+			}
+		}
+	],
+	"prereqs": [
+		{
+			"two_gates": true,
+			"or_gate": {
+				"min": 2,
+				"conditions": {
+					"this_looks_familiar": true,
+					"have_seen_before": true,
+					"remember_where": false
+				}
+			},
+			"and_gate": {
+				"number_of_times_seen_ge": 1
+			}
+		}
+	]
+}
+
+________________
+
+card.effect Methods
+
+damage
+	Used to make an attack against a target. The damage() method takes the following arguments:
+
+		damage_amount (str)
+			The amount of damage to be dealt to the target. The value should be expressible as an integer or in dice notation.
+			Default: 0
+
+		damage_min (int)
+			The minimum amount of damage that this attack will deliver, regardless of the value of damage_amount.
+			Default: 0
+
+		Damage_max (int)
+			The maximum amount of damage that this attack will deliver, regardless of the value of damage_amount. A value of null means no cap is placed on damage dealt. 
+			Default: null
+
+		damage_type (str)
+			The type of damage that will be dealt.
+			Default: “dmgWeapon”
+
+		damage_on_miss (int)
+			The amount of damage dealt even if the attack misses. If the value is a float, it represents the percentage of the damage that would have been dealt if the attack passed that will be dealt to the target.
+			Default: 0
+
+
+	Sample: {
+	        "effect_name": "damage",
+	        "effect_info": {
+	                "damage_amount": "2d8",
+	                "damage_min": 1,
+	                "damage_max": 16,
+	                "damage_type": "dmgCold",
+	                "damage_on_miss": 0.5
+        }
+>>>>>>> 7c186a7cb6f73a835e20c975e4bd6fb43eea3da4

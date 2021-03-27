@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 {
 	"name": "minor_levitation_0",
 	"ID": "",
 	"title": "Minor Levitation",
 	"description": "Grant an allied creature Flying."
+=======
+{
+	"name": "minor_levitation_0",
+	"ID": "",
+	"title": "Minor Levitation",
+	"description": "Grant an allied creature Flying."
+>>>>>>> 7c186a7cb6f73a835e20c975e4bd6fb43eea3da4
 }

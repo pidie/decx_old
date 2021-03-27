@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 {
 	"name": "banish_0",
 	"ID": "",
 	"title": "Banish",
 	"description": "Choose 1 enemy creature. Return it to your opponent's hand."
+=======
+{
+	"name": "banish_0",
+	"ID": "",
+	"title": "Banish",
+	"description": "Choose 1 enemy creature. Return it to your opponent's hand."
+>>>>>>> 7c186a7cb6f73a835e20c975e4bd6fb43eea3da4
 }

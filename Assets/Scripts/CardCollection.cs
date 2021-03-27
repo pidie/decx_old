@@ -97,3 +97,4 @@ public class CardCollection: MonoBehaviour
     {
         Debug.LogWarning("Hand is full.");
     }
+}

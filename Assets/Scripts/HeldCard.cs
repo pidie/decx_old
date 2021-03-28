@@ -10,7 +10,7 @@ public class HeldCard : Card
     */
 
     private void OnMouseDown() {
-        
+        Debug.Log("test");
     }
 
     private void OnMouseDrag() {

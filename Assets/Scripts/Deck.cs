@@ -49,7 +49,7 @@ public class Deck : CardCollection
         }
     }
 
-    public Card DrawCard()
+    public HeldCard DrawCard()
     {
         return RemoveCardFromTop();
     }

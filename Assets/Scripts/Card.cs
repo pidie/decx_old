@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class Card : MonoBehaviour
 {
+    [SerializeField]
+    private GameHandler GameHandler;
+
     private string _name;
     private int _id;
     private string _title;
@@ -21,6 +24,37 @@ public class Card : MonoBehaviour
     void Update()
     {
 
+    }
+
+    private void OnMouseDown() 
+    {
+        //if parent is hand, do this
+        if (transform.parent == GameHandler.Hand)
+        {
+            // if (Input.GetMouseButtonDown(0))
+            // {
+            //     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            //     RaycastHit hit;
+            //     if (Physics.Raycast(ray, out hit))
+            //     {
+            //         if (hit.transform.parent == transform)
+            //         {
+            //             Card cardClicked = hit.transform.GetComponent<Card>();
+            //             Debug.Log(cardClicked.cardData.title);
+
+                        if (Input.GetMouseButton(0))
+                        {
+                            Vector3 mousePos = Input.mousePosition;
+                            Debug.Log(mousePos);
+                            Vector3 cardClickedPos = cardClicked.transform.position;
+                            cardClickedPos = cardClickedPos + mousePos;
+                            transform.position = cardClickedPos;
+                        }
+                        //functionality for dragging
+            //         }
+            //     }
+            // }
+        }
     }
 
     public CardModel GetCardData()

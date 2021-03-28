@@ -37,11 +37,10 @@ public class Deck : CardCollection
         if (_hand.GetCardCount() < _maxCardsInHand)
         {
             Card drawnCard = DrawCard();
-            drawnCard = drawnCard.GetComponent<HeldCard>;
             _topCard = drawnCard;
-            CardModel cardData = drawnCard.GetCardData();
-            drawnCard.name = cardData.title;
-            Debug.Log(cardData.title);
+            // CardModel cardData = drawnCard.GetCardData();
+            drawnCard.name = drawnCard.cardData.title;
+            // Debug.Log(drawnCard.cardData.title);
             _hand.AddCardToHand(drawnCard);
         }
         else
@@ -50,7 +49,7 @@ public class Deck : CardCollection
         }
     }
 
-    public HeldCard DrawCard()
+    public Card DrawCard()
     {
         return RemoveCardFromTop();
     }

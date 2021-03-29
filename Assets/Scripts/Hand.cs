@@ -40,7 +40,7 @@ public class Hand : CardCollection
     void Update()
     {
         // ArrangeCards();
-        ClickOnHand();
+        // ClickOnHand();
     }
 
     // Now - when I click on a card, there is no response, even in the log.

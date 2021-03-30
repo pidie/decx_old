@@ -24,6 +24,11 @@ public class GameHandler : MonoBehaviour
         
     }
 
+    public Hand GetGame_Hand()
+    {
+        return _playerHand;
+    }
+
     private void LoadPlayerDeck()
     {
         _playerDeck.LoadDeck();

@@ -10,6 +10,9 @@ using UnityEditor;
 public class Deck : CardCollection
 {
     [SerializeField]
+    private GameHandler _gameHandler;
+    // [SerializeField]
+    // private Hand _hand;
     private Hand _hand;
     [SerializeField]
     private GameObject _card;
@@ -24,6 +27,7 @@ public class Deck : CardCollection
     void Start()
     {
         _DataManager = new DataManager();
+        _hand = _gameHandler.GetGame_Hand();
     }
 
     // Update is called once per frame

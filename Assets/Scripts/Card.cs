@@ -14,6 +14,15 @@ public class Card : MonoBehaviour
     private string _description;
     public CardModel cardData;
 
+    protected bool CardIsInHand()
+    {
+        if (transform.parent == GameHandler._playerHand)
+        {
+            return true;
+        }
+        return false;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,18 +35,43 @@ public class Card : MonoBehaviour
 
     }
 
-    private void OnMouseDown() 
+    private void OnMouseUpAsButton()
     {
-        //if parent is hand, do this
-        if (transform.parent == GameHandler.Hand)
+        if (CardIsInHand())
         {
             if (Input.GetMouseButton(0))
             {
-                Vector3 mousePos = Input.mousePosition;
-                Debug.Log(mousePos);
-                Vector3 cardClickedPos = cardClicked.transform.position;
-                cardClickedPos = cardClickedPos + mousePos;
-                transform.position = cardClickedPos;
+                /*
+                foreach available CardPosition:
+                    highlight CardPosition
+
+                the remainder of this logic should be handled by CardPosition
+                if CardPosition is OnMouseUpAsButton:
+                    card goes there
+                */
+            }
+            else if (Input.GetMouseButton(1))
+            {
+                /*
+                show information on the card
+                */
+            }
+            else if (Input.GetMouseButton(2))
+            {
+                /*
+                3d viewer for card
+                */
+            }
+        }
+    }
+
+    private void OnMouseDrag() 
+    {
+        if (CardIsInHand())
+        {
+            if (Input.GetMouseButton(0))
+            {
+                transform.position = transform.position + Input.mousePosition;
             }
         }
     }

@@ -6,8 +6,8 @@ using UnityEngine;
 public class Card : MonoBehaviour
 {
     [SerializeField]
-    private GameHandler GameHandler;
-
+    private GameHandler gameHandler;
+    // private Hand _hand;
     private string _name;
     private int _id;
     private string _title;
@@ -16,7 +16,7 @@ public class Card : MonoBehaviour
 
     protected bool CardIsInHand()
     {
-        if (transform.parent == GameHandler._playerHand)
+        if (transform.parent == transform.parent)
         {
             return true;
         }
@@ -27,6 +27,7 @@ public class Card : MonoBehaviour
     void Start()
     {
         cardData = GetCardData();
+        // _hand = gameHander.GetCard_Hand();
     }
 
     // Update is called once per frame

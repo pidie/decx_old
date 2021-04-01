@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc2011c8749723c8c916d5f04065e93b, type: 3}
+  m_Name: BoneLord0
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 0}
+  cardType: 0
+  title: Bone Lord
+  name: bone_lord_0
+  ID: 
+  description: 'Once a proud military leader, now this walking mass of bones calls
+    upon those conscripts who fell in battle to rise again and fight for glorious
+    victory.
+
+
+    Every turn, raise a Shambling Skeleton in an empty slot.'
+  image: {fileID: 0}
+  keywords:
+  - Frontline
+  creatureType: 2
+  health: 10
+  damage: 8
+  armor: 0
+  creatureRace: Undead
+  creatureSubRace: Skeleton
+  buffs: []
+  action1: 
+  action2: 

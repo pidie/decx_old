@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class CardPosition : MonoBehaviour
 {
-    // private bool isOccupied = false;
+    private bool isOccupied = false;
     private Card card;
-    // private bool isBeingHovered = false;
+    private bool isBeingHovered = false;
+    [SerializeField]
+    private GameHandler _gameHandler;
+    private Graveyard _graveyard;
+    
+    private void Start() {
+        _graveyard = _gameHandler.GetElement_Graveyard();
+    }
 
     private void Update() {
         /*
@@ -27,13 +34,13 @@ public class CardPosition : MonoBehaviour
 
     public void AcceptCard()
     {
-        // isOccupied = true;
+        isOccupied = true;
         //add logic to accept a card object bound to this position
     }
 
-    public void EvictCard()
+    public void EvictCard(Deck destination)
     {
-        // isOccupied = false;
+        isOccupied = false;
         //empty this position.
         //cards should default be sent to the Graveyard. 
     }

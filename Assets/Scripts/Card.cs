@@ -6,34 +6,29 @@ using UnityEngine;
 public class Card : MonoBehaviour
 {
     [SerializeField]
-    private GameHandler gameHandler;
-    // private Hand _hand;
+    private GameHandler _gameHandler;
+    private Hand _hand;
+    
     private string _name;
     private int _id;
     private string _title;
     private string _description;
+    
     public CardModel cardData;
 
     protected bool CardIsInHand()
     {
-        if (transform.parent == transform.parent)
+        if (transform.parent == _hand)
         {
             return true;
         }
         return false;
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         cardData = GetCardData();
-        // _hand = gameHander.GetCard_Hand();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        _hand = _gameHandler.GetElement_Hand();
     }
 
     private void OnMouseUpAsButton()
@@ -43,12 +38,17 @@ public class Card : MonoBehaviour
             if (Input.GetMouseButton(0))
             {
                 /*
-                foreach available CardPosition:
-                    highlight CardPosition
-
-                the remainder of this logic should be handled by CardPosition
-                if CardPosition is OnMouseUpAsButton:
-                    card goes there
+                if card.type == creature:
+                    for each available cardPosition:
+                        cardPosition.highlight();
+                else if card.type == action:
+                    if card.action.target == null:
+                        gameboard.center.highlight
+                    else:
+                        for each available target:
+                            target.highlightAttack();
+                else if card.type == item:
+                    confirm item usage
                 */
             }
             else if (Input.GetMouseButton(1))
@@ -66,16 +66,16 @@ public class Card : MonoBehaviour
         }
     }
 
-    private void OnMouseDrag() 
-    {
-        if (CardIsInHand())
-        {
-            if (Input.GetMouseButton(0))
-            {
-                transform.position = transform.position + Input.mousePosition;
-            }
-        }
-    }
+    // private void OnMouseDrag() 
+    // {
+    //     if (CardIsInHand())
+    //     {
+    //         if (Input.GetMouseButton(0))
+    //         {
+    //             transform.position = transform.position + Input.mousePosition;
+    //         }
+    //     }
+    // }
 
     public CardModel GetCardData()
     {

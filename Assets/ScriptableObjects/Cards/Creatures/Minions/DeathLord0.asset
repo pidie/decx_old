@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc2011c8749723c8c916d5f04065e93b, type: 3}
+  m_Name: DeathLord0
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 0}
+  cardType: 1
+  title: Death Lord
+  name: death_lord_0
+  ID: 
+  description: 'A vile specter of the unliving, this wicked fiend serves one purpose
+    - to absorb the life energies of everything around it until nothing is left.
+
+
+    Safeguard.
+    Rathe: Cast Sacrifice to the Death Lord.
+
+
+    The Death Lord gains +1 Damage
+    and +1 HP for each creature in your Graveyard. When a Minion is added to the
+    Graveyard, the Death Lord heals for the max HP of that creature. Once per turn,
+    the Death Lord casts Sacrifice to the Death Lord. If the Death Lord cannot cast
+    Sacrifice to the Death Lord, it attacks the player.
+
+
+    Spell: Sacrifice to
+    the Death Lord - One minion under your command is sacrificed and added to the
+    Graveyard. The Death Lord inceases its max HP by the max HP of that minion.'
+  image: {fileID: 0}
+  keywords:
+  - Rathe
+  - Safeguard
+  creatureType: 2
+  health: 10
+  damage: 6
+  armor: 0
+  creatureRace: Undead
+  creatureSubRace: Abhorration
+  buffs: []
+  action1: Strike
+  action2: Chilling Howl

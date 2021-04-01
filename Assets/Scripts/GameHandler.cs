@@ -24,9 +24,14 @@ public class GameHandler : MonoBehaviour
         
     }
 
-    public Hand GetGame_Hand()
+    public Hand GetElement_Hand()
     {
         return _playerHand;
+    }
+
+    public Graveyard GetElement_Graveyard()
+    {
+        return _graveyard;
     }
 
     private void LoadPlayerDeck()
@@ -39,7 +44,7 @@ public class GameHandler : MonoBehaviour
         _graveyard.AddToGraveyard(deadCard);
     }
 
-    private Card DrawCard()
+    private Card? DrawCard()
     {
         Card drawnCard = _playerDeck.DrawCard();
         if (drawnCard != null)

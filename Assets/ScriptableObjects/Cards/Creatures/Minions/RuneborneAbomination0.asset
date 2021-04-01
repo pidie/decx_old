@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc2011c8749723c8c916d5f04065e93b, type: 3}
+  m_Name: RuneborneAbomination0
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 0}
+  cardType: 0
+  title: Runeborne Abomination
+  name: runeborne_abomination_0
+  ID: 
+  description: 'These are former slaves of demons that have been melded together
+    with foul magics. They were initially employed to instill fear in the enemy.
+
+
+    Every
+    time the Runeborn Abomination uses Dispel, it is fully healed and gains +1 damage.'
+  image: {fileID: 0}
+  keywords:
+  - Dispel
+  creatureType: 2
+  health: 12
+  damage: 8
+  armor: 2
+  creatureRace: Faeroid
+  creatureSubRace: Demon
+  affectLOS: 1
+  isUnique: 0
+  buffs: []
+  action1: Strike
+  action2: Cleave

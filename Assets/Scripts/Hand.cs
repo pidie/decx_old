@@ -43,6 +43,16 @@ public class Hand : CardCollection
         // ClickOnHand();
     }
 
+    public void SetCardWidth(float f)
+    {
+        _cardWidth = f;
+    }
+
+    public void SetCardBufferInHand(float f)
+    {
+        _cardBufferInHand = f;
+    }
+
     // Now - when I click on a card, there is no response, even in the log.
     void ClickOnHand() {
         if (Input.GetMouseButtonDown(0))

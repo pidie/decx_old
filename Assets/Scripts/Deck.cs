@@ -23,17 +23,10 @@ public class Deck : CardCollection
 
     private Card _topCard;
 
-    // Start is called before the first frame update
     void Start()
     {
         _DataManager = new DataManager();
-        _hand = _gameHandler.GetGame_Hand();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        _hand = _gameHandler.GetElement_Hand();
     }
 
     void OnMouseDown()

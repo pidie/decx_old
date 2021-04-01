@@ -17,9 +17,11 @@ public enum CardType
 }
 public abstract class CardObject : ScriptableObject 
 {
+    [Header("Unity Data")]
     public GameObject prefab;
     public CardType cardType;
 
+    [Header("Basic Information")]
     public string title;
     public new string name;
     public string ID;

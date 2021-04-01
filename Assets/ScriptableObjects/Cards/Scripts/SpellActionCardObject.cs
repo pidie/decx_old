@@ -5,16 +5,22 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Spell", menuName = "Cards/Actions/Spell")]
 public class SpellActionCardObject : ActionCardObject 
 {
-    enum spellComplexityTypes
+    public enum spellComplexityTypes
     {
         Simple,
         Intricate,
         Complex        
     }
-    public string school;  //will have to make a <T> type School
-    public string spellComplexity;
-
-    private void Awake() 
+    public enum spellSchools
+    {
+        ___,
+        Torrid
+    }
+    [Header("Spell Specific")]
+    public spellSchools school;  //will have to make a <T> type School
+    public spellComplexityTypes spellComplexity;
+    
+    public void Awake() 
     {
         actionType = ActionType.Spell;
     }

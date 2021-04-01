@@ -13,21 +13,6 @@ public class CardCollection: MonoBehaviour
         return _cardList.Count;
     }
 
-    protected void _GetCardList()
-    {
-        foreach (Card card in _cardList)
-        {
-            try
-            {
-                Debug.Log(card);
-            }
-            catch
-            {
-
-            }
-        }
-    }
-
     protected void AddCardToTop(Card card)
     {
         _cardList.Add(card);
@@ -91,10 +76,5 @@ public class CardCollection: MonoBehaviour
     protected void ShuffleCards(Card[] cards)
     {
         cards = cards.OrderBy(a => Guid.NewGuid()).ToArray();
-    }
-    
-    protected void ErrorHandIsFull()
-    {
-        Debug.LogWarning("Hand is full.");
     }
 }

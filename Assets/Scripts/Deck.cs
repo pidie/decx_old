@@ -39,7 +39,8 @@ public class Deck : CardCollection
         }
         else
         {
-            ErrorHandIsFull();
+            Debug.LogWarning("Hand is full.");
+            return;
         }
     }
 

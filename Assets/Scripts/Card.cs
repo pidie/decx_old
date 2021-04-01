@@ -14,10 +14,8 @@ public class Card : MonoBehaviour
     private string _id;
     private string _title;
     private string _description;
-    // public string _name;
-    // public string _id;
-    // public string _title;
-    // public string _description;
+
+    public CardObject cardObject;
     
     public CardModel cardData;
 

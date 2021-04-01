@@ -21,7 +21,7 @@ public abstract class CardObject : ScriptableObject
     public CardType cardType;
 
     public string title;
-    public string name;
+    public new string name;
     public string ID;
     [TextArea(15,20)]
     public string description;

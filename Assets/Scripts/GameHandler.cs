@@ -6,7 +6,7 @@ public class GameHandler : MonoBehaviour
 {
     // card collections
     [SerializeField]
-    private Graveyard _graveyard;
+    private Graveyard _playerGraveyard;
     [SerializeField]
     private Deck _playerDeck;
     [SerializeField]
@@ -26,12 +26,12 @@ public class GameHandler : MonoBehaviour
 
     public Hand GetElement_Hand()
     {
-        return _playerHand;
+        return this._playerHand;
     }
 
     public Graveyard GetElement_Graveyard()
     {
-        return _graveyard;
+        return _playerGraveyard;
     }
 
     private void LoadPlayerDeck()
@@ -41,7 +41,7 @@ public class GameHandler : MonoBehaviour
 
     private void SendCardToGraveyard(Card deadCard)
     {
-        _graveyard.AddToGraveyard(deadCard);
+        _playerGraveyard.AddToGraveyard(deadCard);
     }
 
     private Card? DrawCard()

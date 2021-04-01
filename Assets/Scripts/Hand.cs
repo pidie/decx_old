@@ -21,16 +21,18 @@ using UnityEngine;
 
 public class Hand : CardCollection
 {
+    [Header("Object Assignments")]
     [SerializeField]
     private GameObject _centerpiece;
     [SerializeField]
     private Card _card;
     [SerializeField]
     private Deck _stack;
-    [SerializeField]
-    private Hand _hand;
-    private float _cardWidth = 3.5f;
-    private float _cardBufferInHand = 0.3f;
+
+    [Header("Card Stats")]
+    public float cardWidth = 3.5f;
+    [Range(0f,5f)]
+    public float cardBufferInHand = 0.3f;
 
     void Start()
     {
@@ -39,18 +41,18 @@ public class Hand : CardCollection
 
     void Update()
     {
-        // ArrangeCards();
+        ArrangeCardsCenter();
         // ClickOnHand();
     }
 
     public void SetCardWidth(float f)
     {
-        _cardWidth = f;
+        cardWidth = f;
     }
 
     public void SetCardBufferInHand(float f)
     {
-        _cardBufferInHand = f;
+        cardBufferInHand = f;
     }
 
     // Now - when I click on a card, there is no response, even in the log.
@@ -84,12 +86,12 @@ public class Hand : CardCollection
     {
         if (GetCardCount() > 0)
         {
-            float xPosition = transform.childCount > 1 ? (_cardWidth / 2f) - ((transform.childCount * (_cardWidth + _cardBufferInHand)) / 2f) : 0f;
+            float xPosition = transform.childCount > 1 ? (cardWidth / 2f) - ((transform.childCount * (cardWidth + cardBufferInHand)) / 2f) : 0f;
 
             foreach (Transform child in transform)
             {
                 child.transform.position = transform.position + new Vector3(xPosition, 0, 0);
-                xPosition += (_cardWidth + _cardBufferInHand);
+                xPosition += (cardWidth + cardBufferInHand);
             }
         }
     }

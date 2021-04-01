@@ -5,7 +5,6 @@ using UnityEngine;
 public class Draggable : MonoBehaviour
 {
     private float zPosition;
-    private Vector3 offset;
     private Camera mainCamera;
     private bool isDrag;
 
@@ -17,10 +16,8 @@ public class Draggable : MonoBehaviour
     private void Update() {
         if (isDrag)
         {
-            Vector3 pos = new Vector3(Input.mousePosition.x, 
-                    Input.mousePosition.y, zPosition);
-            transform.position = mainCamera.ScreenToWorldPoint(pos + 
-                    new Vector3(offset.x, offset.y));
+            Vector3 pos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, zPosition);
+            transform.position = mainCamera.ScreenToWorldPoint(pos);
         }
     }
 
@@ -29,23 +26,12 @@ public class Draggable : MonoBehaviour
         {
             if (!isDrag)
             {
-                StartDrag();
+                isDrag = true;
             }
         }
     }
 
-    private void OnMouseUp() {
-        EndDrag();
-    }
-
-    public void StartDrag()
-    {
-        isDrag = true;
-        offset = mainCamera.ScreenToWorldPoint(transform.position) - 
-                 Input.mousePosition;
-    }
-
-    public void EndDrag()
+    private void OnMouseUp() 
     {
         isDrag = false;
     }

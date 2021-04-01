@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4932060712214497687}
   - component: {fileID: -5024370543651435410}
   - component: {fileID: 6965683853834269780}
+  - component: {fileID: 1768177551984790050}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -75,7 +76,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d23f453bfcbc12c4fbf4b7a1bfd4e52e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _title: Banish
+  _gameHandler: {fileID: 0}
+  _hand: {fileID: 0}
+  cardData:
+    name: 
+    ID: 0
+    title: 
+    description: 
 --- !u!137 &-1994746231128953533
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -146,11 +153,11 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &6965683853834269780
 MonoBehaviour:
@@ -164,4 +171,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d23f453bfcbc12c4fbf4b7a1bfd4e52e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _title: 
+  _gameHandler: {fileID: 0}
+  _hand: {fileID: 0}
+  cardData:
+    name: 
+    ID: 0
+    title: 
+    description: 
+--- !u!114 &1768177551984790050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4769657208153724752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0790332f7fb791e378078eeaa5897e27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

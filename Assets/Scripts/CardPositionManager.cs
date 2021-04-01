@@ -5,7 +5,7 @@ using UnityEngine;
 public class CardPositionManager : MonoBehaviour
 {
     [SerializeField]
-    private Deck _graveyard;
+    private Graveyard _graveyard;
     [SerializeField]
     private CardPosition _playerBackLeft;
     [SerializeField]

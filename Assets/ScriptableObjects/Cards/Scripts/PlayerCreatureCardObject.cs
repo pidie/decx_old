@@ -15,7 +15,7 @@ public class PlayerCreatureCardObject : CreatureCardObject
     public string charRace;   // need to make a <T> type CharRace
     public string charFaction;    // need to make a <T> type CharFaction
 
-    private void Awake() {
+    private new void Awake() {
         creatureType = CreatureType.Player;
     }
 }

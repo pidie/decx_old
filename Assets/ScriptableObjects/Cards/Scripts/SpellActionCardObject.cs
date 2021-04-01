@@ -12,7 +12,7 @@ public class SpellActionCardObject : ActionCardObject
         Complex        
     }
     public string school;  //will have to make a <T> type School
-    public var spellComplexity = spellComplexityTypes.Simple;
+    public string spellComplexity;
 
     private void Awake() 
     {

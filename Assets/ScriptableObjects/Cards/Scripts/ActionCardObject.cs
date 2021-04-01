@@ -13,8 +13,11 @@ public abstract class ActionCardObject : CardObject {
 
     public int energyCost = 1;
     public int cooldownPeriod = 0;
-    public bool needsTarget = true;
+    public bool needsTarget = false;
     public string rarity;
+    private int minLevel = 1;
+    [SerializeField]
+    private int maxLevel = 6;
 
     [Range(1, 6)]
     public int level = 1;

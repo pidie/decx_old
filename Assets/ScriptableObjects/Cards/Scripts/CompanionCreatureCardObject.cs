@@ -12,7 +12,7 @@ public class CompanionCreatureCardObject : CreatureCardObject
     public string action3;
     public string action4;
 
-    private void Awake() 
+    private new void Awake() 
     {
         creatureType = CreatureType.Companion;
     }

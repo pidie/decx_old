@@ -8,7 +8,7 @@ public class MinionCreatureCardObject : CreatureCardObject
     public string action1;
     public string action2;
 
-    public void Awake() 
+    public new void Awake() 
     {
         creatureType = CreatureType.Minion;
     }

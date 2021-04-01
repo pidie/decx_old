@@ -7,12 +7,17 @@ public class Card : MonoBehaviour
 {
     [SerializeField]
     private GameHandler _gameHandler;
+    [SerializeField]
     private Hand _hand;
     
     private string _name;
-    private int _id;
+    private string _id;
     private string _title;
     private string _description;
+    // public string _name;
+    // public string _id;
+    // public string _title;
+    // public string _description;
     
     public CardModel cardData;
 
@@ -28,7 +33,6 @@ public class Card : MonoBehaviour
     void Start()
     {
         cardData = GetCardData();
-        _hand = _gameHandler.GetElement_Hand();
     }
 
     private void OnMouseUpAsButton()
@@ -123,7 +127,7 @@ public class Card : MonoBehaviour
 public class CardModel
 {
     public string name;
-    public int ID;
+    public string ID;
     public string title;
     public string description;
 }

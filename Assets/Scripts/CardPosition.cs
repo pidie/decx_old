@@ -9,12 +9,9 @@ public class CardPosition : MonoBehaviour
     private bool isBeingHovered = false;
     [SerializeField]
     private GameHandler _gameHandler;
+    [SerializeField]
     private Graveyard _graveyard;
     
-    private void Start() {
-        _graveyard = _gameHandler.GetElement_Graveyard();
-    }
-
     private void Update() {
         /*
         check to see if a card is being hovered over

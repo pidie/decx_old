@@ -11,12 +11,10 @@ public class Deck : CardCollection
 {
     [SerializeField]
     private GameHandler _gameHandler;
-    // [SerializeField]
-    // private Hand _hand;
+    [SerializeField]
     private Hand _hand;
     [SerializeField]
-    private GameObject _card;
-    [SerializeField]
+    [Range(1,12)]
     private int _maxCardsInHand;
     [SerializeField]
     private DataManager _DataManager;
@@ -26,7 +24,6 @@ public class Deck : CardCollection
     void Start()
     {
         _DataManager = new DataManager();
-        _hand = _gameHandler.GetElement_Hand();
     }
 
     void OnMouseDown()

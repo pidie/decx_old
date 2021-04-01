@@ -28,6 +28,8 @@ MonoBehaviour:
   armor: 2
   creatureRace: Undead
   creatureSubRace: Skeleton
+  affectLOS: 1
+  isUnique: 0
   buffs: []
-  action1: Strike
-  action2: Bash
+  action1: 11
+  action2: 0

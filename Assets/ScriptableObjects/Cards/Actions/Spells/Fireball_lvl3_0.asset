@@ -10,25 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 51c79825d76be1f24af9e58377d55c41, type: 3}
-  m_Name: Fireball_lvl1_0
+  m_Name: Fireball_lvl3_0
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   cardType: 0
-  title: Fireball
-  name: fireball_lvl1_0
+  title: 
+  name: 
   ID: 
-  description: There is a 1 in 6 chance that the Fireball will explode, dealing half-damage
-    to all adjacent creatures.
+  description: 
   image: {fileID: 0}
   keywords: []
   actionType: 2
-  energyCost: 1
-  cooldownPeriod: 0
+  energyCost: 2
+  cooldownPeriodInTurns: 0
   needsTarget: 1
   rarity: 
   maxLevel: 6
-  level: 6
-  attribute: arcana
-  damage: 0.7
-  school: Torrid
-  spellComplexity: 
+  level: 3
+  attribute: Arcana
+  damage: 1.2
+  damageType: 3
+  splashDamageChance: 33.33333
+  splashDamage: 0.6
+  splashOnlyInLine: 1
+  school: 1
+  spellComplexity: 0

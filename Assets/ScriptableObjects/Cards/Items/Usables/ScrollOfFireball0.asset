@@ -9,25 +9,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc2011c8749723c8c916d5f04065e93b, type: 3}
-  m_Name: Gravedigger0
+  m_Script: {fileID: 11500000, guid: d0a401f8a9a279c08ab5ae6e7f569028, type: 3}
+  m_Name: ScrollOfFireball0
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   cardType: 0
-  title: Gravedigger
-  name: gravedigger_0
+  title: Scroll of Fireball I
+  name: scroll_of_fireball_0
   ID: 
-  description: 
+  description: Add 1 Temporary level 1 Fireball card to your hand.
   image: {fileID: 0}
   keywords: []
-  creatureType: 2
-  health: 20
-  damage: 0
-  armor: 0
-  creatureRace: Terresqi
-  creatureSubRace: Human
-  affectLOS: 1
-  isUnique: 0
-  buffs: []
-  action1: 2
-  action2: 10
+  itemType: 1
+  cooldownPeriodInTurns: 0
+  magicCost: 0
+  weight: 0
+  numOfCharges: 1
+  isConsumable: 1
+  gainChargeAfterTurns: -1

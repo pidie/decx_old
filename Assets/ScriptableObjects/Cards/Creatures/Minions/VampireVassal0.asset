@@ -27,6 +27,8 @@ MonoBehaviour:
   armor: 0
   creatureRace: Undead
   creatureSubRace: Vampire
+  affectLOS: 1
+  isUnique: 0
   buffs: []
-  action1: Strike
-  action2: Bite
+  action1: 0
+  action2: 9

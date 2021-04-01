@@ -28,6 +28,8 @@ MonoBehaviour:
   armor: 0
   creatureRace: Synthetic
   creatureSubRace: Golem
+  affectLOS: 1
+  isUnique: 0
   buffs: []
-  action1: Strike
-  action2: Bash
+  action1: 8
+  action2: 11

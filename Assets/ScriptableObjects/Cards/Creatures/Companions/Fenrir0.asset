@@ -26,9 +26,11 @@ MonoBehaviour:
   armor: 0
   creatureRace: Beast
   creatureSubRace: Wolf
+  affectLOS: 1
+  isUnique: 0
   buffs: []
   level: 0
-  action1: Bite
-  action2: Rend
-  action3: Maul
-  action4: Chilling Howl
+  action1: 1
+  action2: 7
+  action3: 4
+  action4: 9

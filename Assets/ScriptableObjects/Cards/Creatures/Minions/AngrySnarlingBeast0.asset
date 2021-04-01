@@ -33,6 +33,8 @@ MonoBehaviour:
   armor: 0
   creatureRace: Faeroid
   creatureSubRace: Carnomaw
+  affectLOS: 1
+  isUnique: 0
   buffs: []
-  action1: 
-  action2: 
+  action1: 11
+  action2: 2

@@ -285,6 +285,9 @@ MonoBehaviour:
   _centerpiece: {fileID: 1549128610}
   _card: {fileID: 4559377689257960075, guid: cadd1424d955cb84db67c33c200f5948, type: 3}
   _stack: {fileID: 89706038}
+  _maxCards: 8
+  deckObject: {fileID: 11400000, guid: 996f163c6a07e6249ab75e164ee3c9d5, type: 2}
+  cards: []
   cardWidth: 3.5
   cardBufferInHand: 0.3
 --- !u!1001 &152921139
@@ -1070,7 +1073,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -263.5, y: -64.63}
+  m_AnchoredPosition: {x: -261, y: 34.912}
   m_SizeDelta: {x: 26.8365, y: 26.8365}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &551999727
@@ -2131,8 +2134,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 164, y: 238}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 112, y: 150.07}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!1001 &1333836390
 PrefabInstance:
@@ -3137,7 +3140,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -220.85, y: -66.3}
+  m_AnchoredPosition: {x: -218.35, y: -15.088}
   m_SizeDelta: {x: 112.1433, y: 30.1757}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1835682589
@@ -3655,6 +3658,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b602fdbe57b7746b66a2ff7e089819, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deckObject: {fileID: 11400000, guid: 996f163c6a07e6249ab75e164ee3c9d5, type: 2}
+  cards: []
 --- !u!4 &2096785665
 Transform:
   m_ObjectHideFlags: 0
@@ -3816,6 +3821,18 @@ PrefabInstance:
       propertyPath: _hand
       value: 
       objectReference: {fileID: 145287940}
+    - target: {fileID: -3879987220695704066, guid: 7768f62926344f94b96214677795566c,
+        type: 3}
+      propertyPath: deckObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 182b4392fd3244a479ac348821e384a2,
+        type: 2}
+    - target: {fileID: -3879987220695704066, guid: 7768f62926344f94b96214677795566c,
+        type: 3}
+      propertyPath: _cardPrefab
+      value: 
+      objectReference: {fileID: 4559377689257960075, guid: cadd1424d955cb84db67c33c200f5948,
+        type: 3}
     - target: {fileID: -3879987220695704066, guid: 7768f62926344f94b96214677795566c,
         type: 3}
       propertyPath: _gameHandler

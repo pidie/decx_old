@@ -14,18 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   cardType: 0
+  notes: 
   title: Grey Wolf
   name: grey_wolf_0
   ID: 
   description: 
   image: {fileID: 0}
-  keywords: []
+  keywords: 
   creatureType: 2
   health: 2
   damage: 2
   armor: 0
   creatureRace: Beast
   creatureSubRace: Wolf
+  affectLOS: 0
+  isUnique: 0
   buffs: []
-  action1: Bite
-  action2: Rend
+  action1: 0
+  action2: 0

@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class Graveyard : CardCollection
 {
+    [SerializeField]
+    private DeckObject deckObject;
+    [SerializeField]
+    private List<CardObject> cards;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        cards = deckObject.cards;
     }
 
     // Update is called once per frame
@@ -16,7 +21,7 @@ public class Graveyard : CardCollection
         
     }
 
-    public void AddToGraveyard(Card card)
+    public void AddToGraveyard(CardObject card)
     {
         AddCardToTop(card);
     }

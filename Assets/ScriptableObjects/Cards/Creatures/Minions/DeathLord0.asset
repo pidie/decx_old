@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   cardType: 1
+  notes: 
   title: Death Lord
   name: death_lord_0
   ID: 
@@ -27,24 +28,25 @@ MonoBehaviour:
 
     The Death Lord gains +1 Damage
     and +1 HP for each creature in your Graveyard. When a Minion is added to the
-    Graveyard, the Death Lord heals for the max HP of that creature. Once per turn,
-    the Death Lord casts Sacrifice to the Death Lord. If the Death Lord cannot cast
-    Sacrifice to the Death Lord, it attacks the player.
+    Graveyard, the Death Lord heals for the max HP of that creature. At te start
+    of your turn, the Death Lord casts Sacrifice to the Death Lord. If the Death
+    Lord cannot cast Sacrifice to the Death Lord, it attacks the player.
 
 
-    Spell: Sacrifice to
-    the Death Lord - One minion under your command is sacrificed and added to the
-    Graveyard. The Death Lord inceases its max HP by the max HP of that minion.'
+    Spell:
+    Sacrifice to the Death Lord - One minion under your command is sacrificed and
+    added to the Graveyard. The Death Lord inceases its max HP by the max HP of that
+    minion.'
   image: {fileID: 0}
-  keywords:
-  - Rathe
-  - Safeguard
+  keywords: 4200000047000000
   creatureType: 2
   health: 10
   damage: 6
   armor: 0
   creatureRace: Undead
   creatureSubRace: Abhorration
+  affectLOS: 1
+  isUnique: 0
   buffs: []
-  action1: Strike
-  action2: Chilling Howl
+  action1: 11
+  action2: 7

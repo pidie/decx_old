@@ -36,24 +36,24 @@ public class GameHandler : MonoBehaviour
 
     private void LoadPlayerDeck()
     {
-        _playerDeck.LoadDeck();
+        // _playerDeck.LoadDeck();
     }
 
-    private void SendCardToGraveyard(Card deadCard)
+    private void SendCardToGraveyard(CardObject deadCard)
     {
         _playerGraveyard.AddToGraveyard(deadCard);
     }
 
-    private Card? DrawCard()
-    {
-        Card drawnCard = _playerDeck.DrawCard();
-        if (drawnCard != null)
-        {
-            _playerHand.AddCardToHand(drawnCard);
-            return drawnCard;
-        }
-        return null;
-    }
+    // private CardObject? DrawCard()
+    // {
+    //     CardObject drawnCard = _playerDeck.DrawCard();
+    //     if (drawnCard != null)
+    //     {
+    //         _playerHand.AddCardToHand(drawnCard);
+    //         return drawnCard;
+    //     }
+    //     return null;
+    // }
 
     private void UseCard(Card card)
     {

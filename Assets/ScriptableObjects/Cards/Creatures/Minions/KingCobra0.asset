@@ -14,18 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   cardType: 0
+  notes: 
   title: King Cobra
   name: king_cobra_0
   ID: 
   description: 
   image: {fileID: 0}
-  keywords: []
+  keywords: 0c00000031000000
   creatureType: 2
   health: 3
   damage: 6
   armor: 0
   creatureRace: Beast
   creatureSubRace: Serpent
+  affectLOS: 0
+  isUnique: 0
   buffs: []
-  action1: Strike
-  action2: Toxic Strike
+  action1: 0
+  action2: 0

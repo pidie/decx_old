@@ -13,8 +13,22 @@ public class SpellActionCardObject : ActionCardObject
     }
     public enum spellSchools
     {
-        ___,
-        Torrid
+        Agony,
+        Chaos,
+        Chronomancy,
+        Conjuration,
+        Decay,
+        Hallowed,
+        Ichor,
+        Invocation,
+        Necromancy,
+        Scorch,
+        Scrying,
+        Storm,
+        Telepathy,
+        Wildern,
+        Winter,
+        Wizardry
     }
     [Header("Spell Specific")]
     public spellSchools school;  //will have to make a <T> type School

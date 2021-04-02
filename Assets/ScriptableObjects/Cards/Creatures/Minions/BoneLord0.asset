@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   cardType: 0
+  notes: 
   title: Bone Lord
   name: bone_lord_0
   ID: 
@@ -24,14 +25,15 @@ MonoBehaviour:
 
     Every turn, raise a Shambling Skeleton in an empty slot.'
   image: {fileID: 0}
-  keywords:
-  - Frontline
+  keywords: 47000000
   creatureType: 2
   health: 10
   damage: 8
   armor: 0
   creatureRace: Undead
   creatureSubRace: Skeleton
+  affectLOS: 1
+  isUnique: 0
   buffs: []
-  action1: 
-  action2: 
+  action1: 0
+  action2: 0

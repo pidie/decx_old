@@ -14,21 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   cardType: 0
+  notes: 
   title: Succulent Matriarch
   name: succulent_matriarch_0
   ID: 
   description: 'Rathe: Summon 2 Servile Succubus in empty slots, preferring adjacency
     to and the same line as the Succulent Matriarch.'
   image: {fileID: 0}
-  keywords:
-  - Charm
-  - Rathe
+  keywords: 0a00000042000000
   creatureType: 2
   health: 8
   damage: 8
   armor: 0
   creatureRace: Faeroid
   creatureSubRace: Demon
+  affectLOS: 1
+  isUnique: 0
   buffs: []
-  action1: Reaping Strike
-  action2: Double Tap
+  action1: 0
+  action2: 0

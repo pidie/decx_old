@@ -28,6 +28,13 @@ public class Hand : CardCollection
     private Card _card;
     [SerializeField]
     private Deck _stack;
+    [SerializeField]
+    [Range(1,12)]
+    private int _maxCards = 8;
+    [SerializeField]
+    private DeckObject deckObject;
+    [SerializeField]
+    private List<CardObject> cards;
 
     [Header("Card Stats")]
     public float cardWidth = 3.5f;
@@ -36,62 +43,51 @@ public class Hand : CardCollection
 
     void Start()
     {
+        cards = deckObject.cards;
+        cards.Clear();
         transform.position = new Vector3(_centerpiece.transform.position.x, transform.position.y, transform.position.z);
     }
 
     void Update()
     {
         ArrangeCardsCenter();
-        // ClickOnHand();
     }
 
-    public void SetCardWidth(float f)
+    public void CreateNewCard(Card card)
     {
-        cardWidth = f;
+        Instantiate(card, transform);
     }
 
-    public void SetCardBufferInHand(float f)
+    public bool DrawCard(CardObject card)
     {
-        cardBufferInHand = f;
-    }
-
-    // Now - when I click on a card, there is no response, even in the log.
-    void ClickOnHand() {
-        if (Input.GetMouseButtonDown(0))
+        if (cards.Count < _maxCards)
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
-            {
-                if (hit.transform.parent == transform)
-                {
-                    Card cardClicked = hit.transform.GetComponent<Card>();
-                    Debug.Log(cardClicked.cardData.title);
-
-                    // if (Input.GetMouseButton(0))
-                    // {
-                    //     Vector3 mousePos = Input.mousePosition;
-                    //     Debug.Log(mousePos);
-                    //     Vector3 cardClickedPos = cardClicked.transform.position;
-                    //     cardClickedPos = cardClickedPos + mousePos;
-                    //     transform.position = cardClickedPos;
-                    // }
-                    //functionality for dragging
-                }
-            }
+            cards.Add(card);
+            return true;
         }
+        Debug.LogWarning("Hand is full.");
+        return false;
+    }
+
+    public int GetMaxCards()
+    {
+        return _maxCards;
     }
 
     void ArrangeCardsCenter()
     {
-        if (GetCardCount() > 0)
+        if (GetCardCount(cards) > 0)
         {
             float xPosition = transform.childCount > 1 ? (cardWidth / 2f) - ((transform.childCount * (cardWidth + cardBufferInHand)) / 2f) : 0f;
+            Camera mainCamera = Camera.main;
 
             foreach (Transform child in transform)
             {
                 child.transform.position = transform.position + new Vector3(xPosition, 0, 0);
                 xPosition += (cardWidth + cardBufferInHand);
+                
+                float cameraRotAdjust = mainCamera.transform.localEulerAngles.x * -1;
+                child.transform.rotation = Quaternion.Euler(cameraRotAdjust, 180, 0);
             }
         }
     }
@@ -127,14 +123,19 @@ public class Hand : CardCollection
 
     }
 
-    public void AddCardToHand(Card card)
-    {
-        AddCardToBottom(card);
-        _card.LoadCard(card.cardData);
+//     public void AddCardToHand(CardObject card)
+//     {
+//         AddCardToBottom(card);
+//         // _card.LoadCard(card.cardData);
         
-        // Add card to hierarchy
-        _card.name = card.cardData.title;
-        Instantiate(_card, transform);
-        ArrangeCardsCenter();
-    }
+//         // Add card to hierarchy
+//         // _card.name = card.cardData.title;
+//         // Instantiate(_card, transform);
+//         ArrangeCardsCenter();
+//     }
+
+//     public void AddCard(CardObject card)
+//     {
+
+//     }
 }

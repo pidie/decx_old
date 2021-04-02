@@ -46,9 +46,9 @@ public class PlayerCreatureCardObject : CreatureCardObject
         else
         {
             int factorial = 1;
-            for (i = number; i >= 1; i--)
+            for (int i = number; i >= 1; i--)
             {
-                factorial = factorial + i
+                factorial = factorial + i;
             }
             return factorial;
         }

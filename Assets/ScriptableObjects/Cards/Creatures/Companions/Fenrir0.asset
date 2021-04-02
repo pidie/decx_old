@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   cardType: 0
+  notes: 
   title: Fenrir
   name: fenrir_0
   ID: 
   description: 
   image: {fileID: 0}
-  keywords: []
+  keywords: 
   creatureType: 1
   health: 15
   damage: 6
@@ -29,7 +30,7 @@ MonoBehaviour:
   affectLOS: 1
   isUnique: 0
   buffs: []
-  level: 0
+  level: 1
   action1: 1
   action2: 7
   action3: 4

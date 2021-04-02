@@ -14,25 +14,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   cardType: 0
+  notes: 
   title: Fireball
   name: fireball_lvl2_0
   ID: 
   description: There is a 1 in 6 chance that the Fireball will explode, dealing 50%
     Splash damage as Fire to all adjacent creatures.
   image: {fileID: 0}
-  keywords: []
+  keywords: 50000000
   actionType: 2
   energyCost: 1
   cooldownPeriodInTurns: 0
   needsTarget: 1
   rarity: 
-  maxLevel: 6
-  level: 2
+  maxActionLevel: 6
+  actionLevel: 1
   attribute: Arcana
   damage: 0.8
   damageType: 3
+  range: 4
   splashDamageChance: 16.66666
   splashDamage: 0.4
   splashOnlyInLine: 1
-  school: 1
+  school: 9
   spellComplexity: 0

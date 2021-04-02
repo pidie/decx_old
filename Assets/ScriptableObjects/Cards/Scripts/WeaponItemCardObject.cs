@@ -14,7 +14,7 @@ public enum WeaponTypes
     Focus,
     Flail,
     Greataxe,
-    HandCrossbow
+    HandCrossbow,
     HuntingBow,
     Javelin,
     LongBow,
@@ -30,22 +30,21 @@ public enum WeaponTypes
     Whip,
     Zweihander
 }
-
 [CreateAssetMenu(fileName = "New Weapon", menuName = "Cards/Items/Weapon")]
 public class WeaponItemCardObject : ItemCardObject
 {
     public WeaponTypes weaponType;
     public int damage = 1;
-    public string damageType = "physical";  // will have to make a <T> type DamageType
+    public DamageTypes damageType = DamageTypes.Physical;  // will have to make a <T> type DamageType
 
     private void Awake()
     {
         itemType = ItemType.Weapon;
-        if (this.weaponType == Axe)
+        if (this.weaponType == WeaponTypes.Axe)
         {
             if (this.title == "Bearded Axe")
             {
-                this.description.Add("\n\nThere is a 1d4 chance that this weapon will ignore Block from shields.");
+                this.description = this.description + "\n\nThere is a 1d4 chance that this weapon will ignore Block from shields.";
             }
         }
     }

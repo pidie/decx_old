@@ -9,26 +9,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc2011c8749723c8c916d5f04065e93b, type: 3}
-  m_Name: GreaterSuccubus0
+  m_Script: {fileID: 11500000, guid: e22e5bd0bb012c7d8901bab1f78dbb52, type: 3}
+  m_Name: FingerOfSaintMetholil0
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   cardType: 0
-  notes: 
-  title: Greater Succubus
-  name: greater_succubus_0
+  title: Finger of Saint Metholil
+  name: finger_of_saint_metholil_0
   ID: 
   description: 
   image: {fileID: 0}
-  keywords: 0a000000
-  creatureType: 2
-  health: 5
-  damage: 4
-  armor: 0
-  creatureRace: Faeroid
-  creatureSubRace: Demon
-  affectLOS: 1
-  isUnique: 0
-  buffs: []
-  action1: 0
-  action2: 0
+  keywords: []
+  itemType: 2
+  cooldownPeriodInTurns: 0
+  magicRequired: 1
+  weight: 0
+  weaponType: 21
+  damage: 3
+  damageType: 6

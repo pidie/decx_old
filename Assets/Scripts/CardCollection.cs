@@ -4,65 +4,70 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class CardCollection: MonoBehaviour
+public class CardCollection : MonoBehaviour
 {
     private List<Card> _cardList = new List<Card>();
+    private List<CardObject> _cardObjectList = new List<CardObject>();
 
     public int GetCardCount()
     {
-        return _cardList.Count;
+        return _cardObjectList.Count;
+    }
+    public int GetCardCount(List<CardObject> cards)
+    {
+        return cards.Count();
     }
 
-    protected void AddCardToTop(Card card)
+    protected void AddCardToTop(CardObject card)
     {
-        _cardList.Add(card);
+        _cardObjectList.Add(card);
     }
 
-    protected void AddCardToTop(Card[] cards)
+    protected void AddCardToTop(CardObject[] cards)
     {
-        _cardList.AddRange(cards);
+        _cardObjectList.AddRange(cards);
     }
 
-    protected void AddCardToBottom(Card card)
+    protected void AddCardToBottom(CardObject card)
     {
-        _cardList.Insert(0, card);
+        _cardObjectList.Insert(0, card);
     }
 
-    protected void AddCardToBottom(Card[] cards)
+    protected void AddCardToBottom(CardObject[] cards)
     {
-        _cardList.InsertRange(0, cards);
+        _cardObjectList.InsertRange(0, cards);
     }
 
-    protected Card RemoveCardFromTop()
+    protected CardObject RemoveCardFromTop()
     {
-        if (_cardList.Count == 0)
+        if (_cardObjectList.Count == 0)
         {
             Debug.LogWarning("Deck is empty.");
             return null;
         }
-        Card topCard =_cardList.First();
-        return _cardList.Remove(topCard) ? topCard : null;
+        CardObject topCard =_cardObjectList.First();
+        return _cardObjectList.Remove(topCard) ? topCard : null;
     }
 
-    protected Card RemoveCardFromBottom()
+    protected CardObject RemoveCardFromBottom()
     {
-        if (_cardList.Count == 0)
+        if (_cardObjectList.Count == 0)
         {
             Debug.LogWarning("Deck is empty.");
             return null;
         }
-        Card bottomCard = _cardList.Last();
-        return _cardList.Remove(bottomCard) ? bottomCard : null;
+        CardObject bottomCard = _cardObjectList.Last();
+        return _cardObjectList.Remove(bottomCard) ? bottomCard : null;
     }
 
-    protected void RemoveCard(Card card)
+    protected void RemoveCard(CardObject card)
     {
-        _cardList.Remove(card);
+        _cardObjectList.Remove(card);
     }
 
     protected void RemoveAllCards()
     {
-        _cardList.Clear();
+        _cardObjectList.Clear();
     }
 
     protected void SwapCards(Card card1, Card card2)
@@ -73,8 +78,14 @@ public class CardCollection: MonoBehaviour
         _cardList[card2Index] = card1;
     }
 
-    protected void ShuffleCards(Card[] cards)
+    // protected void ShuffleCards(Card[] cards)
+    // {
+    //     cards = cards.OrderBy(a => Guid.NewGuid()).ToArray();
+    // }
+
+    protected List<CardObject> ShuffleCards(List<CardObject> cards)
     {
-        cards = cards.OrderBy(a => Guid.NewGuid()).ToArray();
+        cards = cards.OrderBy(a => Guid.NewGuid()).ToList();
+        return cards;
     }
 }

@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc2011c8749723c8c916d5f04065e93b, type: 3}
   m_Name: DreadSkeleton0
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 4769657208153724752, guid: cadd1424d955cb84db67c33c200f5948, type: 3}
   cardType: 1
+  notes: 
   title: Dread Skeleton
   name: dread_skeleton_0
   ID: 
   description: Sturdy bones, plated with armor and shield, and an unrelenting desire
     to void this world of life.
   image: {fileID: 0}
-  keywords:
-  - Safeguard
+  keywords: 35000000
   creatureType: 2
   health: 8
   damage: 5

@@ -14,24 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   cardType: 0
+  notes: 
   title: 
   name: 
   ID: 
   description: 
   image: {fileID: 0}
-  keywords: []
+  keywords: 50000000
   actionType: 2
   energyCost: 2
   cooldownPeriodInTurns: 0
   needsTarget: 1
   rarity: 
-  maxLevel: 6
-  level: 3
+  maxActionLevel: 6
+  actionLevel: 1
   attribute: Arcana
   damage: 1.2
   damageType: 3
+  range: 4
   splashDamageChance: 33.33333
   splashDamage: 0.6
   splashOnlyInLine: 1
-  school: 1
+  school: 9
   spellComplexity: 0

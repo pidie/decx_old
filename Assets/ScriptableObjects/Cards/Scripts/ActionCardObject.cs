@@ -8,18 +8,6 @@ public enum ActionType
     Hidden,
     Spell
 }
-public enum DamageTypes
-{
-    Acid,
-    Cold,
-    Force,
-    Fire,
-    Holy,
-    Lightning,
-    Magic,
-    Physical,
-    Poison
-}
 public abstract class ActionCardObject : CardObject {
     [Header("Action Specific")]
     public ActionType actionType;
@@ -30,15 +18,17 @@ public abstract class ActionCardObject : CardObject {
     public string rarity;
     private int minLevel = 1;
     [SerializeField]
-    private int maxLevel = 6;
+    private int maxActionLevel = 6;
 
     [Range(1, 6)]
-    public int level = 1;
+    public int actionLevel = 1;
 
     [Header("Damage Information")]
     public string attribute; //need to make a <T> type Attribute
     public float damage = 0;
     public DamageTypes damageType;
+    [Range(1,4)]
+    public int range = 1;
     
     [Header("Splash Damage")]
     [Range(0, 100)]

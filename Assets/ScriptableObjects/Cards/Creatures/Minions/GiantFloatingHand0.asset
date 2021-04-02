@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   cardType: 0
+  notes: 
   title: Giant Floating Hand
   name: giant_floating_hand_0
   ID: 
   description: While Grappling, can only target the Grappled target, and Strike deals
     +50% damage.
   image: {fileID: 0}
-  keywords:
-  - Grapple
+  keywords: 25000000
   creatureType: 2
   health: 6
   damage: 4

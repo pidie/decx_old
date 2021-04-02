@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   cardType: 0
+  notes: 
   title: Blood Golem
   name: blood_golem_0
   ID: 
@@ -29,16 +30,15 @@ MonoBehaviour:
     active for 1 round, the Blood Golem can be sacrificed. Heal for the amount of
     health the Blood Golem had at the time of sacrifice.'
   image: {fileID: 0}
-  keywords:
-  - Leech
-  - Lifelink
-  - Safeguard
+  keywords: 300000003200000047000000
   creatureType: 2
   health: 15
   damage: 6
   armor: 0
   creatureRace: Synthetic
   creatureSubRace: Golem
+  affectLOS: 1
+  isUnique: 0
   buffs: []
-  action1: 
-  action2: 
+  action1: 0
+  action2: 0

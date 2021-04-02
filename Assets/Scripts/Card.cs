@@ -33,6 +33,11 @@ public class Card : MonoBehaviour
         cardData = GetCardData();
     }
 
+    private void OnMouseDown() 
+    {
+        
+    }
+
     private void OnMouseUpAsButton()
     {
         if (CardIsInHand())

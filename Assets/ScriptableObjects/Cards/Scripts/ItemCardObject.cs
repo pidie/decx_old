@@ -25,8 +25,10 @@ public abstract class ItemCardObject : CardObject
 
     [Range(0,5)]
     public int cooldownPeriodInTurns = 0;
-    public int magicCost = 0;
+    public int magicRequired = 0;
     public int weight = 0;
+    [Range(1,4)]
+    public int range = 1;
 
     private void Awake() 
     {

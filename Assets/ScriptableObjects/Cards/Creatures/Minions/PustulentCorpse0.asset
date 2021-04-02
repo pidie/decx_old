@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   cardType: 0
+  notes: 
   title: Pustulent Corpse
   name: pustulent_corpse_0
   ID: 
@@ -23,17 +24,15 @@ MonoBehaviour:
 
     Rancid Odor: Damage is reduced by 2.'
   image: {fileID: 0}
-  keywords:
-  - Advance
-  - Death Rattle
-  - Prod
-  - Rathe
+  keywords: 01000000100000003d00000042000000
   creatureType: 2
   health: 6
   damage: 3
   armor: 0
   creatureRace: Undead
   creatureSubRace: Zombie
+  affectLOS: 1
+  isUnique: 0
   buffs: []
-  action1: Strike
-  action2: Pummel
+  action1: 0
+  action2: 0

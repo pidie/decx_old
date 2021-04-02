@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   cardType: 0
+  notes: 
   title: Vampire Vassal
   name: vampire_vassal_0
   ID: 
   description: Bite grants +1 Bleeding DCs and grants 150% Leech HP.
   image: {fileID: 0}
-  keywords:
-  - Leech
+  keywords: 30000000
   creatureType: 2
   health: 6
   damage: 3

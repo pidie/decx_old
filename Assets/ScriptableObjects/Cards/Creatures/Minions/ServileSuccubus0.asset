@@ -14,19 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   cardType: 0
+  notes: 
   title: Servile Succubus
   name: servile_succubus_0
   ID: 
   description: 
   image: {fileID: 0}
-  keywords:
-  - Charm
+  keywords: 0a000000
   creatureType: 2
   health: 3
   damage: 3
   armor: 0
   creatureRace: Faeroid
   creatureSubRace: Demon
+  affectLOS: 1
+  isUnique: 0
   buffs: []
-  action1: Strike
-  action2: Double Tap
+  action1: 0
+  action2: 0

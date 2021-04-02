@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   cardType: 0
+  notes: 
   title: Runeborne Abomination
   name: runeborne_abomination_0
   ID: 
@@ -24,8 +25,7 @@ MonoBehaviour:
     Every
     time the Runeborn Abomination uses Dispel, it is fully healed and gains +1 damage.'
   image: {fileID: 0}
-  keywords:
-  - Dispel
+  keywords: 16000000
   creatureType: 2
   health: 12
   damage: 8
@@ -35,5 +35,5 @@ MonoBehaviour:
   affectLOS: 1
   isUnique: 0
   buffs: []
-  action1: Strike
-  action2: Cleave
+  action1: 0
+  action2: 0

@@ -56,6 +56,11 @@ public class Hand : CardCollection
     public void CreateNewCard(Card card)
     {
         Instantiate(card, transform);
+        if (this.cards.Count == 0)
+        {
+            Debug.Log(this.cards.Count - 1);
+            card.cardObject = this.cards[this.cards.Count - 1];
+        }
     }
 
     public bool DrawCard(CardObject card)

@@ -15,6 +15,8 @@ public enum DamageTypes
     Force,
     Fire,
     Holy,
+    Lightning,
+    Magic,
     Physical,
     Poison
 }

@@ -8,6 +8,17 @@ public enum ItemType
     Usable,
     Weapon
 }
+public enum ArmorTypes
+{
+    Belt,
+    Boots,
+    Bracers,
+    Cape,
+    Chestplate,
+    Gauntlets,
+    Helm,
+    Pauldrons
+}
 public abstract class ItemCardObject : CardObject 
 {
     public ItemType itemType;

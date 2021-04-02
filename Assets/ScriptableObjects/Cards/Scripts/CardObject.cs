@@ -2,13 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-/// <summary>
-/// The most primal version of a Card object.
-/// <summary>
-/// <remark>
-/// There are three types of Card: Action, Creature, and Item.
-/// <summary>
 public enum CardType
 {
     Action,

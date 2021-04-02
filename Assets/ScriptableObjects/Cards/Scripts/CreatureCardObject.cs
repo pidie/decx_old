@@ -2,29 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum CreatureType
-{
-    Boss,
-    Companion,
-    Minion,
-    Player
-}
+public enum CreatureType { Boss, Companion, Minion, Player }
 public enum CreatureActionTypes
 {
-    Bash,
-    Bite,
-    Burrow,
-    Cleave,
-    ChillingHowl,
-    DoubleTap,
-    Maim,
-    Maul,
-    Pummel,
-    Rend,
-    Ritual__Gravedigger,
-    Strike,
-    ToxicStrike
+    Bash, Bite, Burrow, Cleave, ChillingHowl, DoubleTap, Maim, Maul, Pummel, Rend, Ritual__Gravedigger,
+    Strike, ToxicStrike
 }
+public enum RaceTypes { Aelfaen, Dwarf, Darkling, Elf, Goblin, Human, Orc, Pygmeri }
 public abstract class CreatureCardObject : CardObject 
 {
     public CreatureType creatureType;

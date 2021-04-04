@@ -8,7 +8,14 @@ public enum CreatureActionTypes
     Bash, Bite, Burrow, Cleave, ChillingHowl, DoubleTap, Maim, Maul, Pummel, Rend, Ritual__Gravedigger,
     Strike, ToxicStrike
 }
-public enum RaceTypes { Aelfaen, Dwarf, Darkling, Elf, Goblin, Human, Orc, Pygmeri }
+public enum RaceCategoryTypes { Beast, Celestial, Faeroid, Synthetic, Tellusi, Undead }
+public enum SubraceBeastCategoryTypes { Bear, Cat, Crustacean, Dog, Dragon, Insect, Jellyfish, Lizard, Mollusk, Primate, Raptor, Rodent, Shark, Snake, Spider, Wolf, Worm }
+public enum SubraceCelestialCategoryTypes { Angel, Cherub, Host, Nefilim, Sanctir, Seraph }
+public enum SubraceFaeroidCategoryTypes { Carnomaw, Cthulli, Demon, Djinix, Jyant, Pixie, Warvol }
+public enum SubraceSyntheticCategoryTypes { Automaton, Construct, Cyborg, Golem, Homonculus, Mechanism }
+public enum SubraceTellusiCategoryTypes { Aelfaen, Cyanite, Darkling, Driad, Dwarf, Elf, Goblin, Grokkin, Human, Orc, Pygmeri, Troll, Vesper }
+public enum SubraceUndeadCategoryTypes { Abhoration, Disembodied, Lich, Phantom, Skeleton, Vampire, Zombie }
+
 public abstract class CreatureCardObject : CardObject 
 {
     public CreatureType creatureType;

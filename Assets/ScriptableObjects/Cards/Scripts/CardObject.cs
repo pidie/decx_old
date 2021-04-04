@@ -23,7 +23,7 @@ public enum DamageTypes
 public enum Keywords
 {
     Acid,
-    Advance,
+    Advance,                //this effect happens when the creature attacks
     ArcaneShift,
     AuraOfProtection,
     Bleeding,

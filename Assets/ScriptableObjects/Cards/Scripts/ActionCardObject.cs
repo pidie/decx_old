@@ -27,7 +27,7 @@ public abstract class ActionCardObject : CardObject {
     public string attribute; //need to make a <T> type Attribute
     public float damage = 0;
     public DamageTypes damageType;
-    [Range(1,4)]
+    [Range(1,5)]
     public int range = 1;
     
     [Header("Splash Damage")]

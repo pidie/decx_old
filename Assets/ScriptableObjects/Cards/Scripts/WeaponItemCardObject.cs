@@ -25,6 +25,7 @@ public enum WeaponTypes
     Spear,
     Staff,
     Sword,
+    Thrown,
     Wand,
     Warhammer,
     Whip,

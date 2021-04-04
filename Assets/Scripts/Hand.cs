@@ -53,21 +53,18 @@ public class Hand : CardCollection
         ArrangeCardsCenter();
     }
 
-    public void CreateNewCard(Card card)
+    public void CreateNewCard(Card card, CardObject cardObject)
     {
+        cards.Add(cardObject);
+        card.cardObject = cardObject;
         Instantiate(card, transform);
-        if (this.cards.Count == 0)
-        {
-            Debug.Log(this.cards.Count - 1);
-            card.cardObject = this.cards[this.cards.Count - 1];
-        }
     }
 
     public bool DrawCard(CardObject card)
     {
         if (cards.Count < _maxCards)
         {
-            cards.Add(card);
+            // cards.Add(card);
             return true;
         }
         Debug.LogWarning("Hand is full.");
@@ -97,50 +94,8 @@ public class Hand : CardCollection
         }
     }
 
-    // void ArrangeCards()
-    // {
-    //     // repurpose this to keep the cards aligned along the vertical axis after being manipulated 
-    //     if (GetCardCount() > 0)
-    //     {
-    //         // Todo: change hardcoded 3.5 to width of card
-    //         float xPosition = transform.childCount > 1 ? (_cardWidth / 2) - ((transform.childCount * (_cardWidth + _cardBufferInHand)) / 2f) : 0f;
-            
-    //         foreach (Transform child in transform.childCount)
-    //         {
-    //             //the following line needs to be called only once on instantiation of the card object
-    //             // child.transform.position = transform.position + new Vector3(xPosition, 0, 0);
-    //             ClickOnHand();
-    //             xPosition += (_cardWidth + _cardBufferInHand);
-    //         }
-
-    //         foreach (Transform child in transform)
-    //         {   
-    //             child.transform.position = transform.position + new Vector3(xPosition, 0, 0);
-    //             //child.RotateAround();
-    //             //child.transform.position = new Vector3(xPosition, 1, -22);
-    //             xPosition += (3.5f + 0.3f);
-    //         }
-    //     }
-    // }
-
     void PlayCard()
     {
 
     }
-
-//     public void AddCardToHand(CardObject card)
-//     {
-//         AddCardToBottom(card);
-//         // _card.LoadCard(card.cardData);
-        
-//         // Add card to hierarchy
-//         // _card.name = card.cardData.title;
-//         // Instantiate(_card, transform);
-//         ArrangeCardsCenter();
-//     }
-
-//     public void AddCard(CardObject card)
-//     {
-
-//     }
 }

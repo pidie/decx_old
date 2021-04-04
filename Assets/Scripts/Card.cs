@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Card : MonoBehaviour
 {
@@ -15,9 +16,14 @@ public class Card : MonoBehaviour
     private string _title;
     private string _description;
 
+    private Sprite _image;
+
     public CardObject cardObject;
     
     public CardModel cardData;
+
+    [SerializeField]
+    private TMP_Text cardTitle;
 
     protected bool CardIsInHand()
     {
@@ -31,6 +37,19 @@ public class Card : MonoBehaviour
     void Start()
     {
         cardData = GetCardData();
+    }
+
+    private void Update() 
+    {
+        SetCardTitle();
+    }
+
+    private void SetCardTitle()
+    {
+        if ( cardObject )
+        {
+            cardTitle.text = cardObject.title;
+        }
     }
 
     private void OnMouseDown() 

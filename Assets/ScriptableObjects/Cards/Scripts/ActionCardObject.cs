@@ -12,7 +12,6 @@ public abstract class ActionCardObject : CardObject {
     [Header("Action Specific")]
     public ActionType actionType;
 
-    public int energyCost = 1;
     public int cooldownPeriodInTurns = 0;
     public bool needsTarget = false;
     public string rarity;

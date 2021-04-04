@@ -24,6 +24,8 @@ public class Card : MonoBehaviour
 
     [SerializeField]
     private TMP_Text cardTitle;
+    [SerializeField]
+    private TMP_Text cardEnergyCost;
 
     protected bool CardIsInHand()
     {
@@ -41,14 +43,15 @@ public class Card : MonoBehaviour
 
     private void Update() 
     {
-        SetCardTitle();
+        SetCardData();
     }
 
-    private void SetCardTitle()
+    private void SetCardData()
     {
         if ( cardObject )
         {
             cardTitle.text = cardObject.title;
+            cardEnergyCost.text = cardObject.energyCost.ToString();
         }
     }
 

@@ -155,6 +155,7 @@ public abstract class CardObject : ScriptableObject
     public string ID;
     [TextArea(15,20)]
     public string description;
+    public int energyCost = 1;
 
     public Sprite image;
 

@@ -267,7 +267,7 @@ MonoBehaviour:
     ID: 0
     title: 
     description: 
-  cardTitle: {fileID: 0}
+  cardTitle: {fileID: 3424390227362808648}
 --- !u!114 &1768177551984790050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -503,7 +503,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 8
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0

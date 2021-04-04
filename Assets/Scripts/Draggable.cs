@@ -24,7 +24,7 @@ public class Draggable : MonoBehaviour
     {
         if (isDrag)
         {
-            Vector3 pos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, zPosition);
+            Vector3 pos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, zPosition - 0.5f);
             transform.position = mainCamera.ScreenToWorldPoint(pos);
         }
     }

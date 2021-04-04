@@ -15,8 +15,8 @@ MonoBehaviour:
   prefab: {fileID: 0}
   cardType: 0
   notes: The benefits from any Snake Charmer do not stack.
-  title: 
-  name: 
+  title: Elven Snake Charmer
+  name: elven_snake_charmer_0
   ID: 
   description: 'Rathe: Summon 2 King Cobras in the Front Line.
 

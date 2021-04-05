@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum abilityProficiencies
+{
+
+}
+
 [CreateAssetMenu(fileName = "New Ability", menuName = "Cards/Actions/Ability")]
 public class AbilityActionCardObject : ActionCardObject 
 {
     public bool isMagical = false;
-    public List<string> proficiencies; // need to create a <T> type Proficiency
+    public List<abilityProficiencies> proficiencies; // need to create a <T> type Proficiency
 
     /*
     proficiencies should work like schools, but for abilities.

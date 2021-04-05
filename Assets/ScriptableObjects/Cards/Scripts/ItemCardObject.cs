@@ -10,6 +10,7 @@ public enum ItemType
 }
 public enum ArmorTypes
 {
+    Amulet,
     Belt,
     Boots,
     Bracers,
@@ -17,7 +18,8 @@ public enum ArmorTypes
     Chestplate,
     Gauntlets,
     Helm,
-    Pauldrons
+    Pauldrons,
+    Rings
 }
 public abstract class ItemCardObject : CardObject 
 {

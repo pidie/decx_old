@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class CardPosition : MonoBehaviour
 {
-    private bool isOccupied = false;
+    [SerializeField]    private GameHandler _gameHandler;
+    [SerializeField]    private Graveyard _graveyard;
+
     private Card card;
+    private bool isOccupied = false;
     private bool isBeingHovered = false;
-    [SerializeField]
-    private GameHandler _gameHandler;
-    [SerializeField]
-    private Graveyard _graveyard;
     
     private void Update() {
         /*

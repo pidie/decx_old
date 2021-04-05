@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class Graveyard : CardCollection
 {
-    [SerializeField]
-    private DeckObject deckObject;
-    [SerializeField]
-    private List<CardObject> cards;
+    [SerializeField]    private DeckObject deckObject;
+    [SerializeField]    private List<CardObject> cards;
 
     // Start is called before the first frame update
     void Start()

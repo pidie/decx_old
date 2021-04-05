@@ -9,18 +9,11 @@ using UnityEditor;
 
 public class Deck : CardCollection
 {
-    [SerializeField]
-    private GameHandler _gameHandler;
-    [SerializeField]
-    private Hand _hand;
-    [SerializeField]
-    private Card _cardPrefab;
-    [SerializeField]
-    private DeckObject deckObject;
-    [SerializeField]
-    private List<CardObject> cards;
-
-    private Card _topCard;
+    [SerializeField]    private GameHandler _gameHandler;
+    [SerializeField]    private Hand _hand;
+    [SerializeField]    private Card _cardPrefab;
+    [SerializeField]    private DeckObject deckObject;
+    [SerializeField]    private List<CardObject> cards;
 
     void Start()
     {

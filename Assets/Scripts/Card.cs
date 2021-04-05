@@ -51,6 +51,7 @@ public class Card : MonoBehaviour
     {
         if (CardIsInHand())
         {
+            Debug.Log("Card is in hand");
             if (Input.GetMouseButton(0))
             {
                 /*
@@ -62,14 +63,13 @@ public class Card : MonoBehaviour
                         gameboard.center.highlight
                     else:
                         for each available target:
-                            target.highlightAttack();
-                else if card.type == item:
-                    confirm item usage
+                            target.highlightTarget();
                 */
             }
             else if (Input.GetMouseButton(1))
             {
                 /*
+                pull up the card for viewing
                 show information on the card
                 */
             }

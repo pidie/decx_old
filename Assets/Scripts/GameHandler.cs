@@ -5,12 +5,9 @@ using UnityEngine;
 public class GameHandler : MonoBehaviour
 {
     // card collections
-    [SerializeField]
-    private Graveyard _playerGraveyard;
-    [SerializeField]
-    private Deck _playerDeck;
-    [SerializeField]
-    private Hand _playerHand;
+    [SerializeField]    private Graveyard _playerGraveyard;
+    [SerializeField]    private Deck _playerDeck;
+    [SerializeField]    private Hand _playerHand;
 
     // Start is called before the first frame update
     void Start()

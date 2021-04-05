@@ -78,11 +78,6 @@ public class CardCollection : MonoBehaviour
         _cardList[card2Index] = card1;
     }
 
-    // protected void ShuffleCards(Card[] cards)
-    // {
-    //     cards = cards.OrderBy(a => Guid.NewGuid()).ToArray();
-    // }
-
     protected List<CardObject> ShuffleCards(List<CardObject> cards)
     {
         cards = cards.OrderBy(a => Guid.NewGuid()).ToList();

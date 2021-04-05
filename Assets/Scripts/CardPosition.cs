@@ -24,6 +24,11 @@ public class CardPosition : MonoBehaviour
         */
     }
 
+    private void FixedUpdate()
+    {
+        // used for physics
+    }
+
     private void HighlightPosition()
     {
         //change the color of the CardPosition object to a highlited version

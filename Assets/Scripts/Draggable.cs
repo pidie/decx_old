@@ -13,6 +13,8 @@ public class Draggable : MonoBehaviour
     private float zPosition;
     private Camera mainCamera;
     private bool isDrag;
+    [SerializeField]
+    private LayerMask layerMask;
 
     private void Start() 
     {
@@ -26,6 +28,19 @@ public class Draggable : MonoBehaviour
         {
             Vector3 pos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, zPosition - 0.5f);
             transform.position = mainCamera.ScreenToWorldPoint(pos);
+
+            Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+            Debug.DrawRay(ray.origin, ray.direction * 200f);
+            RaycastHit hit;
+
+            if ( Physics.Raycast(ray, out hit, 40) )
+            {
+                Debug.Log("Layer is " + LayerMask.LayerToName(layerMask.value));
+                if (hit.collider.gameObject.layer == layerMask)
+                {
+                    Debug.DrawLine(ray.origin, hit.point, Color.green);
+                }
+            }
         }
     }
 

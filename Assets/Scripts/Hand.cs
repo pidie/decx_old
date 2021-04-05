@@ -22,24 +22,17 @@ using UnityEngine;
 public class Hand : CardCollection
 {
     [Header("Object Assignments")]
-    [SerializeField]
-    private GameObject _centerpiece;
-    [SerializeField]
-    private Card _card;
-    [SerializeField]
-    private Deck _stack;
-    [SerializeField]
-    [Range(1,12)]
-    private int _maxCards = 8;
-    [SerializeField]
-    private DeckObject deckObject;
-    [SerializeField]
-    private List<CardObject> cards;
+    [SerializeField]    private GameObject _centerpiece;
+    [SerializeField]    private Card _card;
+    [SerializeField]    private Deck _stack;
+                        [Range(1,12)]
+    [SerializeField]    private int _maxCards = 8;
+    [SerializeField]    private DeckObject deckObject;
+    [SerializeField]    private List<CardObject> cards;
 
     [Header("Card Stats")]
     public float cardWidth = 3.5f;
-    [Range(0f,5f)]
-    public float cardBufferInHand = 0.3f;
+    [Range(0f,5f)]    public float cardBufferInHand = 0.3f;
 
     void Start()
     {

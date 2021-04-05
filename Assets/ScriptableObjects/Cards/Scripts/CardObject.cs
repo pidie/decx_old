@@ -2,120 +2,83 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum CardType
-{
-    Action,
-    Creature,
-    Item
-}
-public enum DamageTypes
-{
-    Acid,
-    Cold,
-    Force,
-    Fire,
-    Holy,
-    Lightning,
-    Magic,
-    Physical,
-    Poison
-}
+public enum CardType { Action, Creature, Item }
+public enum DamageTypes { Acid, Cold, Force, Fire, Holy, Lightning, Magic, Physical, Poison }
 public enum Keywords
 {
-    Acid,
-    Advance,                //this effect happens when the creature attacks
-    ArcaneShift,
-    AuraOfProtection,
-    Bleeding,
-    Blind,
-    Bloodletter,
-    Bolster,
-    Burning,
-    Channeler,
-    Charm,
-    Cold,
-    Counterstrike,
-    CoupDeGrace,
-    Dazed,
-    Deadly,
-    DeathRattle,
-    Deathstroke,
-    Delay,
-    DemonHunter,
-    Demoralized,
-    Disarmed,
-    Dispel,
-    Distracting,
-    DominanceOfWill,
-    EagleEyed,
-    EnergizingField,
-    Enraged,
-    Ensorcellment,
-    Enthralled,
-    Fire,
-    Flamebearer,
-    Flying,
-    FontOfPower,
-    Force,
-    Frontline,
-    Frozen,
+    //A
+    Acid, Advance, ArcaneShift, AuraOfProtection,
+
+    //B
+    Bleeding, Blind, Bloodletter, Bolster, Burning,
+
+    //C
+    Channeler, Charm, Cold, Counterstrike, CoupDeGrace,
+
+    //D
+    Dazed, Deadly, DeathRattle, Deathstroke, Delay, DemonHunter, Demoralized, Disarmed, Dispel, 
+    Distracting, DominanceOfWill,
+
+    //E
+    EagleEyed, EnergizingField, Enraged, Ensorcellment, Enthralled,
+
+    //F
+    Fire, Flamebearer, Flying, FontOfPower, Force, Frontline, Frozen,
+
+    //G
     Grapple,
-    Havoc,
-    Healer,
-    Hibernate,
-    Hidden,
-    Holy,
-    HumbleServant,
-    Immortal,
-    Inspired,
-    Invulnerable,
+
+    //H
+    Havoc, Healer, Hibernate, Hidden, Holy, HumbleServant,
+
+    //I
+    Immortal, Inspired, Invulnerable,
+
+    //J
+
+    //K
     Knockback,
-    Leech,
-    Lethal,
-    Lifelink,
-    Lightning,
-    Madness,
-    Magic,
-    Multistrike,
-    Offering,
-    OrcishPride,
-    PackHunter,
-    Physical,
-    Piercing,
-    Poison,
-    Prod,
-    Prone,
-    ProtectionCharm,
-    Psychic,
-    Ranged,
-    Rathe,
-    Realmwalker,
-    ReluctantHero,
-    Restrained,
-    Ritual,
-    Safeguard,
-    Secured,
-    Shriek,
-    Shrug,
-    Sickened,
-    Silence,
-    Small,
-    SnakeCharmer,
-    SneakAttack,
-    Spellarmor,
-    Splash,
-    Stealth,
-    Stunned,
-    SwornEnemy,
-    Temporary,
-    Tracker,
-    Triumph,
-    TwinFuries,
+
+    //L
+    Leech, Lethal, Lifelink, Lightning,
+
+    //M
+    Madness, Magic, Multistrike,
+
+    //N
+
+    //O
+    Offering, OrcishPride,
+
+    //P
+    PackHunter, Physical, Piercing, Poison, Prod, Prone, ProtectionCharm, Psychic,
+
+    //Q
+
+    //R
+    Ranged, Rathe, Realmwalker, ReluctantHero, Restrained, Ritual,
+
+    //S
+    Safeguard, Secured, Shriek, Shrug, Sickened, Silence, Small, SnakeCharmer, SneakAttack,
+    Spellarmor, Splash, Stealth, Stunned, SwornEnemy,
+
+    //T
+    Temporary, Tracker, Triumph, TwinFuries,
+
+    //U
     Unyielding,
-    Vengeful,
-    VictoryCry,
-    Zeal,
-    Zoologist
+
+    //V
+    Vengeful, VictoryCry,
+
+    //W
+
+    //X
+
+    //Y
+
+    //Z
+    Zeal, Zoologist
 }
 public abstract class CardObject : ScriptableObject 
 {

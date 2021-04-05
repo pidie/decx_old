@@ -23,6 +23,7 @@ MonoBehaviour:
 
     All Serpent
     creatures gain +2/+2 while the Snake Charmer is alive.'
+  energyCost: 5
   image: {fileID: 0}
   keywords: 4e000000
   creatureType: 2

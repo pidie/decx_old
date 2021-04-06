@@ -411,9 +411,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d23f453bfcbc12c4fbf4b7a1bfd4e52e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameHandler: {fileID: 0}
-  _hand: {fileID: 0}
-  cardObject: {fileID: 0}
+  _gameHandler: {fileID: 2181864360731471968, guid: 23baf09305a7af44aa7c70c7a9c6b53d,
+    type: 3}
+  _hand: {fileID: 6991177350693002237, guid: 38df9b63337ffcb41b49a8c2417d948f, type: 3}
+  cardObject: {fileID: 11400000, guid: 221e853de4c6edd62b8f133258a2374f, type: 2}
   cardTitle: {fileID: 4788645661619926746}
   cardEnergyCost: {fileID: 5144700962451305268}
 --- !u!137 &-1994746231128953533

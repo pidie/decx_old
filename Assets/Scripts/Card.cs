@@ -9,6 +9,8 @@ public class Card : MonoBehaviour
     [SerializeField]    private GameHandler _gameHandler;
     [SerializeField]    private Hand _hand;
 
+    private Collider collider;
+
     [Header("Card Object Attributes")]
     public CardObject cardObject;
     [SerializeField]    private TMP_Text cardTitle;
@@ -25,7 +27,7 @@ public class Card : MonoBehaviour
 
     void Start()
     {
-
+        collider = GetComponent<Collider>();
     }
 
     private void Update() 
@@ -39,6 +41,7 @@ public class Card : MonoBehaviour
         {
             cardTitle.text = cardObject.title;
             cardEnergyCost.text = cardObject.energyCost.ToString();
+            collider.isTrigger = true;
         }
     }
 

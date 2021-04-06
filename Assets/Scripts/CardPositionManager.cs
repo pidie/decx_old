@@ -52,6 +52,7 @@ public class CardPositionManager : MonoBehaviour
     {
         foreach (CardPosition cardPosition in positions)
         {
+            // Debug.Log(_playerBackRight.IsBeingHovered());
             if ( cardPosition.IsBeingHovered() )
             {
                 Debug.Log(cardPosition);

@@ -33,6 +33,8 @@ public class CardPosition : MonoBehaviour
         //change the color of the CardPosition object to a highlited version
     }
 
+    
+
     public bool IsBeingHovered()
     {
         if ( this.isBeingHovered )

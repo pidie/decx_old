@@ -41,7 +41,7 @@ public class Card : MonoBehaviour
         {
             cardTitle.text = cardObject.title;
             cardEnergyCost.text = cardObject.energyCost.ToString();
-            collider.isTrigger = true;
+            // collider.isTrigger = true;
         }
     }
 

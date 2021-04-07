@@ -29,16 +29,22 @@ public class Draggable : MonoBehaviour
             Vector3 pos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, zPosition - 0.5f);
             transform.position = mainCamera.ScreenToWorldPoint(pos);
 
-            Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);                                                     Debug.DrawRay(ray.origin, ray.direction * 200f);
-            RaycastHit hit;
 
-            if ( Physics.Raycast(ray, out hit, 40) )
+            // the problem here is that the ray is going from the mouse to the card, not the card to the cardPosition!
+            Ray cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);                                              //       Debug.DrawRay(cameraRay.origin, cameraRay.direction * 30f);
+            RaycastHit heldCard;
+
+            if ( Physics.Raycast(cameraRay, out heldCard, 30) )
             {
-                Debug.Log(hit.distance);
-                if (hit.collider.gameObject.layer == layerMask)
-                {
+                // Ray cardRay = heldCard.transform.gameObject.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
                     
-                }
+                // Debug.Log(hit.distance);
+                    // if (hit.collider.gameObject.layer == layerMask)
+                    if (Physics.Raycast(heldCard.transform.position, heldCard.transform.forward, out hit, 50) )
+                    {
+                        Debug.Log(hit.transform.gameObject);
+                    }
             }
         }
     }

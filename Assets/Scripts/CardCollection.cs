@@ -23,7 +23,7 @@ public class CardCollection : MonoBehaviour
         _cardObjectList.Add(card);
     }
 
-    protected void AddCardToTop(CardObject[] cards)
+    protected void AddCardToTop(List<CardObject> cards)
     {
         _cardObjectList.AddRange(cards);
     }
@@ -33,7 +33,7 @@ public class CardCollection : MonoBehaviour
         _cardObjectList.Insert(0, card);
     }
 
-    protected void AddCardToBottom(CardObject[] cards)
+    protected void AddCardToBottom(List<CardObject> cards)
     {
         _cardObjectList.InsertRange(0, cards);
     }

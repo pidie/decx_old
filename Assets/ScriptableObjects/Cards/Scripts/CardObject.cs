@@ -123,8 +123,4 @@ public abstract class CardObject : ScriptableObject
     public Sprite image;
 
     public List<Keywords> keywords;
-
-    private void Awake() {
-        
-    }
 }

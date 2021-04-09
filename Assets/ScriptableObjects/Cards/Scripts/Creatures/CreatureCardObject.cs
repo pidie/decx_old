@@ -33,7 +33,7 @@ public abstract class CreatureCardObject : CardObject
 
     public List<string> buffs;  // will have to make a <T> type StatusEffects
 
-    public void Awake() 
+    public void Start() 
     {
         cardType = CardType.Creature;
     }

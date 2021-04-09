@@ -15,7 +15,7 @@ public class CompanionCreatureCardObject : CreatureCardObject
     public CreatureActionTypes action3;
     public CreatureActionTypes action4;
 
-    private new void Awake() 
+    private new void Start() 
     {
         creatureType = CreatureType.Companion;
     }

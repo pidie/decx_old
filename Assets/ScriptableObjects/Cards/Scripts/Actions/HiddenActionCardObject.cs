@@ -7,7 +7,7 @@ public class HiddenActionCardObject : ActionCardObject
 {
     public bool isVisible = false;
 
-    private void Awake() 
+    private void Start() 
     {
         actionType = ActionType.Hidden;    
     }

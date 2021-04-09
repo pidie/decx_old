@@ -13,7 +13,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Boss", menuName = "Cards/Creatures/Boss")]
 public class BossCreatureCardObject : CreatureCardObject 
 {
-    private new void Awake()
+    private new void Start()
     {
         creatureType = CreatureType.Boss;
     }

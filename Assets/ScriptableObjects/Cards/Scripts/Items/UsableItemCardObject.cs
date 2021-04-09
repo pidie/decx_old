@@ -11,7 +11,7 @@ public class UsableItemCardObject : ItemCardObject
 
     public int gainChargeAfterTurns = -1;
 
-    private void Awake() 
+    private void Start() 
     {
         itemType = ItemType.Usable;    
     }    

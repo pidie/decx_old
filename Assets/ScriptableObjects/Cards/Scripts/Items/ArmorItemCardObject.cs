@@ -16,8 +16,9 @@ public class ArmorItemCardObject : ItemCardObject
     public string slot;     // will need to create a <T> type EquipmentSlot
     public int armorGranted = 0;
     public int durability = 1;
+    public Resistances resistances;
 
-    private void Awake() {
+    private void Start() {
         itemType = ItemType.Armor;
     }
 }

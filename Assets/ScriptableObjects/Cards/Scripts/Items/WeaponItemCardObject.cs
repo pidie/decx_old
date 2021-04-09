@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum WeaponTypes
+public enum WeaponTypes     //maybe change this to WeaponFamilies, and have specific AxeTypes, WandTypes, etc.
 {
     Axe,
     BastardSword,
@@ -28,7 +28,6 @@ public enum WeaponTypes
     Thrown,
     Wand,
     Warhammer,
-    Whip,
     Zweihander
 }
 [CreateAssetMenu(fileName = "New Weapon", menuName = "Cards/Items/Weapon")]
@@ -38,7 +37,7 @@ public class WeaponItemCardObject : ItemCardObject
     public int damage = 1;
     public DamageTypes damageType = DamageTypes.Physical;  // will have to make a <T> type DamageType
 
-    private void Awake()
+    private void Start()
     {
         itemType = ItemType.Weapon;
         if (this.weaponType == WeaponTypes.Axe)

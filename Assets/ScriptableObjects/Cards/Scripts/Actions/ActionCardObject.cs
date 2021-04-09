@@ -35,7 +35,7 @@ public abstract class ActionCardObject : CardObject {
     public float splashDamage;
     public bool splashOnlyInLine = true;
 
-    private void Awake() {
+    private void Start() {
         cardType = CardType.Action;
     }
 }

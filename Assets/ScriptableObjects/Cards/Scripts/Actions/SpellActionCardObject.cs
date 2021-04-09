@@ -34,7 +34,7 @@ public class SpellActionCardObject : ActionCardObject
     public spellSchools school;  //will have to make a <T> type School
     public spellComplexityTypes spellComplexity;
     
-    public void Awake() 
+    public void Start() 
     {
         actionType = ActionType.Spell;
     }

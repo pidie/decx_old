@@ -19,7 +19,7 @@ public enum ArmorTypes
     Gauntlets,
     Helm,
     Pauldrons,
-    Rings
+    Rings           //rings will take up one slot, and will be stored like a "keychain". Max ten rings.
 }
 public abstract class ItemCardObject : CardObject 
 {
@@ -32,7 +32,7 @@ public abstract class ItemCardObject : CardObject
     [Range(1,5)]
     public int range = 1;
 
-    private void Awake() 
+    private void Start() 
     {
         cardType = CardType.Item;
     }

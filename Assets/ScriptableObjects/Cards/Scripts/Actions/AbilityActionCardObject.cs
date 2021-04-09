@@ -33,7 +33,7 @@ public class AbilityActionCardObject : ActionCardObject
     character's collection.
     */
 
-    private void Awake() 
+    private void Start() 
     {
         actionType = ActionType.Ability;    
     }

@@ -6,11 +6,13 @@ public class PositionCamera : MonoBehaviour
 {
     [SerializeField]
     private GameObject _centerpiece;
-    private float _HARD_Y = 26.3f;   //just in case
-    private float _HARD_Z = -53.8f;  //just in case
+    private float _HARD_Y;   //just in case
+    private float _HARD_Z;  //just in case
 
-    void Awake()
+    void Start()
     {
+        // _HARD_Y = 26.3f;
+        // _HARD_Z = -53.8f;
         transform.position = new Vector3(_centerpiece.transform.position.x, transform.position.y, transform.position.z);
     }
 }

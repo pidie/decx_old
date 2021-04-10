@@ -9,16 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52d223bb7f9a1b301ad54d16e1fcd7e4, type: 3}
+  m_Script: {fileID: 11500000, guid: cc8ee59be0819784c909932e0cd34b37, type: 3}
   m_Name: Fenrir0
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
-  cardType: 0
+  cardType: 1
   notes: 
   title: Fenrir
   name: fenrir_0
   ID: 
   description: 
+  energyCost: 1
   image: {fileID: 0}
   keywords: 
   creatureType: 1

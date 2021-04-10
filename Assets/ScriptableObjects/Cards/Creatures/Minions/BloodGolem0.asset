@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc2011c8749723c8c916d5f04065e93b, type: 3}
+  m_Script: {fileID: 11500000, guid: cc1c8233a2c520c47a77c296535f8cbb, type: 3}
   m_Name: BloodGolem0
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
-  cardType: 0
+  cardType: 1
   notes: 
   title: Blood Golem
   name: blood_golem_0
@@ -29,6 +29,7 @@ MonoBehaviour:
     Leech. All Damage Counters on the caster transfer to the Blood Golem. After being
     active for 1 round, the Blood Golem can be sacrificed. Heal for the amount of
     health the Blood Golem had at the time of sacrifice.'
+  energyCost: 1
   image: {fileID: 0}
   keywords: 300000003200000047000000
   creatureType: 2

@@ -262,7 +262,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -414,7 +414,7 @@ MonoBehaviour:
   _gameHandler: {fileID: 2181864360731471968, guid: 23baf09305a7af44aa7c70c7a9c6b53d,
     type: 3}
   _hand: {fileID: 6991177350693002237, guid: 38df9b63337ffcb41b49a8c2417d948f, type: 3}
-  cardObject: {fileID: 11400000, guid: 221e853de4c6edd62b8f133258a2374f, type: 2}
+  cardObject: {fileID: 0}
   cardTitle: {fileID: 4788645661619926746}
   cardEnergyCost: {fileID: 5144700962451305268}
 --- !u!137 &-1994746231128953533
@@ -623,7 +623,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: title
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -650,7 +650,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.75
+  m_fontSize: 5.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

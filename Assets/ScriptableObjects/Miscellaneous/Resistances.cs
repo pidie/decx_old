@@ -13,18 +13,18 @@ public class Resistances : ScriptableObject {
     public int physicalResistance =     0;
     public int poisonResistance =       0;
 
-    public Resistances GetResistance(Resistances resistance)
-    {
-        return resistance;
-    }
+    // public Resistances GetResistance(Resistances resistance)
+    // {
+    //     return resistance;
+    // }
 
-    public void SetResistance(Resistances resistance, int value)
-    {
-        this.resistance = value;
-    }
+    // public void SetResistance(Resistances resistance, int value)
+    // {
+    //     this.resistance = value;
+    // }
 
-    public void ModifyResistance(Resistances resistance, int value)
-    {
-        this.GetResistance += value;
-    }
+    // public void ModifyResistance(Resistances resistance, int value)
+    // {
+    //     this.GetResistance += value;
+    // }
 }

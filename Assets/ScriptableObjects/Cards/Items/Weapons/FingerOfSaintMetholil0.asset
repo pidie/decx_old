@@ -9,21 +9,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e22e5bd0bb012c7d8901bab1f78dbb52, type: 3}
+  m_Script: {fileID: 11500000, guid: c9c6255ae5e079e4ea8725f519c4afb5, type: 3}
   m_Name: FingerOfSaintMetholil0
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
-  cardType: 0
+  cardType: 2
+  notes: 
   title: Finger of Saint Metholil
   name: finger_of_saint_metholil_0
   ID: 
   description: 
+  energyCost: 1
   image: {fileID: 0}
-  keywords: []
+  keywords: 
   itemType: 2
   cooldownPeriodInTurns: 0
   magicRequired: 1
   weight: 0
-  weaponType: 21
+  range: 1
+  weaponType: 22
   damage: 3
   damageType: 6

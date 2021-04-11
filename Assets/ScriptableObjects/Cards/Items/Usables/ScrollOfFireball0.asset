@@ -9,21 +9,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0a401f8a9a279c08ab5ae6e7f569028, type: 3}
+  m_Script: {fileID: 11500000, guid: 53359d5f617f36d4696ed1336baee2cf, type: 3}
   m_Name: ScrollOfFireball0
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
-  cardType: 0
+  cardType: 2
+  notes: 
   title: Scroll of Fireball I
   name: scroll_of_fireball_0
   ID: 
   description: Add 1 Temporary level 1 Fireball card to your hand.
+  energyCost: 1
   image: {fileID: 0}
-  keywords: []
+  keywords: 
   itemType: 1
   cooldownPeriodInTurns: 0
-  magicCost: 0
+  magicRequired: 0
   weight: 0
+  range: 1
   numOfCharges: 1
   isConsumable: 1
   gainChargeAfterTurns: -1

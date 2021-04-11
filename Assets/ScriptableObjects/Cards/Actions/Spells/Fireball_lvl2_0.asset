@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51c79825d76be1f24af9e58377d55c41, type: 3}
+  m_Script: {fileID: 11500000, guid: 6707d8d57ed03c44693a6144b58dbae2, type: 3}
   m_Name: Fireball_lvl2_0
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
@@ -20,10 +20,10 @@ MonoBehaviour:
   ID: 
   description: There is a 1 in 6 chance that the Fireball will explode, dealing 50%
     Splash damage as Fire to all adjacent creatures.
-  image: {fileID: 0}
-  keywords: 50000000
-  actionType: 2
   energyCost: 1
+  image: {fileID: 0}
+  keywords: 1e000000
+  actionType: 2
   cooldownPeriodInTurns: 0
   needsTarget: 1
   rarity: 

@@ -15,6 +15,7 @@ public class Draggable : MonoBehaviour
     private bool isDrag;
     [SerializeField]
     private LayerMask layerMask;
+    private CardPosition dropOff = new CardPosition();
 
     private void Start() 
     {
@@ -29,23 +30,33 @@ public class Draggable : MonoBehaviour
             Vector3 pos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, zPosition - 0.5f);
             transform.position = mainCamera.ScreenToWorldPoint(pos);
 
+            Ray cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);                                                     Debug.DrawRay(cameraRay.origin, cameraRay.direction * 50f);
+            RaycastHit[] hits;
+            hits = Physics.RaycastAll(cameraRay, 50f);
 
-            // the problem here is that the ray is going from the mouse to the card, not the card to the cardPosition!
-            Ray cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);                                              //       Debug.DrawRay(cameraRay.origin, cameraRay.direction * 30f);
-            RaycastHit heldCard;
-
-            if ( Physics.Raycast(cameraRay, out heldCard, 30) )
+            for (int i = 0; i < hits.Length; i++)
             {
-                // Ray cardRay = heldCard.transform.gameObject.ScreenPointToRay(Input.mousePosition);
-                RaycastHit hit;
-                    
-                // Debug.Log(hit.distance);
-                    // if (hit.collider.gameObject.layer == layerMask)
-                    if (Physics.Raycast(heldCard.transform.position, heldCard.transform.forward, out hit, 50) )
-                    {
-                        Debug.Log(hit.transform.gameObject);
-                    }
+                Debug.Log(dropOff);
+
+                Transform hit = hits[i].transform;
+                CardPosition hitCP = new CardPosition();
+
+                if (hit.GetComponent<CardPosition>())
+                {
+                    hitCP = hit.GetComponent<CardPosition>();
+                    dropOff = hitCP;
+                }
+                else if (dropOff != null && dropOff != hitCP)
+                {
+                    dropOff.RevertHighlightPosition();
+                    dropOff = new CardPosition();
+                }
             }
+        }
+
+        if (dropOff != null)
+        {
+            dropOff.HighlightPosition();
         }
     }
 

@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc2011c8749723c8c916d5f04065e93b, type: 3}
+  m_Script: {fileID: 11500000, guid: cc1c8233a2c520c47a77c296535f8cbb, type: 3}
   m_Name: BoneLord0
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
-  cardType: 0
+  cardType: 1
   notes: 
   title: Bone Lord
   name: bone_lord_0
@@ -24,6 +24,7 @@ MonoBehaviour:
 
 
     Every turn, raise a Shambling Skeleton in an empty slot.'
+  energyCost: 1
   image: {fileID: 0}
   keywords: 47000000
   creatureType: 2

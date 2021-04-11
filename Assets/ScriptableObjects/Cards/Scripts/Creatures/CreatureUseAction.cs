@@ -5,25 +5,21 @@ using UnityEngine;
 public class CreatureUseAction : ScriptableObject {
     public List<ActionCardObject> actions;
 
-    public GetAction(bool isBool = false)
+    public List<ActionCardObject> GetAction()
     {
-        if (isBool)
+        if (actions.Count == 0)
         {
-            if (actions.Count == 0)
-            {
-                return false;
-            }
-            return true;
+            return null;
         }
         return actions;
     }
 
-    public SetAction(ActionCardObject action)
+    public void SetAction(ActionCardObject action)
     {
         this.actions.Add(action);
     }
 
-    public SetAction(List<ActionCardObject> actions)
+    public void SetAction(List<ActionCardObject> actions)
     {
         this.actions.AddRange(actions);
     }

@@ -18,11 +18,5 @@ MonoBehaviour:
   description: 
   image: {fileID: 0}
   cards:
-  - {fileID: 11400000, guid: bbef44f2db57e3c16be1c92122e8597f, type: 2}
-  - {fileID: 11400000, guid: 963fd6f0ecf5f7e938de4fecdbee5fcd, type: 2}
-  - {fileID: 11400000, guid: bbef44f2db57e3c16be1c92122e8597f, type: 2}
-  - {fileID: 11400000, guid: 221e853de4c6edd62b8f133258a2374f, type: 2}
-  - {fileID: 11400000, guid: bbef44f2db57e3c16be1c92122e8597f, type: 2}
-  - {fileID: 11400000, guid: e232ea9b376586a36b1477da23f774da, type: 2}
-  - {fileID: 11400000, guid: 58002ebfb7fe0f9d8ad4a672a6ffa188, type: 2}
+  - {fileID: 11400000, guid: 7ab3be9b0dd7f3359a9a003f76344b45, type: 2}
   - {fileID: 11400000, guid: 134fd1aab42fa8ef793ba6e167a20e1d, type: 2}

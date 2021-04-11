@@ -9,12 +9,11 @@ public class Card : MonoBehaviour
     [SerializeField]    private GameHandler _gameHandler;
     [SerializeField]    private Hand _hand;
 
-    private Collider collider;
-
     [Header("Card Object Attributes")]
     public CardObject cardObject;
     [SerializeField]    private TMP_Text cardTitle;
     [SerializeField]    private TMP_Text cardEnergyCost;
+    [SerializeField]    private Sprite image;
 
     protected bool CardIsInHand()
     {
@@ -23,11 +22,6 @@ public class Card : MonoBehaviour
             return true;
         }
         return false;
-    }
-
-    void Start()
-    {
-        collider = GetComponent<Collider>();
     }
 
     private void Update() 
@@ -41,6 +35,7 @@ public class Card : MonoBehaviour
         {
             cardTitle.text = cardObject.title;
             cardEnergyCost.text = cardObject.energyCost.ToString();
+            image = cardObject.image;
             // collider.isTrigger = true;
         }
     }

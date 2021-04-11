@@ -10,17 +10,16 @@ public class CardPosition : MonoBehaviour
     private Card card;
     private bool isOccupied = false;
     private bool isBeingHovered = false;
-    
-    private void Update() {
-        /*
-        check to see if a card is being hovered over
-        if so, call HighlightPosition
-            if card is released:
-                if isOccupied == false:
-                    isOccupied = true
-                    card = hand.card
+    private Renderer renderer;
 
-        */
+    private void Start() 
+    {
+        renderer = GetComponent<Renderer>();    
+    }
+    
+    private void Update() 
+    {
+
     }
 
     private void FixedUpdate()
@@ -28,12 +27,16 @@ public class CardPosition : MonoBehaviour
         // used for physics
     }
 
-    private void HighlightPosition()
+    public void HighlightPosition()
     {
         //change the color of the CardPosition object to a highlited version
+        this.renderer.material.color = Color.yellow;
     }
 
-    
+    public void RevertHighlightPosition()
+    {
+        this.renderer.material.color = Color.white;
+    }
 
     public bool IsBeingHovered()
     {

@@ -25,7 +25,7 @@ public class Draggable : MonoBehaviour
 
     private void Update() 
     {
-        if (isDrag)
+        if ( isDrag )
         {
             Vector3 pos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, zPosition - 0.5f);
             transform.position = mainCamera.ScreenToWorldPoint(pos);
@@ -34,37 +34,42 @@ public class Draggable : MonoBehaviour
             RaycastHit[] hits;
             hits = Physics.RaycastAll(cameraRay, 50f);
 
-            for (int i = 0; i < hits.Length; i++)
+            for ( int i = 0; i < hits.Length; i++ )
             {
                 Debug.Log(dropOff);
 
                 Transform hit = hits[i].transform;
-                CardPosition hitCP = new CardPosition();
+                CardPosition hitCP = hit.GetComponent<CardPosition>();
 
-                if (hit.GetComponent<CardPosition>())
+                if ( hitCP )
                 {
-                    hitCP = hit.GetComponent<CardPosition>();
-                    dropOff = hitCP;
+                    if ( dropOff != hitCP )
+                    {
+                        if ( dropOff != null )
+                        {
+                            dropOff.RevertHighlightPosition();
+                        }
+                        dropOff = hitCP;
+                    }
+
+                    if ( dropOff != null )
+                    {
+                        dropOff.HighlightPosition();
+                    }
                 }
-                else if (dropOff != null && dropOff != hitCP)
+                else if ( !hitCP && dropOff != null )
                 {
-                    dropOff.RevertHighlightPosition();
-                    dropOff = new CardPosition();
+                    // dropOff.RevertHighlightPosition();
                 }
             }
-        }
-
-        if (dropOff != null)
-        {
-            dropOff.HighlightPosition();
         }
     }
 
     private void OnMouseDown() 
     {
-        if (Input.GetMouseButton(0))
+        if ( Input.GetMouseButton(0) )
         {
-            if (!isDrag)
+            if ( !isDrag )
             {
                 isDrag = true;
             }

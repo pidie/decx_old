@@ -28,6 +28,7 @@ public abstract class ActionCardObject : CardObject {
     public DamageTypes damageType;
     [Range(1,5)]
     public int range = 1;
+    public Dictionary<DamageTypes, int> damageCounters;
     
     [Header("Splash Damage")]
     [Range(0, 100)]
@@ -35,7 +36,8 @@ public abstract class ActionCardObject : CardObject {
     public float splashDamage;
     public bool splashOnlyInLine = true;
 
-    private void Start() {
+    private void Start() 
+    {
         cardType = CardType.Action;
     }
 }

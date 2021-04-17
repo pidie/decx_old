@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Attributes { Arcana, Chi, Guile, Power }
 public enum CardType { Action, Creature, Item }
-public enum DamageTypes { Acid, Cold, Force, Fire, Holy, Lightning, Magic, Physical, Poison }
+public enum DamageTypes { Acid, Cold, Fire, Force, Holy, Lightning, Magic, Physical, Poison }
 public enum Keywords
 {
     //A

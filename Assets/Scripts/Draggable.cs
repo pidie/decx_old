@@ -1,18 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Draggable : MonoBehaviour
 {
-
-    /*
-    todo:
-        - create an offset value so you can drag an object from where the mouse touches it, not just the center of the object
-    */
-
+    [SerializeField]
+    private Hand _hand;
     private float zPosition;
     private Camera mainCamera;
     private bool isDrag;
+    [SerializeField]
+    private bool isHovering;
     [SerializeField]
     private LayerMask layerMask;
     private CardPosition dropOff = new CardPosition();
@@ -25,8 +24,23 @@ public class Draggable : MonoBehaviour
 
     private void Update() 
     {
+
+        /*
+
+        todo:
+            + get a card to transfer from the hand to the card position
+                - in cardposition, create new card - get cardobject from held card
+                - in hand, destroy card
+            + if a card position is filled, ensure that a second card can't stack on top
+            - adjust where the ray is cast from so that the held card doesn't obstruct the player's view of card positions
+            - if the ray isn't hitting a card position, no card position should be selected.
+
+        */
+
+
         if ( isDrag )
         {
+            _hand = this.transform.parent.GetComponent<Hand>();
             Vector3 pos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, zPosition - 0.5f);
             transform.position = mainCamera.ScreenToWorldPoint(pos);
 
@@ -36,8 +50,6 @@ public class Draggable : MonoBehaviour
 
             for ( int i = 0; i < hits.Length; i++ )
             {
-                Debug.Log(dropOff);
-
                 Transform hit = hits[i].transform;
                 CardPosition hitCP = hit.GetComponent<CardPosition>();
 
@@ -48,6 +60,7 @@ public class Draggable : MonoBehaviour
                         if ( dropOff != null )
                         {
                             dropOff.RevertHighlightPosition();
+                            isHovering = false;
                         }
                         dropOff = hitCP;
                     }
@@ -55,6 +68,7 @@ public class Draggable : MonoBehaviour
                     if ( dropOff != null )
                     {
                         dropOff.HighlightPosition();
+                        isHovering = true;
                     }
                 }
                 else if ( !hitCP && dropOff != null )
@@ -78,6 +92,25 @@ public class Draggable : MonoBehaviour
 
     private void OnMouseUp() 
     {
+        try
+        {
+            if (!dropOff.GetIsOccupied())
+            {
+                Card card = this.GetComponent<Card>();
+
+                dropOff.CreateNewCard(card, card.cardObject);
+                _hand.DestroyCardObject(card.cardObject);
+                Destroy(this.gameObject);
+            }
+            else
+            {
+                Debug.LogWarning("This position is filled!");
+            }
+        }
+        catch(NullReferenceException)
+        {
+
+        }
         isDrag = false;
     }
 }

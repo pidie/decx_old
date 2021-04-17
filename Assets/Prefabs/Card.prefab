@@ -351,8 +351,6 @@ GameObject:
   - component: {fileID: -5024370543651435410}
   - component: {fileID: 6965683853834269780}
   - component: {fileID: 1768177551984790050}
-  - component: {fileID: 5685526642500387751}
-  - component: {fileID: 9041578555119703219}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -527,40 +525,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0790332f7fb791e378078eeaa5897e27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hand: {fileID: 6991177350693002237, guid: 38df9b63337ffcb41b49a8c2417d948f, type: 3}
+  isHovering: 0
   layerMask:
     serializedVersion: 2
     m_Bits: 8
---- !u!114 &5685526642500387751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4769657208153724752}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1465209106, guid: c8d0ad23af520fe46aabe2b1fecf6462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _data:
-    _json: '{"declarations":{"collection":{"$content":[],"$version":"A"},"$version":"A"}}'
-    _objectReferences: []
---- !u!114 &9041578555119703219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4769657208153724752}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -57143145, guid: a040fb66244a7f54289914d98ea4ef7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _data:
-    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
-    _objectReferences:
-    - {fileID: 11400000, guid: 051e560df3064124cb4337fc0235f866, type: 2}
 --- !u!1 &5636392112863244746
 GameObject:
   m_ObjectHideFlags: 0

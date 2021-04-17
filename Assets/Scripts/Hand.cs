@@ -16,6 +16,10 @@ using UnityEngine;
  *  - Individual cards in hand should float upwards into view when the player hovers/scrolls over them
  *    - cards next to them should hover slightly, creating the illusion of a curve (for aethsetic purposes)
  *  - Should have the option to autosort cards based on a specification (EP cost, type, etc)
+
+todo:
+    - remove cardObjects from hand when placed on table. reference Draggable.OnMouseUp()
+
  */
 
 
@@ -32,7 +36,7 @@ public class Hand : CardCollection
 
     [Header("Card Stats")]
     public float cardWidth = 3.5f;
-    [Range(0f,5f)]    public float cardBufferInHand = 0.3f;
+    [Range(-0.5f,5f)]    public float cardBufferInHand = 0.3f;
 
     void Start()
     {
@@ -51,6 +55,11 @@ public class Hand : CardCollection
         cards.Add(cardObject);
         card.cardObject = cardObject;
         Instantiate(card, transform);
+    }
+
+    public void DestroyCardObject(CardObject cardObject)
+    {
+        cards.Remove(cardObject);
     }
 
     public bool DrawCard(CardObject card)

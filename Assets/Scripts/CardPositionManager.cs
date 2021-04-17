@@ -30,9 +30,10 @@ public class CardPositionManager : MonoBehaviour
     [SerializeField]    private CardPosition _opponentBackRightCenter;
     [SerializeField]    private CardPosition _opponentBackRight;
 
-    private List<CardPosition> positions;
-    private List<CardPosition> playerPositions;
-    private List<CardPosition> opponentPositions;
+    [Header("Lists")]
+    [SerializeField]    private List<CardPosition> positions;
+    [SerializeField]    private List<CardPosition> playerPositions;
+    [SerializeField]    private List<CardPosition> opponentPositions;
 
 
     // Start is called before the first frame update
@@ -52,10 +53,9 @@ public class CardPositionManager : MonoBehaviour
     {
         foreach (CardPosition cardPosition in positions)
         {
-            // Debug.Log(_playerBackRight.IsBeingHovered());
-            if ( cardPosition.IsBeingHovered() )
+            if ( cardPosition.GetIsOccupied() )
             {
-                Debug.Log(cardPosition);
+                
             }
         }
     }

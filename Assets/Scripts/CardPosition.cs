@@ -7,7 +7,7 @@ public class CardPosition : MonoBehaviour
     [SerializeField]    private GameHandler _gameHandler;
     [SerializeField]    private Graveyard _graveyard;
 
-    private Card card;
+    [SerializeField]    private Card card;
     private bool isOccupied = false;
     private bool isBeingHovered = false;
     private Renderer renderer;
@@ -25,6 +25,23 @@ public class CardPosition : MonoBehaviour
     private void FixedUpdate()
     {
         // used for physics
+    }
+
+    public bool GetIsOccupied()
+    {
+        if (isOccupied)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public void CreateNewCard(Card card, CardObject cardObject)
+    {
+        this.card = card;
+        this.card.cardObject = cardObject;
+        Instantiate(this.card, transform.position, Quaternion.Euler(-90, 180, 0));
+        isOccupied = true;
     }
 
     public void HighlightPosition()

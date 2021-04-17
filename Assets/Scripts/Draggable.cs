@@ -3,6 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+
+todo:
+    + get a card to transfer from the hand to the card position
+        - in cardposition, create new card - get cardobject from held card
+        - in hand, destroy card
+    + if a card position is filled, ensure that a second card can't stack on top
+    - adjust where the ray is cast from so that the held card doesn't obstruct the player's view of card positions
+    - if the ray isn't hitting a card position, no card position should be selected.
+
+*/
+
 public class Draggable : MonoBehaviour
 {
     [SerializeField]
@@ -24,20 +36,6 @@ public class Draggable : MonoBehaviour
 
     private void Update() 
     {
-
-        /*
-
-        todo:
-            + get a card to transfer from the hand to the card position
-                - in cardposition, create new card - get cardobject from held card
-                - in hand, destroy card
-            + if a card position is filled, ensure that a second card can't stack on top
-            - adjust where the ray is cast from so that the held card doesn't obstruct the player's view of card positions
-            - if the ray isn't hitting a card position, no card position should be selected.
-
-        */
-
-
         if ( isDrag )
         {
             _hand = this.transform.parent.GetComponent<Hand>();

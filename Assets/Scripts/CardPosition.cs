@@ -7,7 +7,7 @@ public class CardPosition : MonoBehaviour
     [SerializeField]    private GameHandler _gameHandler;
     [SerializeField]    private Graveyard _graveyard;
 
-    [SerializeField]    private Card card;
+    // [SerializeField]    private Card card;
     [SerializeField]    private CardObject cardObject;
     private bool isOccupied = false;
     private bool isBeingHovered = false;
@@ -39,9 +39,9 @@ public class CardPosition : MonoBehaviour
 
     public void CreateNewCard(Card card, CardObject cardObject)
     {
-        this.card = card;
+        Card card = card;
         this.cardObject = cardObject;
-        Instantiate(this.card, transform.position, Quaternion.Euler(-90, 180, 0));
+        Instantiate(card, transform.position, Quaternion.Euler(-90, 180, 0));
         isOccupied = true;
     }
 
@@ -54,21 +54,6 @@ public class CardPosition : MonoBehaviour
     public void RevertHighlightPosition()
     {
         this.renderer.material.color = Color.white;
-    }
-
-    public bool IsBeingHovered()
-    {
-        if ( this.isBeingHovered )
-        {
-            return true;
-        }
-        return false;
-    }
-
-    public void AcceptCard()
-    {
-        isOccupied = true;
-        //add logic to accept a card object bound to this position
     }
 
     public void EvictCard(Deck destination)

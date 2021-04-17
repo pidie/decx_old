@@ -6,7 +6,7 @@ using TMPro;
 
 public class Card : MonoBehaviour
 {
-    [SerializeField]    private GameHandler _gameHandler;
+    // [SerializeField]    private GameHandler _gameHandler;
     [SerializeField]    private Hand _hand;
 
     [Header("Card Object Attributes")]
@@ -49,7 +49,7 @@ public class Card : MonoBehaviour
     {
         if (CardIsInHand())
         {
-            // Debug.Log("Card is in hand");
+            Debug.Log("Card is in hand");
             if (Input.GetMouseButton(0))
             {
                 /*

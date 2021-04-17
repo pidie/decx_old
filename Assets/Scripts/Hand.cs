@@ -27,8 +27,8 @@ public class Hand : CardCollection
 {
     [Header("Object Assignments")]
     [SerializeField]    private GameObject _centerpiece;
-    [SerializeField]    private Card _card;
-    [SerializeField]    private Deck _stack;
+    // [SerializeField]    private Card _card;
+    // [SerializeField]    private Deck _stack;
                         [Range(1,12)]
     [SerializeField]    private int _maxCards = 8;
     [SerializeField]    private DeckObject deckObject;

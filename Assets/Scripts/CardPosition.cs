@@ -8,6 +8,7 @@ public class CardPosition : MonoBehaviour
     [SerializeField]    private Graveyard _graveyard;
 
     [SerializeField]    private Card card;
+    [SerializeField]    private CardObject cardObject;
     private bool isOccupied = false;
     private bool isBeingHovered = false;
     private Renderer renderer;
@@ -39,7 +40,7 @@ public class CardPosition : MonoBehaviour
     public void CreateNewCard(Card card, CardObject cardObject)
     {
         this.card = card;
-        this.card.cardObject = cardObject;
+        this.cardObject = cardObject;
         Instantiate(this.card, transform.position, Quaternion.Euler(-90, 180, 0));
         isOccupied = true;
     }

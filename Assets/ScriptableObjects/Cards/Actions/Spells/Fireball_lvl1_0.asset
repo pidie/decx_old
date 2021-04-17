@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 4769657208153724752, guid: 6707d8d57ed03c44693a6144b58dbae2, type: 3}
   cardType: 0
-  notes: 
+  notes: Need to trigger a secondary action
   title: Fireball
   name: fireball_lvl1_0
   ID: 

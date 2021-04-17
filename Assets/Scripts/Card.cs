@@ -49,7 +49,7 @@ public class Card : MonoBehaviour
     {
         if (CardIsInHand())
         {
-            Debug.Log("Card is in hand");
+            // Debug.Log("Card is in hand");
             if (Input.GetMouseButton(0))
             {
                 /*

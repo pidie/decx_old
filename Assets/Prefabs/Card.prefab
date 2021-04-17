@@ -415,7 +415,7 @@ MonoBehaviour:
   _gameHandler: {fileID: 2181864360731471968, guid: 23baf09305a7af44aa7c70c7a9c6b53d,
     type: 3}
   _hand: {fileID: 6991177350693002237, guid: 38df9b63337ffcb41b49a8c2417d948f, type: 3}
-  cardObject: {fileID: 0}
+  cardObject: {fileID: 11400000, guid: 134fd1aab42fa8ef793ba6e167a20e1d, type: 2}
   cardTitle: {fileID: 4788645661619926746}
   cardEnergyCost: {fileID: 5144700962451305268}
   image: {fileID: 0}
@@ -525,6 +525,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0790332f7fb791e378078eeaa5897e27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hand: {fileID: 6991177350693002237, guid: 38df9b63337ffcb41b49a8c2417d948f, type: 3}
+  isHovering: 0
   layerMask:
     serializedVersion: 2
     m_Bits: 8

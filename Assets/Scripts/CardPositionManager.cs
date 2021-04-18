@@ -36,7 +36,6 @@ public class CardPositionManager : MonoBehaviour
     [SerializeField]    private List<CardPosition> opponentPositions;
 
 
-    // Start is called before the first frame update
     void Start()
     {
         playerPositions = new List<CardPosition>()  {_playerBackLeft, _playerBackLeftCenter, _playerBackCenter, _playerBackRight, _playerBackRight,
@@ -48,7 +47,6 @@ public class CardPositionManager : MonoBehaviour
         positions.AddRange(opponentPositions);
     }
 
-    // Update is called once per frame
     void Update()
     {
         foreach (CardPosition cardPosition in positions)

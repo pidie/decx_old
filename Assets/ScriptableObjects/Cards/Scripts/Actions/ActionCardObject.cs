@@ -46,6 +46,7 @@ public abstract class ActionCardObject : CardObject {
     public bool splashOnlyInLine = true;
 
     [Header("Buff/Debuff Information")]
+    public bool hasBuffs = false;
 
     private void Start()
     {

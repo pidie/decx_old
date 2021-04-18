@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class CardPosition : MonoBehaviour
 {
-    [SerializeField]    private GameHandler _gameHandler;
     [SerializeField]    private Graveyard _graveyard;
 
-    // [SerializeField]    private Card card;
     [SerializeField]    private CardObject cardObject;
     private bool isOccupied = false;
     private bool isBeingHovered = false;
@@ -39,7 +37,6 @@ public class CardPosition : MonoBehaviour
 
     public void CreateNewCard(Card card, CardObject cardObject)
     {
-        Card card = card;
         this.cardObject = cardObject;
         Instantiate(card, transform.position, Quaternion.Euler(-90, 180, 0));
         isOccupied = true;

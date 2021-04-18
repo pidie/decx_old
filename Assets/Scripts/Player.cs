@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
     public int energyPoints;       //add UI elements to display these stats
     public int healthPoints;
     public int armorPoints;
+
+    [SerializeField] private TMP_Text energyPointsDisplay;
 
     // add TextMesh energyPointDisplay etc etc
 
@@ -18,7 +21,7 @@ public class Player : MonoBehaviour
 
     private void Update() 
     {
-        // update the UI elements to reflect the values
+        energyPointsDisplay.text = energyPoints.ToString();
     }
 
     private void FetchData()

@@ -18,6 +18,8 @@ todo:
 public class Draggable : MonoBehaviour
 {
     [SerializeField]
+    private GameHandler _gameHandler;
+    [SerializeField]
     private Hand _hand;
     private float zPosition;
     private Camera mainCamera;
@@ -99,6 +101,7 @@ public class Draggable : MonoBehaviour
                 dropOff.CreateNewCard(card, card.cardObject);
                 _hand.DestroyCardObject(card.cardObject);
                 Destroy(this.gameObject);
+                _gameHandler.GetComponent<Player>().energyPoints -= card.cardObject.energyCost;
             }
             else
             {

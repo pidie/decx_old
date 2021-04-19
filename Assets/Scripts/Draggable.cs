@@ -12,6 +12,7 @@ todo:
     + if a card position is filled, ensure that a second card can't stack on top
     - adjust where the ray is cast from so that the held card doesn't obstruct the player's view of card positions
     - if the ray isn't hitting a card position, no card position should be selected.
+    - get the instantiation of the GameHandler assigned to _gameHandler, not the prefab.
 
 */
 
@@ -101,7 +102,7 @@ public class Draggable : MonoBehaviour
                 dropOff.CreateNewCard(card, card.cardObject);
                 _hand.DestroyCardObject(card.cardObject);
                 Destroy(this.gameObject);
-                _gameHandler.GetComponent<Player>().energyPoints -= card.cardObject.energyCost;
+                _gameHandler.GetComponent<Player>().SpendEnergy(card.cardObject.energyCost);
             }
             else
             {

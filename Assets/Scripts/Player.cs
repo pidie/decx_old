@@ -24,6 +24,22 @@ public class Player : MonoBehaviour
         energyPointsDisplay.text = energyPoints.ToString();
     }
 
+    public bool SpendEnergy(int energyCost)
+    {
+        Debug.Log($"energyCost: {energyCost}");
+        Debug.Log($"energyPoints: {energyPoints}");
+        if ( this.energyPoints > energyCost)
+        {
+            Debug.LogWarning("Insufficient energy");
+            return false;
+        }
+        else
+        {
+            this.energyPoints -= energyCost;
+        }
+        return true;
+    }
+
     private void FetchData()
     {
         // this will eventually fetch the PlayerCreatureCardObject and set the values for this class.

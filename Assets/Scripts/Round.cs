@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Round : MonoBehaviour 
 {
@@ -9,15 +11,33 @@ public class Round : MonoBehaviour
     public bool turnOne = true;     //controls which player gets to go
     public TMP_Text timerCountdown;
 
+    private void Start() 
+    {
+        BeginNewRound();    
+    }
+
+    private void Update() 
+    {
+        timer -= Time.deltaTime;
+        timerCountdown.text = Math.Ceiling(timer).ToString();
+        
+        if ( timer <= 0 )
+        {
+            NextTurn();
+        }
+    }
+
     public void BeginNewRound()
     {
-        round += 1;
-        timer = 25f;
+        if (turnOne)
+        {
+            round += 1;
+        }
     }
 
     public void NextTurn()
     {
-        if ( turnOne )
+        if (turnOne)
         {
             turnOne = false;
         }
@@ -26,5 +46,6 @@ public class Round : MonoBehaviour
             turnOne = true;
             BeginNewRound();
         }
+        timer = 25f;
     }
 }

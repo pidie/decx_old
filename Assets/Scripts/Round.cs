@@ -8,8 +8,9 @@ public class Round : MonoBehaviour
 {
     public int round = 0;
     public float timer;
-    public bool turnOne = true;     //controls which player gets to go
     public TMP_Text timerCountdown;
+    public bool isFirstPlayerTurn = true;
+    private bool turnStarted = false;
 
     private void Start() 
     {
@@ -23,13 +24,20 @@ public class Round : MonoBehaviour
         
         if ( timer <= 0 )
         {
-            NextTurn();
+            EndTurn();
+        }
+        else
+        {
+            if (!turnStarted)
+            {
+                StartTurn();
+            }
         }
     }
 
     public void BeginNewRound()
     {
-        if (turnOne)
+        if (isFirstPlayerTurn)
         {
             round += 1;
         }
@@ -37,15 +45,26 @@ public class Round : MonoBehaviour
 
     public void NextTurn()
     {
-        if (turnOne)
+        if (isFirstPlayerTurn)
         {
-            turnOne = false;
+            isFirstPlayerTurn = false;
         }
         else
         {
-            turnOne = true;
+            isFirstPlayerTurn = true;
             BeginNewRound();
         }
         timer = 25f;
+    }
+
+    public void StartTurn()
+    {
+        //calculate damage counters here
+    }
+
+    public void EndTurn()
+    {
+        //decrement buff duration
+        NextTurn();
     }
 }

@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] private TMP_Text energyPointsDisplay;
     [SerializeField] private TMP_Text healthPointsDisplay;
-    [SerializeField ]private TMP_Text armorPointsDisplay;
+    [SerializeField] private TMP_Text armorPointsDisplay;
 
     // add TextMesh energyPointDisplay etc etc
 

@@ -18,18 +18,16 @@ todo:
 
 public class Draggable : MonoBehaviour
 {
-    [SerializeField]
-    private GameHandler _gameHandler;
-    [SerializeField]
-    private Hand _hand;
+    [SerializeField]    private GameHandler _gameHandler;
+    [SerializeField]    private Hand _hand;
+    
+    [SerializeField]    private bool isHovering;
+    [SerializeField]    private LayerMask layerMask;
+    [SerializeField]    private CardPosition dropOff;
+
     private float zPosition;
     private Camera mainCamera;
     private bool isDrag;
-    [SerializeField]
-    private bool isHovering;
-    [SerializeField]
-    private LayerMask layerMask;
-    private CardPosition dropOff = new CardPosition();
 
     private void Start() 
     {

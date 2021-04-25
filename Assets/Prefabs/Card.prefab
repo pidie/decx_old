@@ -529,6 +529,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 8
+  dropOff: {fileID: 0}
 --- !u!1 &5636392112863244746
 GameObject:
   m_ObjectHideFlags: 0

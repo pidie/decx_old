@@ -45,7 +45,9 @@ public class Draggable : MonoBehaviour
             Vector3 pos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, zPosition - 0.5f);
             transform.position = mainCamera.ScreenToWorldPoint(pos);
 
-            Ray cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);                                                     Debug.DrawRay(cameraRay.origin, cameraRay.direction * 50f);
+            Ray cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
+                Debug.DrawRay(cameraRay.origin, cameraRay.direction * 50f);
+
             RaycastHit[] hits;
             hits = Physics.RaycastAll(cameraRay, 50f);
 
@@ -74,6 +76,7 @@ public class Draggable : MonoBehaviour
                 }
                 else if ( !hitCP && dropOff != null )
                 {
+                    // the scenario when the card is being dragged over any object that isn't a CardPosition
                     // dropOff.RevertHighlightPosition();
                 }
             }

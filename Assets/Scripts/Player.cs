@@ -5,18 +5,19 @@ using TMPro;
 
 public class Player : MonoBehaviour
 {
-    public int energyPoints;       //add UI elements to display these stats
+    public int energyPoints;
     public int healthPoints;
     public int armorPoints;
 
     [SerializeField] private TMP_Text energyPointsDisplay;
+    [SerializeField] private TMP_Text healthPointsDisplay;
+    [SerializeField ]private TMP_Text armorPointsDisplay;
 
     // add TextMesh energyPointDisplay etc etc
 
     private void Start() 
     {
         FetchData();
-        //set up energyPointDisplay etc etc to have the proper values
     }
 
     private void Update() 

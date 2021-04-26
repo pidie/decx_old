@@ -26,6 +26,7 @@ todo:
 public class Hand : CardCollection
 {
     [Header("Object Assignments")]
+    [SerializeField]    private GameHandler _gameHandler;
     [SerializeField]    private GameObject _centerpiece;
     
                         [Range(1,12)]
@@ -39,6 +40,7 @@ public class Hand : CardCollection
 
     void Start()
     {
+        _gameHandler = GameObject.Find("GameHandler").GetComponent<GameHandler>();
         cards = deckObject.cards;
         cards.Clear();
         transform.position = new Vector3(_centerpiece.transform.position.x, transform.position.y, transform.position.z);
@@ -61,20 +63,14 @@ public class Hand : CardCollection
         cards.Remove(cardObject);
     }
 
-    public bool DrawCard(CardObject card)
+    public bool CanDrawCard()
     {
         if (cards.Count < _maxCards)
         {
-            // cards.Add(card);
             return true;
         }
         Debug.LogWarning("Hand is full.");
         return false;
-    }
-
-    public int GetMaxCards()
-    {
-        return _maxCards;
     }
 
     void ArrangeCardsCenter()

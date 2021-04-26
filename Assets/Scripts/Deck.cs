@@ -1,11 +1,6 @@
-﻿using System;
-using System.IO;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SceneManagement;
 using UnityEngine;
-using System.Linq;
-using UnityEditor;
 
 public class Deck : CardCollection
 {
@@ -17,20 +12,16 @@ public class Deck : CardCollection
 
     void Start()
     {
+        _gameHandler = GameObject.Find("GameHandler").GetComponent<GameHandler>();
         cards = ShuffleCards(deckObject.cards);
     }
 
     void OnMouseDown()
     {
-        if (_hand.DrawCard(cards[0]))
+        if (_hand.CanDrawCard())
         {
             _hand.CreateNewCard(_cardPrefab, cards[0]);
             cards.Remove(cards[0]);
         }
-    }
-
-    public CardObject DrawCard()
-    {
-        return RemoveCardFromTop();
     }
 }

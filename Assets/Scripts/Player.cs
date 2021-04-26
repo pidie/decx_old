@@ -5,6 +5,10 @@ using TMPro;
 
 public class Player : MonoBehaviour
 {
+    [Header("Game Objects")]
+    [SerializeField]    private GameHandler _gameHandler;
+
+    [Header("Data")]
     public int energyPoints;
     public int healthPoints;
     public int armorPoints;
@@ -17,26 +21,27 @@ public class Player : MonoBehaviour
 
     private void Start() 
     {
+        _gameHandler = GameObject.Find("GameHandler").GetComponent<GameHandler>();
         FetchData();
     }
 
     private void Update() 
     {
         energyPointsDisplay.text = energyPoints.ToString();
+        healthPointsDisplay.text = healthPoints.ToString();
+        armorPointsDisplay.text = armorPoints.ToString();
     }
 
-    public bool SpendEnergy(int energyCost)
+    public void SpendEnergy(int energyCost)
     {
-        Debug.Log($"energyCost: {energyCost}");
-        Debug.Log($"energyPoints: {energyPoints}");
-        if ( this.energyPoints > energyCost)
+        this.energyPoints -= energyCost;
+    }
+
+    public bool CheckCanSpendEnergy(int energyCost)
+    {
+        if ( this.energyPoints < energyCost )
         {
-            Debug.LogWarning("Insufficient energy");
             return false;
-        }
-        else
-        {
-            this.energyPoints -= energyCost;
         }
         return true;
     }

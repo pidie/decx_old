@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Companion", menuName = "Cards/Creatures/Companion")]
 public class CompanionCreatureCardObject : CreatureCardObject 
 {
-    private int _MAX_LEVEL = 10;
+    // private int _MAX_LEVEL = 10;
     
     [Header("Companion Information")]
     [Range(1, 10)]

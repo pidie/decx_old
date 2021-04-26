@@ -15,9 +15,9 @@ public abstract class ActionCardObject : CardObject {
     public int cooldownPeriodInTurns = 0;
     public bool needsTarget = false;
     public string rarity;
-    private int minLevel = 1;
+    // private int minLevel = 1;
     [SerializeField]
-    private int maxActionLevel = 6;
+    // private int maxActionLevel = 6;
 
     [Range(1, 6)]
     public int actionLevel = 1;

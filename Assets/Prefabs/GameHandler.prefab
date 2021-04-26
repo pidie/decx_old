@@ -1876,6 +1876,8 @@ MonoBehaviour:
   positions: []
   playerPositions: []
   opponentPositions: []
+  occupiedPlayerPositions: []
+  occupiedOpponentPositions: []
 --- !u!1 &8320509266262501409
 GameObject:
   m_ObjectHideFlags: 0

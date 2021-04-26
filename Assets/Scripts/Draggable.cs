@@ -7,12 +7,12 @@ using UnityEngine;
 
 todo:
     + get a card to transfer from the hand to the card position
-        - in cardposition, create new card - get cardobject from held card
-        - in hand, destroy card
+        + in cardposition, create new card - get cardobject from held card
+        + in hand, destroy card
     + if a card position is filled, ensure that a second card can't stack on top
     - adjust where the ray is cast from so that the held card doesn't obstruct the player's view of card positions
     - if the ray isn't hitting a card position, no card position should be selected.
-    - get the instantiation of the GameHandler assigned to _gameHandler, not the prefab.
+    + get the instantiation of the GameHandler assigned to _gameHandler, not the prefab.
 
 */
 
@@ -20,8 +20,9 @@ public class Draggable : MonoBehaviour
 {
     [SerializeField]    private GameHandler _gameHandler;
     [SerializeField]    private Hand _hand;
+    [SerializeField]    private Player _playerHandler;
+    [SerializeField]    private Card card;
     
-    [SerializeField]    private bool isHovering;
     [SerializeField]    private LayerMask layerMask;
     [SerializeField]    private CardPosition dropOff;
 
@@ -33,13 +34,17 @@ public class Draggable : MonoBehaviour
     {
         mainCamera = Camera.main;
         zPosition = mainCamera.WorldToScreenPoint(transform.position).z;
+
+        _gameHandler = GameObject.Find("GameHandler").GetComponent<GameHandler>();
+        _hand = GameObject.Find("Hand").GetComponent<Hand>();
+        _playerHandler = _gameHandler.GetComponent<Player>();
+        card = this.GetComponent<Card>();
     }
 
     private void Update() 
     {
         if ( isDrag )
         {
-            _hand = this.transform.parent.GetComponent<Hand>();
             Vector3 pos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, zPosition - 0.5f);
             transform.position = mainCamera.ScreenToWorldPoint(pos);
 
@@ -61,7 +66,6 @@ public class Draggable : MonoBehaviour
                         if ( dropOff != null )
                         {
                             dropOff.RevertHighlightPosition();
-                            isHovering = false;
                         }
                         dropOff = hitCP;
                     }
@@ -69,7 +73,6 @@ public class Draggable : MonoBehaviour
                     if ( dropOff != null )
                     {
                         dropOff.HighlightPosition();
-                        isHovering = true;
                     }
                 }
                 else if ( !hitCP && dropOff != null )
@@ -96,18 +99,27 @@ public class Draggable : MonoBehaviour
     {
         try
         {
-            if (!dropOff.GetIsOccupied())
+            if ( !dropOff.GetIsOccupied() && _playerHandler.CheckCanSpendEnergy(card.cardObject.energyCost) && card.cardObject.cardType == CardType.Creature)
             {
-                Card card = this.GetComponent<Card>();
-
                 dropOff.CreateNewCard(card, card.cardObject);
                 _hand.DestroyCardObject(card.cardObject);
                 Destroy(this.gameObject);
-                _gameHandler.GetComponent<Player>().SpendEnergy(card.cardObject.energyCost);
+                _playerHandler.SpendEnergy(card.cardObject.energyCost);
             }
             else
             {
-                Debug.LogWarning("This position is filled!");
+                if (!_playerHandler.CheckCanSpendEnergy(card.cardObject.energyCost))
+                {
+                    Debug.LogWarning("Not enough energy!");
+                }
+                else if ( card.cardObject.cardType != CardType.Creature )
+                {
+                    Debug.LogWarning("Only creatures can be played!");
+                }
+                else
+                {
+                    Debug.LogWarning("This position is filled!");
+                }
             }
         }
         catch(NullReferenceException)

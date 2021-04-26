@@ -13,7 +13,7 @@ public enum PlayerCharacterFactions { Annexors, Erusguud, Falthlar, Greycloaks, 
 [CreateAssetMenu(fileName = "New Player", menuName = "Cards/Creatures/Player")]
 public class PlayerCreatureCardObject : CreatureCardObject 
 {
-    private int _MAX_LEVEL = 20;
+    // private int _MAX_LEVEL = 20;
     public int level = 0;
     public int xp = 0;
     public int rank = 0;

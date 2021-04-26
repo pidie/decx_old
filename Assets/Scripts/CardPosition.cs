@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class CardPosition : MonoBehaviour
 {
+    [SerializeField]    private GameHandler _gameHandler;
+    [SerializeField]    private Canvas canvas;
     [SerializeField]    private Graveyard _graveyard;
-
     [SerializeField]    private CardObject cardObject;
+    [SerializeField]    private Card card;
     private bool isOccupied = false;
-    private bool isBeingHovered = false;
-    private Renderer renderer;
+
+    new private Renderer renderer;
 
     private void Start() 
     {
+        _gameHandler = GameObject.Find("GameHandler").GetComponent<GameHandler>();
+        canvas = GameObject.Find("UI").transform.Find("Canvas").GetComponent<Canvas>();
         renderer = GetComponent<Renderer>();    
     }
     
@@ -38,13 +42,12 @@ public class CardPosition : MonoBehaviour
     public void CreateNewCard(Card card, CardObject cardObject)
     {
         this.cardObject = cardObject;
-        Instantiate(card, transform.position, Quaternion.Euler(-90, 180, 0));
+        this.card = Instantiate(card, transform.position, Quaternion.Euler(-90, 180, 0));
         isOccupied = true;
     }
 
     public void HighlightPosition()
     {
-        //change the color of the CardPosition object to a highlited version
         this.renderer.material.color = Color.yellow;
     }
 
@@ -55,8 +58,9 @@ public class CardPosition : MonoBehaviour
 
     public void EvictCard(Deck destination)
     {
-        isOccupied = false;
-        //empty this position.
-        //cards should default be sent to the Graveyard. 
+        //destination.CreateNewCard(cardObject);
+        //cardObject.Destroy();
+        //card.Destroy();
+        //isOccupied = false;
     }
 }

@@ -41,30 +41,30 @@ public class Round : MonoBehaviour
         {
             round += 1;
         }
+        timer = 25f;
     }
 
     public void NextTurn()
     {
+        isFirstPlayerTurn = !isFirstPlayerTurn;
+        timer = 25f;
+
         if (isFirstPlayerTurn)
         {
-            isFirstPlayerTurn = false;
-        }
-        else
-        {
-            isFirstPlayerTurn = true;
             BeginNewRound();
         }
-        timer = 25f;
     }
 
     public void StartTurn()
     {
         //calculate damage counters here
+        turnStarted = true;
     }
 
     public void EndTurn()
     {
         //decrement buff duration
+        turnStarted = false;
         NextTurn();
     }
 }

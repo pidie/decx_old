@@ -18,26 +18,33 @@ todo:
 
 public class Draggable : MonoBehaviour
 {
+    [Header("Game Objects")]
     [SerializeField]    private GameHandler _gameHandler;
     [SerializeField]    private Hand _hand;
     [SerializeField]    private Player _playerHandler;
-    [SerializeField]    private Card card;
-    
     [SerializeField]    private LayerMask layerMask;
     [SerializeField]    private CardPosition dropOff;
+
+    [Header("Prefabs")]
+    [SerializeField]    private Card card;
+    [SerializeField]    private GameObject CreatureUI;
 
     private float zPosition;
     private Camera mainCamera;
     private bool isDrag;
 
-    private void Start() 
+    private void Start()
     {
+        //Position the camera
         mainCamera = Camera.main;
         zPosition = mainCamera.WorldToScreenPoint(transform.position).z;
 
+        //Set up game objects
         _gameHandler = GameObject.Find("GameHandler").GetComponent<GameHandler>();
         _hand = GameObject.Find("Hand").GetComponent<Hand>();
         _playerHandler = _gameHandler.GetComponent<Player>();
+
+        //Set up prefabs
         card = this.GetComponent<Card>();
     }
 

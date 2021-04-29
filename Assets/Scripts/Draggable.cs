@@ -24,6 +24,7 @@ public class Draggable : MonoBehaviour
     [SerializeField]    private Player _playerHandler;
     [SerializeField]    private LayerMask layerMask;
     [SerializeField]    private CardPosition dropOff;
+    [SerializeField]    private UIManager _uiManager;
 
     [Header("Prefabs")]
     [SerializeField]    private Card card;
@@ -43,6 +44,7 @@ public class Draggable : MonoBehaviour
         _gameHandler = GameObject.Find("GameHandler").GetComponent<GameHandler>();
         _hand = GameObject.Find("Hand").GetComponent<Hand>();
         _playerHandler = _gameHandler.GetComponent<Player>();
+        _uiManager = GameObject.Find("UI").GetComponent<UIManager>();
 
         //Set up prefabs
         card = this.GetComponent<Card>();
@@ -112,6 +114,9 @@ public class Draggable : MonoBehaviour
                 _hand.DestroyCardObject(card.cardObject);
                 Destroy(this.gameObject);
                 _playerHandler.SpendEnergy(card.cardObject.energyCost);
+
+                CreatureCardObject creatureCardObject = (CreatureCardObject)card.cardObject;
+                _uiManager.CreateNewCreatureUI(creatureCardObject);
             }
             else
             {

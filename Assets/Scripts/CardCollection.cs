@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class CardCollection : MonoBehaviour
 {
-    private List<Card> _cardList = new List<Card>();
+    // private List<Card> _cardList = new List<Card>();
     private List<CardObject> _cardObjectList = new List<CardObject>();
 
     public int GetCardCount()
@@ -70,17 +70,17 @@ public class CardCollection : MonoBehaviour
         _cardObjectList.Clear();
     }
 
-    protected void SwapCards(Card card1, Card card2)
-    {
-        int card1Index = _cardList.IndexOf(card1);
-        int card2Index = _cardList.IndexOf(card2);
-        _cardList[card1Index] = card2;
-        _cardList[card2Index] = card1;
-    }
+    // protected void SwapCards(Card card1, Card card2)
+    // {
+    //     int card1Index = _cardList.IndexOf(card1);
+    //     int card2Index = _cardList.IndexOf(card2);
+    //     _cardList[card1Index] = card2;
+    //     _cardList[card2Index] = card1;
+    // }
 
-    protected List<CardObject> ShuffleCards(List<CardObject> cards)
-    {
-        cards = cards.OrderBy(a => Guid.NewGuid()).ToList();
-        return cards;
-    }
+    // protected List<CardObject> ShuffleCards(List<CardObject> cards)
+    // {
+    //     cards = cards.OrderBy(a => Guid.NewGuid()).ToList();
+    //     return cards;
+    // }
 }

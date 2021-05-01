@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Deck", menuName = "Decks/Deck")]
@@ -17,15 +19,19 @@ public class DeckObject : ScriptableObject
     [Header("Cards")]
     public List<CardObject> cards;
 
+    public int GetCardCount()
+    {
+        return cards.Count();
+    }
 
-    private void SwapCards(Card firstCard, Card secondCard)
+    public void SwapCards(Card firstCard, Card secondCard)
     {
         // swap the positions of two cardObjects in the list.
         //       *CardObjects will be attackhed to Cards if they have been instaniated!
         // if there are mono behaviours (such as in the hand), those get swapped as well
     }
 
-    private List<CardObject> ShuffleCards()
+    public List<CardObject> ShuffleCards()
     {
         return this.cards.OrderBy(a => Guid.NewGuid()).ToList(); 
     }

@@ -23,7 +23,7 @@ todo:
  */
 
 
-public class Hand : CardCollection
+public class Hand : MonoBehaviour
 {
     [Header("Object Assignments")]
     [SerializeField]    private GameHandler _gameHandler;
@@ -75,7 +75,7 @@ public class Hand : CardCollection
 
     void ArrangeCardsCenter()
     {
-        if (GetCardCount(cards) > 0)
+        if (deckObject.GetCardCount() > 0)
         {
             float xPosition = transform.childCount > 1 ? (cardWidth / 2f) - ((transform.childCount * (cardWidth + cardBufferInHand)) / 2f) : 0f;
             Camera mainCamera = Camera.main;

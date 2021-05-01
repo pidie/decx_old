@@ -6,14 +6,15 @@ public class Deck : CardCollection
 {
     [SerializeField]    private GameHandler _gameHandler;
     [SerializeField]    private Hand _hand;
-    [SerializeField]    private Card _cardPrefab;
+    // [SerializeField]    private Card _cardPrefab;
     [SerializeField]    private DeckObject deckObject;
     [SerializeField]    private List<CardObject> cards;
 
     void Start()
     {
         _gameHandler = GameObject.Find("GameHandler").GetComponent<GameHandler>();
-        cards = ShuffleCards(deckObject.cards);
+        // cards = ShuffleCards(deckObject.cards);
+        cards = deckObject.ShuffleCards();
     }
 
     void OnMouseDown()

@@ -6,8 +6,9 @@ using UnityEngine;
 
 public class CardCollection : MonoBehaviour
 {
-    // private List<Card> _cardList = new List<Card>();
     private List<CardObject> _cardObjectList = new List<CardObject>();
+    
+    // [SerializeField]    protected Card _cardPrefab;
 
     public int GetCardCount()
     {

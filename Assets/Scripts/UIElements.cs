@@ -4,8 +4,6 @@ using System.Collections.Generic;
 
 public class UIElements : MonoBehaviour 
 {
-    public delegate UpdateUIElement(UIElements element)
-    {
-        UpdateUIElement updateUIElement;
-    }
+    public delegate void UpdateUIElement(UIElements element);
+    UpdateUIElement updateUIElement;
 }

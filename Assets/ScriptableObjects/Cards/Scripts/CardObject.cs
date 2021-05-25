@@ -109,6 +109,7 @@ public abstract class CardObject : ScriptableObject
 
     [Header("Unity Data")]
     public GameObject prefab;
+    public Card card;
     public CardType cardType;
     [TextArea(10,50)]
     public string notes;

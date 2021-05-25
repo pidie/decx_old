@@ -3145,6 +3145,7 @@ MonoBehaviour:
   canvas: {fileID: 8320509265995504465}
   CreatureUI: {fileID: 1884749809269539096, guid: 85da0f06d60c43341918ec71bab86349,
     type: 3}
+  CreatureList: []
   CreatureName: {fileID: 0}
   CreatureHealth: {fileID: 0}
   xPositionPlayer: 0

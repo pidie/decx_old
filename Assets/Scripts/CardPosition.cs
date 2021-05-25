@@ -10,14 +10,17 @@ public class CardPosition : MonoBehaviour
     [SerializeField]    private CardObject cardObject;
     [SerializeField]    private Card card;
     private bool isOccupied = false;
+    public string name {get; private set;}
 
     new private Renderer renderer;
 
     private void Start() 
     {
         _gameHandler = GameObject.Find("GameHandler").GetComponent<GameHandler>();
+        card = GameObject.Find("Card").GetComponent<Card>();
         canvas = GameObject.Find("UI").transform.Find("Canvas").GetComponent<Canvas>();
-        renderer = GetComponent<Renderer>();    
+        renderer = GetComponent<Renderer>();
+        name = this.transform.name;
     }
     
     private void Update() 
@@ -39,10 +42,10 @@ public class CardPosition : MonoBehaviour
         return false;
     }
 
-    public void CreateNewCard(Card card, CardObject cardObject)
+    public void CreateNewCard(CardObject cardObject)
     {
         this.cardObject = cardObject;
-        this.card = Instantiate(card, transform.position, Quaternion.Euler(-90, 180, 0));
+        card = Instantiate(card, transform.position, Quaternion.Euler(-90, 180, 0));
         isOccupied = true;
     }
 

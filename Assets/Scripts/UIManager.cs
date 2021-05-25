@@ -50,6 +50,8 @@ public class UIManager : MonoBehaviour
         int index = CreatureList.IndexOf(creature);
         GameObject NewCreatureUI = Instantiate(CreatureUI, new Vector3(xPositionPlayer, yStartPosition, 0f), Quaternion.identity);
         NewCreatureUI.transform.parent = GameObject.Find("UI/Canvas").transform;
+        //instead, do a GameObject.FindAll and assign the information to each instance on find, this way only the single empty one will get data
+        //or can assign based on instance id
 
         CreatureName = GameObject.Find("UI/Canvas/CreatureUI(Clone)/Canvas/Name").GetComponent<TMP_Text>();
         CreatureName.text = creature.title;

@@ -10,13 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66e6ef0ddbdb6344ba70dfee2a2c4ad4, type: 3}
-  m_Name: EmptyDeck
+  m_Name: EmptyHand
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
-  title: Empty Deck
+  title: Hand
   ID: 
   description: 
   image: {fileID: 0}
-  cards:
-  - {fileID: 11400000, guid: 7ab3be9b0dd7f3359a9a003f76344b45, type: 2}
-  - {fileID: 11400000, guid: 134fd1aab42fa8ef793ba6e167a20e1d, type: 2}
+  cards: []

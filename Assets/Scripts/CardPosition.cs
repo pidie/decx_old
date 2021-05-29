@@ -59,7 +59,7 @@ public class CardPosition : MonoBehaviour
         this.renderer.material.color = Color.white;
     }
 
-    public void EvictCard(Deck destination)
+    public void EvictCard(DeckObject destination)
     {
         //destination.CreateNewCard(cardObject);
         //cardObject.Destroy();

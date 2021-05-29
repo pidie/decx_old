@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Deck : CardCollection
+public class Stock : CardCollection
 {
     [SerializeField]    private GameHandler _gameHandler;
     [SerializeField]    private Hand _hand;
